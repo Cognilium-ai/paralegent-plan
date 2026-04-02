@@ -7,11 +7,14 @@ import {
   blogPlan,
   cutItems,
 } from "@/data/plan";
+import { channelMix } from "@/data/research";
 import type { Task, TeamMember, Phase } from "@/data/types";
+import Nav from "@/components/Nav";
 
 // ── Helpers ──
 
 const phaseColors: Record<Phase, string> = {
+  0: "bg-gray-700",
   1: "bg-blue-600",
   2: "bg-amber-600",
   3: "bg-emerald-600",
@@ -19,6 +22,7 @@ const phaseColors: Record<Phase, string> = {
 };
 
 const phaseBgLight: Record<Phase, string> = {
+  0: "bg-gray-50 border-gray-300",
   1: "bg-blue-50 border-blue-200",
   2: "bg-amber-50 border-amber-200",
   3: "bg-emerald-50 border-emerald-200",
@@ -163,6 +167,37 @@ function TeamOverview() {
             <p className="text-xs text-gray-400 mt-2">{member.hoursPerDay}h/day</p>
           </div>
         ))}
+      </div>
+    </section>
+  );
+}
+
+function ChannelMixSection() {
+  return (
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
+      <h2 className="text-xl font-bold mb-4">Channel Mix — What Drives First 10 Customers</h2>
+      <div className="bg-white rounded-xl border border-gray-200 p-6">
+        <div className="space-y-4">
+          {channelMix.map((ch) => (
+            <div key={ch.channel} className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-16 text-right">
+                <span className="text-2xl font-bold text-[#042729]">{ch.percentage}%</span>
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-1">
+                  <h3 className="font-semibold text-sm">{ch.channel}</h3>
+                  <div className="flex-1 h-3 bg-gray-100 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-[#FF4800] rounded-full"
+                      style={{ width: `${ch.percentage * 2.5}%` }}
+                    />
+                  </div>
+                </div>
+                <p className="text-xs text-gray-600">{ch.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -445,6 +480,7 @@ export default function Home() {
   return (
     <main>
       <Header />
+      <Nav active="plan" />
 
       {/* Quick Stats Bar */}
       <div className="bg-white border-b border-gray-200">
@@ -481,6 +517,7 @@ export default function Home() {
       </div>
 
       <RevenueModel />
+      <ChannelMixSection />
       <GeoPriority />
       <TeamOverview />
       <PhaseOverview />
