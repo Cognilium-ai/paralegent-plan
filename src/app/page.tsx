@@ -1,12 +1,13 @@
 import {
   planMeta,
-  weeklyPlan,
   milestones,
   outreachMetrics,
   salesAssets,
   blogPlan,
-  cutItems,
-} from "@/data/plan";
+  platformRegistrations,
+  whatsNew,
+} from "@/data/plan-v3";
+import { weeklyPlan, cutItems } from "@/data/plan";
 import { channelMix } from "@/data/research";
 import type { Task, TeamMember, Phase } from "@/data/types";
 import Nav from "@/components/Nav";
@@ -366,6 +367,68 @@ function TaskCard({ task }: { task: Task }) {
   );
 }
 
+function PlatformRegistrationsSection() {
+  const priorityColors: Record<string, string> = {
+    P0: "border-red-300 bg-red-50",
+    P1: "border-amber-300 bg-amber-50",
+    P2: "border-gray-300 bg-gray-50",
+  };
+  return (
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
+      <h2 className="text-xl font-bold mb-4">Platform Registrations ({platformRegistrations.length})</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {platformRegistrations.map((pr) => (
+          <div key={pr.id} className={`rounded-xl border-2 p-4 ${priorityColors[pr.priority]}`}>
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-2">
+                <Badge className={pr.priority === "P0" ? "bg-red-100 text-red-800" : pr.priority === "P1" ? "bg-yellow-100 text-yellow-800" : "bg-gray-100 text-gray-600"}>{pr.priority}</Badge>
+                <h3 className="font-semibold text-sm">{pr.platform}</h3>
+              </div>
+              <span className="text-xs text-gray-400">Week {pr.week} | {pr.hours}h</span>
+            </div>
+            <div className="flex items-center gap-2 mb-2">
+              <Badge className={memberColors[pr.assignee]}>{pr.assignee}</Badge>
+              <span className="text-xs text-gray-400">+ {pr.helper}</span>
+            </div>
+            <p className="text-xs text-gray-600 mb-2">{pr.why}</p>
+            {pr.categories && <p className="text-xs text-gray-500"><span className="font-medium">Categories:</span> {pr.categories}</p>}
+            <details className="mt-2">
+              <summary className="text-xs text-[#FF4800] cursor-pointer font-medium">Steps</summary>
+              <p className="text-xs text-gray-600 mt-1 whitespace-pre-line">{pr.steps}</p>
+            </details>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function WhatsNewSection() {
+  return (
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
+      <h2 className="text-xl font-bold mb-4">What Changed in v3.0</h2>
+      <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="bg-emerald-50">
+              <th className="px-4 py-3 text-left font-semibold text-emerald-800">Change</th>
+              <th className="px-4 py-3 text-left font-semibold text-gray-700">Why</th>
+            </tr>
+          </thead>
+          <tbody>
+            {whatsNew.map((item) => (
+              <tr key={item.change} className="border-t border-gray-100">
+                <td className="px-4 py-3 font-medium text-emerald-700">{item.change}</td>
+                <td className="px-4 py-3 text-gray-600">{item.why}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
 function WeeklyBreakdown() {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
@@ -524,9 +587,10 @@ export default function Home() {
       <OutreachPipeline />
       <MilestonesSection />
       <SalesAssetsSection />
+      <PlatformRegistrationsSection />
       <BlogPlanSection />
       <WeeklyBreakdown />
-      <CutItemsSection />
+      <WhatsNewSection />
 
       {/* Footer */}
       <footer className="bg-[#042729] text-[#F8F5EE]/50 text-center py-6 text-sm">
