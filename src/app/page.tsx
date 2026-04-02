@@ -7,7 +7,7 @@ import {
   platformRegistrations,
   whatsNew,
 } from "@/data/plan-v3";
-import { weeklyPlan, cutItems } from "@/data/plan";
+import { weeklyPlan } from "@/data/weekly-v3";
 import { channelMix } from "@/data/research";
 import type { Task, TeamMember, Phase } from "@/data/types";
 import Nav from "@/components/Nav";
@@ -475,34 +475,6 @@ function WeeklyBreakdown() {
             </div>
           );
         })}
-      </div>
-    </section>
-  );
-}
-
-function CutItemsSection() {
-  return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-12">
-      <h2 className="text-xl font-bold mb-4">What We Cut (And Why)</h2>
-      <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="bg-red-50">
-              <th className="px-4 py-3 text-left font-semibold text-red-800">Cut</th>
-              <th className="px-4 py-3 text-left font-semibold text-emerald-800">Replaced With</th>
-              <th className="px-4 py-3 text-left font-semibold text-gray-700">Reason</th>
-            </tr>
-          </thead>
-          <tbody>
-            {cutItems.map((item) => (
-              <tr key={item.item} className="border-t border-gray-100">
-                <td className="px-4 py-3 text-red-700 line-through">{item.item}</td>
-                <td className="px-4 py-3 text-emerald-700 font-medium">{item.replacement}</td>
-                <td className="px-4 py-3 text-gray-600">{item.reason}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
       </div>
     </section>
   );
