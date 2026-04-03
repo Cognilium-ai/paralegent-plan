@@ -84,62 +84,70 @@ export default function BrandPage() {
 
             <CopyBlock
               label="Short Tagline (under 80 chars)"
-              text="AI contract review in your cloud — 30 hours to 30 minutes"
+              text="Agentic contract due diligence — in your cloud, 30 hours to 30 minutes"
             />
 
             <CopyBlock
               label="Short Description (for G2, Capterra, quick intros)"
-              text="Paralegent AI reviews your contracts against your company's rules and tells you exactly which clauses are risky, which need approval, and which are ready to sign — all inside Microsoft Word. 11 specialized AI agents work together to review an 80-page agreement in 30 minutes instead of 30 hours. Deployed directly in your cloud, customized to your business rules, and operated by your team. Your data never leaves your environment."
+              text="Paralegent.ai is an agentic AI application that performs contract due diligence on master agreements and their resulting subcontracts. 11 specialized AI agents analyze every clause, in every section, against a deeply structured rulebook — and surface exactly which terms put your business at risk, which need executive approval, and which are ready for signature. Deployed directly in your cloud, customized to your business rules, and operated by your team. Your data never leaves your environment."
               multiline
             />
 
             <CopyBlock
               label="Long Description (for detailed platform profiles)"
-              text={`Every enterprise processes hundreds of master agreements each year. Your legal team spends 20-30 hours on each one — clause by clause, 40-100 pages of legal language. A single overlooked red clause can cost millions.
+              text={`Every enterprise processes hundreds of master agreements each year. Master Sales Agreements, Master Purchase Agreements, Master Service Agreements — each one is 40 to 100+ pages of legal language that must be reviewed clause by clause for risk exposure. A single overlooked red clause in a warranty section can cost millions. An undetected liability cap in an indemnification provision can leave your business exposed for years.
 
-Paralegent AI changes that. Our 11 specialized AI agents each focus on one area of your contract — warranty, liability, IP, indemnity, compliance, termination, and more. They analyze every clause against your company's own rulebook and classify each one:
+Today, your legal team spends 20 to 30 hours on a single master agreement. That's a 10-15 day SLA just to return a redlined version to the counterparty. Meanwhile, deals stall, revenue recognition delays, and your attorneys spend their highest-value hours doing repetitive clause-matching instead of strategic negotiation.
 
-GREEN — favorable, ready for signature
-ORANGE — needs senior approval, negotiate if possible
-RED — unacceptable, reject and replace
+Paralegent.ai is not a chatbot that reads your contract. It's a structured, multi-agent orchestration system that applies institutional legal knowledge with surgical precision.
 
-The result? 40-50 precise redlines delivered inside Microsoft Word, each with a clear explanation of why it was flagged and suggested replacement language in your preferred terms. Your attorneys review the findings, not 80 pages.
+11 specialized AI agents each focus on one area of your contract — Warranty, Liability, Indemnity, Intellectual Property, Termination, Confidentiality, Force Majeure, and more. They analyze every clause against your company's own rulebook and classify each one:
 
-What makes us different: Paralegent deploys directly in your cloud — Azure, AWS, or GCP. Your contracts never touch our servers. Your data never leaves your environment. We customize the system to your business rules, integrate with your CLM tools, and your team operates it.
+GREEN — Favorable. Clause protects your commercial interests. Approve and proceed to signature.
+ORANGE — Conditional. Carries moderate risk. Escalate for senior approval. Negotiate if possible.
+RED — Unacceptable. Materially unfavorable. Reject. Negotiate out or replace with approved fallback language.
 
-30 hours of manual review becomes 30 minutes. Your attorneys focus on negotiation, not repetitive clause-matching.`}
+The result? 40-50 precise redlines delivered inside Microsoft Word, each tagged with its classification, the rationale explaining why it was flagged, and AI-generated replacement language in your preferred terms. Your attorneys review the findings, not 80 pages. Send a clean redlined version to the counterparty — all within our Word add-in.
+
+We don't sell a generic SaaS subscription. We deploy a production-grade AI accelerator directly into your cloud, customized to your business rules, integrated with your CLM tools, and operated by your team. Your data stays in your infrastructure. Your contracts never touch our servers.`}
               multiline
             />
 
             <CopyBlock
               label="Crunchbase Description (Third Person)"
-              text={`Paralegent AI is an agentic AI solution for enterprise contract due diligence. The platform deploys 11 specialized AI agents that analyze contracts against an organization's custom rulebook, classifying every clause as favorable (GREEN), conditional (ORANGE), or unacceptable (RED). Each finding includes the rationale, confidence score, and suggested replacement language in the organization's preferred terms — delivered directly inside Microsoft Word.
+              text={`Paralegent.ai is an agentic AI application that performs contract due diligence on master agreements and their resulting subcontracts. The platform deploys 11 specialized AI agents that analyze every clause, in every section, against an organization's deeply structured rulebook — surfacing exactly which terms carry risk, which need executive approval, and which are ready for signature.
 
-Unlike SaaS contract review tools, Paralegent deploys in the customer's own cloud environment. Contract data never leaves the customer's infrastructure. The solution supports Azure, AWS, and GCP deployments and works with the customer's choice of language model.
+For each clause, the system applies a three-tier classification: GREEN (favorable — approve and proceed), ORANGE (conditional — escalate for senior review), or RED (unacceptable — reject and negotiate). Each finding includes the rationale, confidence score, and suggested replacement language in the organization's preferred terms — delivered directly inside Microsoft Word.
 
-Paralegent reduces contract review time from 20-30 hours to approximately 30 minutes per master agreement, delivering 40-50 precise redlines per contract. The system is customized to each organization's legal positions and integrated with their existing CLM tools.`}
+Unlike SaaS contract review tools, Paralegent deploys directly in the customer's own cloud environment. Contract data never leaves the customer's infrastructure. The system is customized to each organization's legal positions, integrated with their existing CLM tools, and operated by their team. Paralegent reduces contract review time from 20-30 hours to approximately 30 minutes per master agreement, delivering 40-50 precise redlines per contract.`}
               multiline
             />
 
             <CopyBlock
-              label="One-Liner (Mom Test — anyone can understand this)"
-              text="AI that reviews your contracts and tells you what's risky — inside Word, in your cloud, in 30 minutes."
+              label="One-Liner"
+              text="Agentic AI that performs contract due diligence like your best attorney — in 30 minutes, not 30 hours, inside Word, in your cloud."
             />
 
             <CopyBlock
               label="Product Hunt Tagline (60 chars)"
-              text="AI reviews your contracts in 30 min, not 30 hours"
+              text="AI contract due diligence — 30 min, not 30 hours"
             />
 
             <CopyBlock
               label="Elevator Pitch (30 seconds)"
-              text="Your legal team spends 30 hours reviewing a single master agreement. Paralegent AI does it in 30 minutes. 11 specialized AI agents analyze every clause against your company's rules and flag what's risky, what needs approval, and what's ready to sign — all inside Microsoft Word. It deploys directly in your cloud, customized to your business rules, operated by your team. Your data never leaves your environment."
+              text="Your legal team spends 20-30 hours reviewing a single master agreement. That's a 10-15 day SLA just to return a redlined version to the counterparty. Paralegent.ai does it in 30 minutes. 11 specialized AI agents analyze every clause against your company's rulebook and classify each one as GREEN, ORANGE, or RED — with rationale and replacement language, delivered inside Microsoft Word. We deploy directly in your cloud. Your contracts never touch our servers. Your attorneys review the findings, not 80 pages."
               multiline
             />
 
             <CopyBlock
               label="Problem Statement (use in content + outreach)"
-              text="Enterprise legal teams spend 20-30 hours reviewing a single 80-page master agreement. That's a 10-15 day SLA just to return a redlined version. Deals stall, revenue delays, and your highest-paid attorneys spend their time doing repetitive clause-matching instead of strategic negotiation. Meanwhile, 62% of teams won't use AI tools because of data security concerns."
+              text="Every enterprise processes hundreds of master agreements each year — each one 40 to 100+ pages of legal language reviewed clause by clause for risk exposure. Your legal team spends 20-30 hours on a single master agreement. That's a 10-15 day SLA just to return a redlined version to the counterparty. A single overlooked red clause in a warranty section can cost millions. An undetected liability cap in an indemnification provision can leave your business exposed for years. Deals stall, revenue recognition delays, and your attorneys spend their highest-value hours doing repetitive clause-matching instead of strategic negotiation."
+              multiline
+            />
+
+            <CopyBlock
+              label="Hero Paragraph (from landing page — use as primary description)"
+              text="Paralegent.ai is an agentic AI application that performs contract due diligence on master agreements and their resulting subcontracts. We analyze every clause, in every section, against a deeply structured rulebook — and surface exactly which terms put your business at risk, which need executive approval, and which are ready for signature. We don't sell a generic SaaS subscription. We deploy a production-grade AI accelerator directly into your cloud, customized to your business rules, integrated with your CLM tools, and operated by your team."
               multiline
             />
 
@@ -149,13 +157,12 @@ Paralegent reduces contract review time from 20-30 hours to approximately 30 min
             <CopyBlock label="AI Agents" text="11 specialized AI agents + 1 orchestrator agent" />
             <CopyBlock label="Legal Categories" text="12 legal categories analyzed" />
             <CopyBlock label="Risk Classification" text="GREEN (favorable) / ORANGE (conditional) / RED (unacceptable)" />
-            <CopyBlock label="Review Speed" text="2-8 minutes per contract (vs 30 hours manual)" />
-            <CopyBlock label="Matching Speed" text="1,536-dimensional semantic search in 15-20 seconds" />
+            <CopyBlock label="Review Speed" text="30 minutes per 80-page master agreement (vs 20-30 hours manual)" />
+            <CopyBlock label="Contract Matching" text="15-20 second contract matching against your rulebook" />
             <CopyBlock label="Redlines" text="40-50 precise redlines per contract" />
             <CopyBlock label="Rulebook Terms" text="80-150 terms per contract type" />
-            <CopyBlock label="Investment" text="$10K license + $50-70K engineering implementation (one-time)" />
-            <CopyBlock label="Manual Cost" text="$100K+/month for 4-5 attorneys" />
-            <CopyBlock label="Payback Period" text="Month 1" />
+            <CopyBlock label="Manual Cost" text="$100K+/month for a team of 4-5 legal professionals" />
+            <CopyBlock label="Implementation" text="Dedicated pod of 3-4 engineers, typically 8-10 weeks" />
             <CopyBlock label="SLA Reduction" text="15 days → 2 days" />
             <CopyBlock label="Time Savings" text="30 hours → 30 minutes per 80-page MSA" />
 
