@@ -415,7 +415,7 @@ He operates across the US, UAE, and Pakistan, serving 12+ industries including l
 
             <CopyBlock label="Company Name" text="Paralegent AI" />
             <CopyBlock label="Parent Company" text="Cognilium AI" />
-            <CopyBlock label="Founded" text="2024" />
+            <CopyBlock label="Founded" text="2026" />
             <CopyBlock label="Headquarters" text="Dubai, UAE" />
             <CopyBlock label="Website" text="https://paralegent.ai" />
             <CopyBlock label="Email (General)" text="info@paralegent.ai" />
