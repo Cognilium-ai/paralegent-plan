@@ -125,7 +125,7 @@ const partnerships: Partnership[] = [
     category: "AWS Ecosystem",
     cost: "FREE (1.5-3% transaction fee)",
     benefit: "New 'AI Agent Products' category specifically for agent-based solutions. Enterprise buyers use existing AWS committed spend. 30% faster time-to-market vs traditional sales.",
-    why: "AWS launched a new category just for AI agents in 2025. Paralegent with its 11-agent architecture is a perfect fit. Customers using AWS Bedrock can purchase through their existing billing.",
+    why: "AWS launched a new category just for AI agents in 2025. Paralegent with its 18-agent architecture is a perfect fit. Customers using AWS Bedrock can purchase through their existing billing.",
     steps: [
       "Create AWS Marketplace seller account",
       "Choose listing type: 'Professional Services' or 'SaaS' (for implementation engagements)",

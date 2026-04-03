@@ -110,7 +110,7 @@ Slide 7 (CTA): [Clear action — 'Request a Demo → paralegent.ai/demo']`,
       "Create with Veo 3 — use AI-generated visuals + screen recordings",
     ],
     template: `Title: [Primary Keyword]: [Benefit/Hook]
-Example: "AI Contract Review: How 11 Agents Analyze Every Clause"
+Example: "AI Contract Review: How 18 Agents Analyze Every Clause"
 
 Description:
 [Keyword-rich opening — 2 sentences with primary keyword]
@@ -353,7 +353,7 @@ export const week1Content = {
         },
         {
           heading: "H2: What Is AI Contract Review?",
-          notes: "H3: Definition and How It Differs from Manual Review — contrast manual (30 hrs, inconsistent, expensive) with AI (minutes, consistent, one-time cost).\nH3: The Shift from Single-LLM to Multi-Agent Architectures — explain why 1 AI trying to do everything fails vs 11 specialists.",
+          notes: "H3: Definition and How It Differs from Manual Review — contrast manual (30 hrs, inconsistent, expensive) with AI (minutes, consistent, one-time cost).\nH3: The Shift from Single-LLM to Multi-Agent Architectures — explain why 1 AI trying to do everything fails vs 18 specialists.",
         },
         {
           heading: "H2: How AI Contract Review Works (Step-by-Step)",
@@ -390,7 +390,7 @@ export const week1Content = {
       ],
       linkedinMudassir: {
         hook: "Your legal team spends 30 hours reviewing a single MSA.\n\nAI does it in under 8 minutes.",
-        body: "But here's what most people get wrong about AI contract review in 2026:\n\nIt's not about one AI model trying to understand everything. That's like asking a general practitioner to perform heart surgery.\n\nThe shift is to multi-agent architectures — 11 specialized AI agents, each expert in one area: scope, liability, IP, compliance, termination...\n\nAnd the biggest gap? Every tool on the market is SaaS. Your contracts sit on their servers.\n\nWhat if the AI deployed in YOUR cloud? Your data never leaves.\n\nI wrote the complete guide to AI contract review in 2026. Covers:\n→ How multi-agent AI actually works\n→ SaaS vs customer-cloud deployment\n→ The real market numbers ($1.75-3.1B)\n→ How to evaluate tools\n\nLink in the comments 👇",
+        body: "But here's what most people get wrong about AI contract review in 2026:\n\nIt's not about one AI model trying to understand everything. That's like asking a general practitioner to perform heart surgery.\n\nThe shift is to multi-agent architectures — 18 specialized AI agents, each expert in one area: scope, liability, IP, compliance, termination...\n\nAnd the biggest gap? Every tool on the market is SaaS. Your contracts sit on their servers.\n\nWhat if the AI deployed in YOUR cloud? Your data never leaves.\n\nI wrote the complete guide to AI contract review in 2026. Covers:\n→ How multi-agent AI actually works\n→ SaaS vs customer-cloud deployment\n→ The real market numbers ($1.75-3.1B)\n→ How to evaluate tools\n\nLink in the comments 👇",
         hashtags: "#LegalTech #AIContractReview #ContractManagement #LegalOps #DataSovereignty",
         linkInComment: "Full guide: paralegent.ai/resources/blog/complete-guide-ai-contract-review",
       },
@@ -414,15 +414,15 @@ export const week1Content = {
         "Slide 4 (Types): '3 types of AI contract review: SaaS (their cloud) vs Customer-Cloud (your cloud) vs Generic AI (doesn't work)'",
         "Slide 5 (Data): '$1.75-3.1B market. 52% adoption. But 80% cite accuracy and 62% cite data security as barriers.'",
         "Slide 6 (Features): '5 features to demand: ✓ Rulebook depth ✓ Data sovereignty ✓ Word integration ✓ LLM flexibility ✓ Multi-agent architecture'",
-        "Slide 7 (CTA): 'Want AI contract review that deploys in YOUR cloud? 11 agents. Your data never leaves. → paralegent.ai/demo'",
+        "Slide 7 (CTA): 'Want AI contract review that deploys in YOUR cloud? 18 agents. Your data never leaves. → paralegent.ai/demo'",
       ],
       youtubeShort: {
         title: "AI Reviews a Contract in 8 Minutes (Here's How)",
-        script: "Hook (0-3 sec): 'An 80-page MSA takes your legal team 30 hours to review. Watch what happens when 11 AI agents do it.'\nBody (3-30 sec): Quick walkthrough — upload rulebook, click review, GREEN/ORANGE/RED highlights appear, suggested revisions in Word.\nClose (30-45 sec): 'Multi-agent AI. Your cloud. Your data never leaves. Link in bio.'",
+        script: "Hook (0-3 sec): 'An 80-page MSA takes your legal team 30 hours to review. Watch what happens when 18 AI agents do it.'\nBody (3-30 sec): Quick walkthrough — upload rulebook, click review, GREEN/ORANGE/RED highlights appear, suggested revisions in Word.\nClose (30-45 sec): 'Multi-agent AI. Your cloud. Your data never leaves. Link in bio.'",
       },
       facebookPost: "AI contract review has evolved dramatically in 2026. Gone are the days of one AI model trying to understand everything — the shift is to multi-agent architectures with 11 specialized agents.\n\nBut here's the gap most teams miss: every tool on the market is SaaS, meaning your confidential contracts sit on someone else's servers.\n\nWe wrote the complete guide covering the market, the technology, and how to evaluate tools.\n\nRead it here: paralegent.ai/resources/blog/complete-guide-ai-contract-review",
       instagramCaption: "30 hours → 8 minutes ⚡\n\nAI contract review isn't just faster — it's fundamentally different in 2026. 11 specialized agents, each expert in their contract section, working in YOUR cloud.\n\nSwipe for the complete breakdown →\n\nLink in bio for the full guide\n\n#LegalTech #AI #ContractReview #Enterprise #LegalAI #DataSovereignty",
-      tiktokCaption: "Your legal team reviews contracts for 30 HOURS. 11 AI agents do it in 8 MINUTES. Here's the difference between generic AI and purpose-built contract review AI in 2026 🧵 #LegalTech #AI #ContractReview",
+      tiktokCaption: "Your legal team reviews contracts for 30 HOURS. 18 AI agents do it in 8 MINUTES. Here's the difference between generic AI and purpose-built contract review AI in 2026 🧵 #LegalTech #AI #ContractReview",
     },
     {
       id: "blog-2",
@@ -474,7 +474,7 @@ export const week1Content = {
         },
         {
           heading: "H2: FAQ (3 questions)",
-          notes: "1. How accurate is AI contract redlining? (confidence scoring, 11 agents)\n2. Can AI redline complex clauses like indemnification and limitation of liability? (specialized agents for each)\n3. Does AI contract redlining work in Microsoft Word? (yes, Word add-in, no new platform)",
+          notes: "1. How accurate is AI contract redlining? (confidence scoring, 18 agents)\n2. Can AI redline complex clauses like indemnification and limitation of liability? (specialized agents for each)\n3. Does AI contract redlining work in Microsoft Word? (yes, Word add-in, no new platform)",
         },
         {
           heading: "Schema",
@@ -483,7 +483,7 @@ export const week1Content = {
       ],
       linkedinMudassir: {
         hook: "I watched an attorney spend 4 days redlining a single MSA.\n\n80 pages. 47 clauses flagged. 30+ hours.",
-        body: "Then I watched 11 AI agents do the same work in 7 minutes.\n\nHere's what people miss about AI redlining:\n\nIt's not about finding keywords. It's about understanding INTENT.\n\nEach of our 11 agents specializes in one area — scope, liability, IP, compliance, termination...\n\nThey match every clause against your company's rulebook. Not generic rules. YOUR rules. YOUR preferred language.\n\nThen they classify: GREEN (good), ORANGE (needs review), RED (negotiate out).\n\nThe attorney's job shifts from reading 80 pages to reviewing 15 flagged items.\n\nI wrote a step-by-step guide to how AI redlining actually works.\n\nLink in comments 👇",
+        body: "Then I watched 18 AI agents do the same work in 7 minutes.\n\nHere's what people miss about AI redlining:\n\nIt's not about finding keywords. It's about understanding INTENT.\n\nEach of our 18 agents specializes in one area — scope, liability, IP, compliance, termination...\n\nThey match every clause against your company's rulebook. Not generic rules. YOUR rules. YOUR preferred language.\n\nThen they classify: GREEN (good), ORANGE (needs review), RED (negotiate out).\n\nThe attorney's job shifts from reading 80 pages to reviewing 15 flagged items.\n\nI wrote a step-by-step guide to how AI redlining actually works.\n\nLink in comments 👇",
         hashtags: "#ContractRedlining #LegalTech #AI #LegalOps #ContractManagement",
         linkInComment: "Full step-by-step: paralegent.ai/resources/blog/how-ai-contract-redlining-works",
       },
@@ -496,7 +496,7 @@ export const week1Content = {
       twitterThread: [
         "Most AI 'contract review' is just glorified Ctrl+F.\n\nReal AI redlining is completely different. Here's how it works, step by step: 🧵",
         "Step 1: Upload your rulebook.\n\nNot generic rules — YOUR company's 80-150 preferred contract positions.\n\nEach rule has: the definition, YOUR preferred language, rationale, examples, and a confidence score.\n\nThis is the AI's 'brain.'",
-        "Step 2: 11 specialized agents analyze every clause.\n\nNot 1 AI trying to understand everything.\n\n11 specialists — scope, IP, liability, compliance, termination... each expert in their area.\n\n1,536-dimensional semantic matching in 15-20 seconds.",
+        "Step 2: 11 specialized agents analyze every clause.\n\nNot 1 AI trying to understand everything.\n\n18 specialists — scope, IP, liability, compliance, termination... each expert in their area.\n\n1,536-dimensional semantic matching in 15-20 seconds.",
         "Step 3: GREEN / ORANGE / RED classification.\n\n🟢 GREEN = favorable, auto-approve\n🟠 ORANGE = conditional, needs senior review\n🔴 RED = unacceptable, negotiate out\n\nWith rationale and confidence scores for every finding.",
         "Step 4: 40-50 precise redlines appear in Word.\n\nSuggested replacement text in YOUR preferred language.\n\nThe attorney's job: review 15 flagged items, not 80 pages.\n\n30 hours → 30 minutes.\n\nFull guide: paralegent.ai/resources/blog/how-ai-contract-redlining-works",
       ],
@@ -511,17 +511,17 @@ export const week1Content = {
       ],
       youtubeShort: {
         title: "Watch AI Redline a Contract in Real-Time",
-        script: "Hook (0-3 sec): 'Watch 11 AI agents redline a contract in real-time'\nBody (3-40 sec): Screen recording — upload contract, agents activate, RED clause detected, confidence 94%, suggested revision appears in Word, GREEN/ORANGE/RED summary.\nClose (40-60 sec): 'From 30 hours to 30 minutes. Link in bio.'",
+        script: "Hook (0-3 sec): 'Watch 18 AI agents redline a contract in real-time'\nBody (3-40 sec): Screen recording — upload contract, agents activate, RED clause detected, confidence 94%, suggested revision appears in Word, GREEN/ORANGE/RED summary.\nClose (40-60 sec): 'From 30 hours to 30 minutes. Link in bio.'",
       },
       facebookPost: "How does AI contract redlining actually work? It's not about finding keywords — it's about understanding whether each clause protects your company or exposes it.\n\nWe broke it down into 5 steps: from uploading your rulebook to getting 40-50 precise redlines in Word, classified as GREEN (favorable), ORANGE (needs review), or RED (unacceptable).\n\nFull step-by-step guide: paralegent.ai/resources/blog/how-ai-contract-redlining-works",
-      instagramCaption: "5 steps from 80-page contract to AI-powered redlines 📋→⚡\n\n1️⃣ Upload your rulebook\n2️⃣ 11 agents analyze every clause\n3️⃣ GREEN / ORANGE / RED classification\n4️⃣ 40-50 redlines in Word\n5️⃣ Attorney reviews findings, not 80 pages\n\nFull guide → link in bio\n\n#LegalTech #ContractReview #AI #Redlining #LegalOps",
+      instagramCaption: "5 steps from 80-page contract to AI-powered redlines 📋→⚡\n\n1️⃣ Upload your rulebook\n2️⃣ 18 agents analyze every clause\n3️⃣ GREEN / ORANGE / RED classification\n4️⃣ 40-50 redlines in Word\n5️⃣ Attorney reviews findings, not 80 pages\n\nFull guide → link in bio\n\n#LegalTech #ContractReview #AI #Redlining #LegalOps",
       tiktokCaption: "How AI redlines a contract in 5 steps 👀 From 30 hours of manual review to 30 minutes of AI-assisted review. 11 specialized agents. Your cloud. Your rules. #LegalTech #AI #ContractReview #Redlining",
     },
   ],
   videoBriefs: [
     {
       id: "video-demo",
-      title: "Paralegent AI Demo: Watch 11 Agents Review a Contract in Minutes",
+      title: "Paralegent AI Demo: Watch 18 Agents Review a Contract in Minutes",
       type: "Product Demo",
       length: "3-5 min",
       platform: "YouTube + Website + LinkedIn",
@@ -548,7 +548,7 @@ export const week1Content = {
       script: [
         "0:00-0:15 — 'I've deployed over 50 GenAI systems. But one pattern kept coming up...'",
         "0:15-0:40 — 'Legal teams were drowning. 100+ contracts a month. 30 hours per MSA. Inconsistent results. And they were terrified of sending their data to another SaaS vendor.'",
-        "0:40-1:10 — 'So we built something different. 11 specialized AI agents — each expert in one area of a contract. And it deploys in THEIR cloud. Their data never touches our servers.'",
+        "0:40-1:10 — 'So we built something different. 18 specialized AI agents — each expert in one area of a contract. And it deploys in THEIR cloud. Their data never touches our servers.'",
         "1:10-1:30 — 'The result? 80-page MSAs reviewed in under 8 minutes. GREEN, ORANGE, RED classification. 40-50 precise redlines in Word.'",
         "1:30-1:50 — 'We're not a SaaS. We're a production accelerator. One-time investment. Your cloud. Your control.'",
         "1:50-2:00 — 'I'm Mudassir. This is Paralegent AI. Let's talk.' + CTA overlay",

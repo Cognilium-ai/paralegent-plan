@@ -44,7 +44,7 @@ export const keywordTargets: KeywordTarget[] = [
 
 export const competitorGaps: CompetitorGap[] = [
   { gap: "No one offers cloud-deployed / on-premise", why: "We're literally the only option. Every competitor is SaaS." },
-  { gap: "No one talks about multi-agent orchestration", why: "We have 11 specialized agents. Competitors use 1 generic LLM." },
+  { gap: "No one talks about multi-agent orchestration", why: "We have 18 specialized domain analysts. Competitors use 1 generic LLM." },
   { gap: "No one shows rulebook depth", why: "80-150 terms with rationale, examples, confidence scoring — our IP." },
   { gap: "All are SaaS with vendor data control", why: "We offer data sovereignty. Customer data never leaves their environment." },
   { gap: "No one is LLM-agnostic", why: "We work with Azure OpenAI, Bedrock, Vertex AI — customer chooses." },
@@ -65,7 +65,7 @@ export const platformStrategy: PlatformStrategy[] = [
   { platform: "LinkedIn Newsletter", priority: "#5 HIGH VALUE", canBringClients: "YES — indirect", weeklyHours: "2-3h", timeToResults: "2-4 months", action: "'The Contract Intelligence Brief' — biweekly. 40-60% open rates vs 20% email. Triple notification system bypasses algorithm. Founder publishes personally, not company page." },
   { platform: "Reddit", priority: "#6 WORTH IT", canBringClients: "Trust-building", weeklyHours: "2-3h", timeToResults: "3-6 months", action: "r/legaltech, r/inhouselegal, r/artificial. Zero promotion — 80/20 rule. Build karma 4-6 weeks first. Harvey did AMA here. Reddit threads rank in Google → boosts SEO + AI citations." },
   { platform: "Medium", priority: "#7 WORTH IT", canBringClients: "Indirect (SEO)", weeklyHours: "1-2h", timeToResults: "2-4 months", action: "Republish every blog 1-2 weeks after original. Canonical URL to paralegent.com. DA 96 backlink. Submit to 'Towards AI' and 'The Startup' publications." },
-  { platform: "Hacker News", priority: "#8 WORTH IT", canBringClients: "One-time spike", weeklyHours: "1-2h (one-time)", timeToResults: "Immediate", action: "'Show HN: 11 AI Agents That Review Contracts Inside Microsoft Word' — focus on TECHNICAL, not sales. Tell 'We built this because...' story. Plan for Month 4-6 when demo is polished. Can drive 5-15K visitors in 24 hours." },
+  { platform: "Hacker News", priority: "#8 WORTH IT", canBringClients: "One-time spike", weeklyHours: "1-2h (one-time)", timeToResults: "Immediate", action: "'Show HN: 18 AI Agents That Review Contracts Inside Microsoft Word' — focus on TECHNICAL, not sales. Tell 'We built this because...' story. Plan for Month 4-6 when demo is polished. Can drive 5-15K visitors in 24 hours." },
   { platform: "Twitter/X", priority: "#9 LOW", canBringClients: "Minimal", weeklyHours: "1-2h", timeToResults: "6+ months", action: "12.73% of B2B leads vs LinkedIn's 80%. 0.69% conversion vs LinkedIn's 4.02%. Use for: legal tech news commentary, threads on insights, engage with Bob Ambrogi and legal tech journalists." },
   { platform: "Quora", priority: "#10 LOW", canBringClients: "Feeds AI engines", weeklyHours: "1h", timeToResults: "3-6 months", action: "2-3 answers/week on high-view questions. 'What is the best AI contract review tool?' feeds directly into ChatGPT/Gemini/Perplexity answers." },
   { platform: "Facebook", priority: "SKIP", canBringClients: "No", weeklyHours: "0", timeToResults: "N/A", action: "GCs don't research $60-80K software on Facebook. Only exception: retargeting ads later." },
@@ -124,11 +124,11 @@ export const marketData = {
     { stat: "78% plan to bring more contract work in-house", source: "Moving away from outside counsel" },
   ],
   barriers: [
-    { barrier: "80% cite accuracy concerns", ourAnswer: "11 specialized agents + confidence scoring" },
+    { barrier: "80% cite accuracy concerns", ourAnswer: "18 specialized domain analysts + confidence scoring" },
     { barrier: "62% stalled by data security fears", ourAnswer: "Customer-cloud deployment, data never leaves" },
     { barrier: "66% worried about IP/confidentiality", ourAnswer: "Attorney-client privilege preserved" },
     { barrier: "95% of AI pilots fail at integration", ourAnswer: "8-10 week implementation with 3-4 engineers" },
-    { barrier: "40% of AI agent projects fail by 2027", ourAnswer: "Production-proven on LangGraph + Google ADK" },
+    { barrier: "40% of AI agent projects fail by 2027", ourAnswer: "Production-proven multi-agent architecture" },
   ],
   costData: [
     { metric: "Top firm hourly rates", value: "$1,000+/hour" },

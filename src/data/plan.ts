@@ -272,7 +272,7 @@ export const blogPlan: BlogPlan[] = [
   },
   {
     id: "blog-5",
-    title: "Multi-Agent AI for Contract Review: Why 11 Specialists Beat 1 Generic AI",
+    title: "Multi-Agent AI for Contract Review: Why 18 Specialists Beat 1 Generic AI",
     words: 2500,
     week: 6,
     keyword: "multi-agent AI contract review",
@@ -1099,7 +1099,7 @@ export const weeklyPlan: WeekData[] = [
       },
       {
         id: "w6-s1",
-        title: "Write Blog #5: Multi-Agent AI (11 Specialists)",
+        title: "Write Blog #5: Multi-Agent AI (18 Specialists)",
         description: "2,500 words. Deep technical content explaining the architecture for a business audience. Second-strongest unique positioning. Analogy: 11 specialist doctors > 1 generalist.",
         assignee: "Saqlain",
         week: 6,
@@ -1133,7 +1133,7 @@ export const weeklyPlan: WeekData[] = [
       {
         id: "w6-d1",
         title: "Architecture diagram + carousel + comparison page graphics",
-        description: "Create the '11 agents' architecture diagram (reusable across website, LinkedIn, sales deck). LinkedIn carousel from multi-agent blog. Design Paralegent vs LegalOn page graphics.",
+        description: "Create the '18 agents' architecture diagram (reusable across website, LinkedIn, sales deck). LinkedIn carousel from multi-agent blog. Design Paralegent vs LegalOn page graphics.",
         assignee: "Asad",
         week: 6,
         day: "Mon-Fri",

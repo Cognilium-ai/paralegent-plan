@@ -349,7 +349,7 @@ export const weeklyPlan: WeekData[] = [
       },
       {
         id: "w6-d2", title: "Architecture diagram + YouTube video + Shorts + 2 carousels", assignee: "Asad", week: 6, day: "Wed-Fri", hours: 14, priority: "P0", status: "not_started", phase: 3, category: "Content",
-        description: "Create the '11 agents' architecture diagram (reusable across everything).\nYouTube: 'Data Sovereignty in Legal AI' (from Blog #5), Veo 3.\n2 Shorts → IG + TikTok + FB.\n2 LinkedIn carousels from Blogs #10 + #11.",
+        description: "Create the '18 agents' architecture diagram (reusable across everything).\nYouTube: 'Data Sovereignty in Legal AI' (from Blog #5), Veo 3.\n2 Shorts → IG + TikTok + FB.\n2 LinkedIn carousels from Blogs #10 + #11.",
         salesConnection: "Architecture diagram = single most reused visual. YouTube builds authority.", deliverable: "Architecture diagram + YouTube video + 2 Shorts + 2 carousels + Reels + TikToks", funnelStage: "demo",
       },
     ],

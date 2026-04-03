@@ -208,7 +208,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "a-d3-4",
         title: "Create YouTube Short #2 from Blog #2 (Veo 3)",
-        description: "Title: 'Watch AI Redline a Contract in Real-Time'\n60 seconds.\n\nScript from Content Factory:\n• Hook (0-3 sec): 'Watch 11 AI agents redline a contract in real-time'\n• Body (3-40 sec): Upload contract → agents activate → RED clause → confidence score → revision\n• Close (40-60 sec): 'From 30 hours to 30 minutes. Link in bio.'\n\nCreate with Veo 3.",
+        description: "Title: 'Watch AI Redline a Contract in Real-Time'\n60 seconds.\n\nScript from Content Factory:\n• Hook (0-3 sec): 'Watch 18 AI agents redline a contract in real-time'\n• Body (3-40 sec): Upload contract → agents activate → RED clause → confidence score → revision\n• Close (40-60 sec): 'From 30 hours to 30 minutes. Link in bio.'\n\nCreate with Veo 3.",
         hours: 3,
         category: "YouTube Short (Veo 3)",
         deliverable: "60-sec YouTube Short #2 uploaded",
@@ -225,7 +225,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "s-d4-1",
         title: "Write LinkedIn Article #2: '11 AI Agents vs 1 Generic AI: Why Specialization Wins'",
-        description: "1,200 words. Published under Mudassir's profile.\n\nContent:\n• Would you want 1 generalist doctor or 11 specialists for a complex diagnosis?\n• How single-LLM fails: context window limits, no specialization, inconsistent outputs\n• Multi-agent architecture: each agent expert in one area\n• The orchestrator: compares findings, resolves conflicts, prioritizes\n• Why this matters for contract review specifically\n• CTA: connect or demo\n\nLinkedIn articles are indexed by Google and cited by AI engines.",
+        description: "1,200 words. Published under Mudassir's profile.\n\nContent:\n• Would you want 1 generalist doctor or 18 specialists for a complex diagnosis?\n• How single-LLM fails: context window limits, no specialization, inconsistent outputs\n• Multi-agent architecture: each agent expert in one area\n• The orchestrator: compares findings, resolves conflicts, prioritizes\n• Why this matters for contract review specifically\n• CTA: connect or demo\n\nLinkedIn articles are indexed by Google and cited by AI engines.",
         hours: 4,
         category: "LinkedIn Article",
         deliverable: "LinkedIn article #2 published on Mudassir's profile",
@@ -249,7 +249,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "s-d4-4",
         title: "LinkedIn Company Page: Write 3 posts for the week",
-        description: "3 posts for Paralegent company page:\n1. Share Blog #1 with company perspective\n2. Share Blog #2 with 'how it works' angle\n3. Product insight: behind-the-scenes of 11 agents\n\nShorter than personal posts. Professional tone. Include demo CTA.",
+        description: "3 posts for Paralegent company page:\n1. Share Blog #1 with company perspective\n2. Share Blog #2 with 'how it works' angle\n3. Product insight: behind-the-scenes of 18 agents\n\nShorter than personal posts. Professional tone. Include demo CTA.",
         hours: 1,
         category: "LinkedIn",
         deliverable: "3 company page posts scheduled",
@@ -344,7 +344,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "a-d5-3",
         title: "Design 'Paralegent At A Glance' Product Summary Sheet",
-        description: "1-page product summary — the post-demo leave-behind.\n\nContent:\n• Logo + tagline at top\n• What it is: 1-paragraph description\n• How it works: 3-step visual (Upload Rulebook → AI Reviews → Redlines in Word)\n• Key numbers: 11 agents, 2-8 min review, 40-50 redlines, 80-150 rulebook terms\n• Differentiators: Customer-cloud, LLM-agnostic, GREEN/ORANGE/RED, one-time license\n• CTA: Request a Demo\n\nReplace the 'let me send you more info' dead end with something concrete.",
+        description: "1-page product summary — the post-demo leave-behind.\n\nContent:\n• Logo + tagline at top\n• What it is: 1-paragraph description\n• How it works: 3-step visual (Upload Rulebook → AI Reviews → Redlines in Word)\n• Key numbers: 18 agents, 2-8 min review, 40-50 redlines, 80-150 rulebook terms\n• Differentiators: Customer-cloud, LLM-agnostic, GREEN/ORANGE/RED, one-time license\n• CTA: Request a Demo\n\nReplace the 'let me send you more info' dead end with something concrete.",
         hours: 2,
         category: "Sales Asset",
         deliverable: "'At A Glance' product summary PDF",
@@ -389,7 +389,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "a-d6-1",
         title: "Finish Blog #4: Multi-Agent AI vs Single LLM",
-        description: "You drafted 60% on Friday. Finish:\n• Complete comparison table (8 dimensions)\n• Real-world example: how 11 agents review an 80-page MSA\n• The architecture: LangGraph + Google ADK explanation for business audience\n• FAQ (3 questions)\n• Final review + publish",
+        description: "You drafted 60% on Friday. Finish:\n• Complete comparison table (8 dimensions)\n• Real-world example: how 18 agents review an 80-page MSA\n• The architecture: LangGraph + Google ADK explanation for business audience\n• FAQ (3 questions)\n• Final review + publish",
         hours: 4,
         category: "Blog",
         deliverable: "Blog #4 published on website",
@@ -397,7 +397,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "a-d6-2",
         title: "Create LinkedIn Carousel from Blog #3 (7 slides) + Repurpose Blog #4",
-        description: "Carousel from Blog #3: 'Your SaaS AI Tool Has Access to All Your Contracts. Should It?'\n7 slides — data sovereignty visual.\n\nRepurpose Blog #4:\n1. LinkedIn post Mudassir — 11 specialists vs 1 generalist analogy\n2. LinkedIn post Ali — technical angle, multi-agent architecture\n3. Twitter thread (5 tweets)\n4. Facebook post",
+        description: "Carousel from Blog #3: 'Your SaaS AI Tool Has Access to All Your Contracts. Should It?'\n7 slides — data sovereignty visual.\n\nRepurpose Blog #4:\n1. LinkedIn post Mudassir — 18 specialists vs 1 generalist analogy\n2. LinkedIn post Ali — technical angle, multi-agent architecture\n3. Twitter thread (5 tweets)\n4. Facebook post",
         hours: 5,
         category: "Repurposing",
         deliverable: "1 carousel + 2 LinkedIn posts + 1 Twitter thread + 1 FB post",
@@ -440,7 +440,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "a-d7-1",
         title: "Create LinkedIn Carousel from Blog #4 (7 slides)",
-        description: "7 slides on multi-agent AI:\nSlide 1: 'Why 11 AI Specialists Beat 1 Generic AI for Contracts'\nSlide 2: How single LLM fails (context window, no specialization)\nSlide 3: 11 agents — each expert in their area\nSlide 4: How the orchestrator works\nSlide 5: Real example — 80-page MSA\nSlide 6: Results — 40-50 redlines with confidence\nSlide 7: CTA",
+        description: "7 slides on multi-agent AI:\nSlide 1: 'Why 11 AI Specialists Beat 1 Generic AI for Contracts'\nSlide 2: How single LLM fails (context window, no specialization)\nSlide 3: 18 agents — each expert in their area\nSlide 4: How the orchestrator works\nSlide 5: Real example — 80-page MSA\nSlide 6: Results — 40-50 redlines with confidence\nSlide 7: CTA",
         hours: 2,
         category: "LinkedIn Carousel",
         deliverable: "7-slide carousel for Blog #4",
