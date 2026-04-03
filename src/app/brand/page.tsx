@@ -294,37 +294,136 @@ Unlike SaaS contract review tools, Paralegent deploys directly in the customer's
             <LinkBlock label="TikTok" url="https://www.tiktok.com/@paralegentai" />
             <LinkBlock label="Pinterest" url="https://www.pinterest.com/paralegentai/" />
 
-            {/* Founder Info */}
-            <h2 className="text-lg font-bold text-[#042729] mb-4 mt-8">Founder</h2>
+            {/* ══════════ FOUNDER PROFILE ══════════ */}
+            <div className="mt-8 mb-4 bg-[#042729] rounded-xl p-4">
+              <h2 className="text-lg font-bold text-[#F8F5EE]">Founder Profile — Mudassir Marwat</h2>
+              <p className="text-xs text-[#F8F5EE]/60">Complete profile for G2, Crunchbase, LinkedIn, and all platform registrations</p>
+            </div>
 
-            <CopyBlock label="Name" text="Mudassir Marwat" />
-            <CopyBlock label="Title" text="Founder & CEO, Paralegent AI" />
-            <CopyBlock label="Bio" text="Builder-first founder with 100+ production AI systems and 50+ GenAI deployments across enterprise clients. Built Paralegent AI to bring production-grade AI to contract due diligence — helping legal teams review master agreements in 30 minutes instead of 30 hours, with data that never leaves their cloud." multiline />
+            <CopyBlock label="Full Name" text="Mudassir Marwat" />
+            <CopyBlock label="Title (for Paralegent)" text="Founder & CEO, Paralegent AI" />
+            <CopyBlock label="Title (for Cognilium)" text="Founder & CEO, Cognilium AI" />
+            <CopyBlock label="Title (combined)" text="Founder & CEO — Cognilium AI | Creator of Paralegent AI" />
 
+            <CopyBlock label="Email (Personal)" text="m.mudassir2015@gmail.com" />
+            <CopyBlock label="Email (Work)" text="mudassir@cognilium.ai" />
+
+            <CopyBlock
+              label="Short Bio (for platform profiles)"
+              text="Tech entrepreneur and AI consultant with nearly a decade of experience in AI product development. Founder & CEO of Cognilium AI. Built 100+ production AI systems and 50+ GenAI deployments across enterprise clients in US, UAE, and Pakistan. Creator of Paralegent AI — bringing production-grade AI to contract due diligence, helping legal teams review master agreements in 30 minutes instead of 30 hours."
+              multiline
+            />
+
+            <CopyBlock
+              label="Long Bio (for detailed profiles)"
+              text={`Mudassir Marwat is a tech entrepreneur and AI consultant with nearly a decade of experience in AI product development, specializing in Generative AI, data engineering, cloud architectures, and AI-driven automation. As Founder & CEO of Cognilium AI (est. 2019), he combines an engineer-first approach with a builder mindset — focused on outcomes over features, reliability over theatrics, and execution over hype.
+
+Under his leadership, Cognilium AI has delivered 100+ production AI systems and 50+ GenAI deployments across enterprise clients in US, UAE, and Pakistan, maintaining a 96% client satisfaction rate and 312% average ROI for clients.
+
+Mudassir has built 4 flagship AI products: Paralegent AI (agentic contract due diligence), VectorHire (AI recruiting platform), VORTA (AI customer support), and ProspectVox AI (voice AI sales automation).
+
+Paralegent AI, his latest product, deploys 18 specialized AI agents that perform contract due diligence on master agreements — analyzing every clause against a company's rulebook and classifying each one as GREEN, ORANGE, or RED. The system deploys directly in the customer's cloud, and data never leaves their environment.
+
+His philosophy: "If it doesn't run in production, it doesn't count. We built Paralegent with the same reliability standards that power our 100+ production AI systems."`}
+              multiline
+            />
+
+            <CopyBlock
+              label="Crunchbase Bio (Third Person)"
+              text={`Mudassir Marwat is the Founder & CEO of Cognilium AI and the creator of Paralegent AI. He is a tech entrepreneur with nearly a decade of experience in AI product development, Generative AI, and enterprise software. Under his leadership, Cognilium AI has delivered 100+ production AI systems and 50+ GenAI deployments across enterprise clients globally, with a 96% client satisfaction rate.
+
+Marwat has built four flagship AI products: Paralegent AI (agentic contract due diligence), VectorHire (AI recruiting), VORTA (AI customer support), and ProspectVox AI (voice AI sales). Paralegent AI deploys 18 specialized domain analysts that review contracts against a company's rulebook inside Microsoft Word, with data that never leaves the customer's cloud environment.
+
+He operates across the US, UAE, and Pakistan, serving 12+ industries including legal tech, fintech, healthcare, and manufacturing.`}
+              multiline
+            />
+
+            <CopyBlock
+              label="G2 / Product Profile — Founder Description"
+              text="Mudassir Marwat, Founder & CEO. Nearly a decade building production AI systems. 100+ AI deployments, 50+ GenAI systems, 96% client satisfaction rate. Built Paralegent AI to solve the contract review bottleneck — 18 specialized agents that perform due diligence on master agreements in 30 minutes, deployed in the customer's cloud."
+              multiline
+            />
+
+            <CopyBlock
+              label="Key Quote #1"
+              text="If it doesn't run in production, it doesn't count."
+            />
+            <CopyBlock
+              label="Key Quote #2"
+              text="I kept seeing the same pattern: teams wanted AI, but got slide decks and prototypes that never shipped. So I built."
+            />
+            <CopyBlock
+              label="Key Quote #3"
+              text="We bring a founder's mindset into every build. We don't just deliver features; we deliver outcomes."
+            />
+
+            <h3 className="text-sm font-bold text-[#042729] mt-6 mb-3">Founder Stats (use in content)</h3>
+            <CopyBlock label="Experience" text="Nearly a decade in AI product development" />
+            <CopyBlock label="Production AI Systems" text="100+ delivered" />
+            <CopyBlock label="GenAI Deployments" text="50+" />
+            <CopyBlock label="Client Satisfaction" text="96% CSAT" />
+            <CopyBlock label="Avg Client ROI" text="312%" />
+            <CopyBlock label="Flagship Products Built" text="4 (Paralegent AI, VectorHire, VORTA, ProspectVox AI)" />
+            <CopyBlock label="Industries Served" text="12+ (Legal Tech, FinTech, Healthcare, E-commerce, SaaS, Real Estate, Manufacturing, Logistics, Insurance, EdTech, Energy, Government)" />
+            <CopyBlock label="Regions" text="US, UAE, Pakistan" />
+
+            <h3 className="text-sm font-bold text-[#042729] mt-6 mb-3">Products by Mudassir (for credibility)</h3>
+            <CopyBlock label="Paralegent AI" text="Agentic contract due diligence — 18 specialized AI agents review master agreements inside Microsoft Word, deployed in customer's cloud" />
+            <CopyBlock label="VectorHire" text="AI recruiting platform — precision matching, reduced hiring time by 60%, high-volume daily candidate screening" />
+            <CopyBlock label="VORTA" text="AI customer support — LLM-powered GenAI assistant, high first-call resolution, multi-million document RAG systems" />
+            <CopyBlock label="ProspectVox AI" text="Voice AI sales automation — multi-agent system for intelligent outbound calling at scale" />
+
+            <h3 className="text-sm font-bold text-[#042729] mt-6 mb-3">Founder Social Links</h3>
             <LinkBlock label="LinkedIn (Personal)" url="https://www.linkedin.com/in/mudassir-marwat/" />
             <LinkBlock label="X / Twitter (Personal)" url="https://x.com/mudassir_cog" />
             <LinkBlock label="YouTube (Personal)" url="https://www.youtube.com/@iammudassir_cognilium_ai" />
             <LinkBlock label="Medium" url="https://medium.com/@Mudassir.Marwat" />
+            <LinkBlock label="Instagram (Personal)" url="https://www.instagram.com/mudassirmarwat/" />
+            <LinkBlock label="Facebook (Personal)" url="https://www.facebook.com/mudassir.marwat" />
             <LinkBlock label="Reddit" url="https://www.reddit.com/user/mudassirmarwat/" />
+            <LinkBlock label="Upwork" url="https://www.upwork.com/freelancers/~01812b2392115e495e" />
+            <LinkBlock label="F6S" url="https://www.f6s.com/member/mudassir-marwat" />
+            <LinkBlock label="Cognilium Founder Page" url="https://cognilium.ai/founder" />
+            <LinkBlock label="Booking Link (Meetings)" url="https://outlook.office.com/bookwithme/user/62978aeac3e34ac29cf4a3e35e9823ac@cognilium.ai/meetingtype/HKCHzBfhXUCW0P6D9Pmvmg2?anonymous&ep=mlink" />
 
-            {/* Parent Company */}
-            <h2 className="text-lg font-bold text-[#042729] mb-4 mt-8">Parent Company</h2>
+            {/* ══════════ PARENT COMPANY ══════════ */}
+            <div className="mt-8 mb-4 bg-[#042729] rounded-xl p-4">
+              <h2 className="text-lg font-bold text-[#F8F5EE]">Parent Company — Cognilium AI</h2>
+              <p className="text-xs text-[#F8F5EE]/60">Company behind Paralegent AI</p>
+            </div>
 
             <CopyBlock label="Name" text="Cognilium AI" />
             <CopyBlock label="Founded" text="2019" />
             <CopyBlock label="Tagline" text="AI That Works, Scales & Matters" />
+            <CopyBlock label="Description" text="Cognilium AI is an AI engineering company that builds production-grade AI systems for enterprises. Founded in 2019 by Mudassir Marwat, the company has delivered 100+ AI projects and 50+ GenAI deployments across US, UAE, and Pakistan, with a 96% client satisfaction rate and 312% average ROI for clients." multiline />
             <LinkBlock label="Website" url="https://cognilium.ai" />
+            <LinkBlock label="LinkedIn (Company)" url="https://www.linkedin.com/company/cognilium-ai/" />
+            <LinkBlock label="X / Twitter (Company)" url="https://x.com/Cognilium_ai" />
+            <LinkBlock label="YouTube (Company)" url="https://www.youtube.com/@Cogniliumai" />
+            <LinkBlock label="Facebook (Company)" url="https://www.facebook.com/Cognilium" />
+            <LinkBlock label="Instagram (Company)" url="https://www.instagram.com/cognilium.ai/" />
             <CopyBlock label="Stats" text="100+ projects | 50+ GenAI deployments | 96% CSAT | 312% avg ROI | 99.9% uptime" />
-            <CopyBlock label="Flagship Products" text="VectorHire, VORTA, ProProspect, ProspectVox, Legal Lens AI" />
+            <CopyBlock label="Flagship Products" text="Paralegent AI, VectorHire, VORTA, ProspectVox AI" />
+            <CopyBlock label="Team Size" text="10-50 AI engineering experts" />
+            <CopyBlock label="Regions" text="US, UAE, Pakistan" />
+            <CopyBlock label="Industries" text="12+ industries including Legal Tech, FinTech, Healthcare, E-commerce, SaaS, Real Estate, Manufacturing, Logistics" />
 
-            {/* Company Details */}
-            <h2 className="text-lg font-bold text-[#042729] mb-4 mt-8">Company Details</h2>
+            {/* ══════════ PARALEGENT COMPANY DETAILS ══════════ */}
+            <div className="mt-8 mb-4 bg-[#042729] rounded-xl p-4">
+              <h2 className="text-lg font-bold text-[#F8F5EE]">Paralegent AI — Company Details</h2>
+            </div>
 
+            <CopyBlock label="Company Name" text="Paralegent AI" />
+            <CopyBlock label="Parent Company" text="Cognilium AI" />
             <CopyBlock label="Founded" text="2024" />
             <CopyBlock label="Headquarters" text="Dubai, UAE" />
+            <CopyBlock label="Website" text="https://paralegent.ai" />
             <CopyBlock label="Email (General)" text="info@paralegent.ai" />
             <CopyBlock label="Email (Sales)" text="sales@paralegent.ai" />
             <CopyBlock label="Email (Support)" text="support@paralegent.ai" />
+            <CopyBlock label="Email (Hello)" text="hello@paralegent.ai" />
+            <CopyBlock label="Founder Email (Personal)" text="m.mudassir2015@gmail.com" />
+            <CopyBlock label="Founder Email (Work)" text="mudassir@cognilium.ai" />
 
             {/* Hashtags */}
             <h2 className="text-lg font-bold text-[#042729] mb-4 mt-8">Hashtags</h2>
