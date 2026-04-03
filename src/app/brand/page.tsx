@@ -67,7 +67,7 @@ export default function BrandPage() {
           <p className="text-[#F8F5EE]/70 mt-1">Taglines, descriptions, links, logos, colors. Click &quot;Copy&quot; on anything.</p>
         </div>
       </header>
-      <Nav active="content" />
+      <Nav active="brand" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

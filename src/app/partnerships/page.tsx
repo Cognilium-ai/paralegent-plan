@@ -374,7 +374,7 @@ export default function PartnershipsPage() {
           <p className="text-[#F8F5EE]/70 mt-1">Enterprise-grade partnerships that drive deals. {partnerships.length} opportunities identified.</p>
         </div>
       </header>
-      <Nav active="assets" />
+      <Nav active="partnerships" />
 
       {/* Summary */}
       <div className="bg-white border-b border-gray-200">

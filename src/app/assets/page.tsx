@@ -309,7 +309,7 @@ export default function AssetsPage() {
           <p className="text-[#F8F5EE]/70 mt-1">Everything we need to collect and create before outreach starts. {needed} of {salesAssets.length} still needed.</p>
         </div>
       </header>
-      <Nav active="content" />
+      <Nav active="assets" />
 
       {/* Summary */}
       <div className="bg-white border-b border-gray-200">

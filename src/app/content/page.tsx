@@ -244,7 +244,7 @@ export default function ContentPage() {
   return (
     <main>
       <Header />
-      <Nav active="research" />
+      <Nav active="content" />
       <PlaybooksSection />
       <RepurposingSection />
       <Week1BlogsSection />

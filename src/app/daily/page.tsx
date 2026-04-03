@@ -141,7 +141,7 @@ export default function DailyPage() {
           <p className="text-[#F8F5EE]/70 mt-1">Day-by-day breakdown. Open your day, follow the tasks, deliver by end of day.</p>
         </div>
       </header>
-      <Nav active="content" />
+      <Nav active="daily" />
 
       {/* Quick Stats */}
       <div className="bg-white border-b border-gray-200">
