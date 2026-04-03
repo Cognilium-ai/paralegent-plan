@@ -174,6 +174,40 @@ Unlike SaaS contract review tools, Paralegent deploys directly in the customer's
             <CopyBlock label="Crunchbase Categories" text="Legal Tech, Artificial Intelligence, Enterprise Software, Contract Management" />
             <CopyBlock label="Product Hunt Tags" text="Legal Tech, AI, Developer Tools, Productivity, Enterprise" />
             <CopyBlock label="AlternativeTo — Tag As Alternative To" text="LegalOn, Spellbook, Harvey AI, Luminance, Ironclad" />
+
+            {/* Proprietary Terms */}
+            <h2 className="text-lg font-bold text-[#042729] mb-4 mt-8">Proprietary Terms (Use Consistently)</h2>
+
+            <CopyBlock label="Product Category" text="Agentic Contract Due Diligence" />
+            <CopyBlock label="Core Process" text="Playbook-Driven Contract Redlining" />
+            <CopyBlock label="Word Integration" text="Word-Native AI Review" />
+            <CopyBlock label="AI Team" text="11 AI Specialists + Orchestrator Agent" />
+            <CopyBlock label="Classification System" text="THREE-TIER: GREEN (favorable) / ORANGE (conditional) / RED (unacceptable)" />
+            <CopyBlock label="Matching" text="15-20 Second Contract Matching" />
+            <CopyBlock label="Output" text="Compliance Explanations — rationale for every flagged clause with suggested replacement language" />
+
+            {/* Contract Types */}
+            <h2 className="text-lg font-bold text-[#042729] mb-4 mt-8">Contract Types We Cover</h2>
+
+            <CopyBlock label="Tier 1 (Master Agreements)" text="Master Sales Agreements (MSA), Master Purchase Agreements (MPA), Master Service Agreements" />
+            <CopyBlock label="Tier 2 (Sub-Contracts)" text="Sales Contracts & Orders, Purchase Contracts & Orders, Statements of Work (SOWs) & Service Contracts" />
+            <CopyBlock label="Full List (copy for platform profiles)" text="Master Sales Agreements (MSA), Master Purchase Agreements (MPA), Master Service Agreements, Sales Contracts & Orders, Purchase Contracts & Orders, Statements of Work (SOWs) & Service Contracts — including cross-validation of subcontracts against both the master agreement terms and the rulebook." multiline />
+
+            {/* Industries */}
+            <h2 className="text-lg font-bold text-[#042729] mb-4 mt-8">Industries (from Landing Page)</h2>
+
+            <CopyBlock label="All 8 Industries" text="Manufacturing & Industrial, Retail & Consumer Goods, Technology & Software, Energy Oil & Gas, Transportation & Logistics, Pharmaceuticals & Healthcare, Construction & Engineering, Financial Services & Insurance" multiline />
+            <CopyBlock label="Short Version (for platform profiles)" text="Manufacturing, Retail, Technology, Energy, Transportation, Healthcare, Construction, Financial Services" />
+
+            {/* 5 Differentiators */}
+            <h2 className="text-lg font-bold text-[#042729] mb-4 mt-8">5 Differentiators (from Landing Page)</h2>
+
+            <CopyBlock label="1. Deployed in Your Cloud" text="Deployed in the customer's cloud — their data never leaves their environment." />
+            <CopyBlock label="2. Custom Rulebook Architecture" text="Not generic playbooks, but deeply structured rules with rationale, examples, and confidence scoring." />
+            <CopyBlock label="3. Multi-Agent Orchestration" text="Specialized agents per contract section with an orchestrator agent that resolves conflicts and ranks by confidence." />
+            <CopyBlock label="4. Accelerator Model" text="Not a subscription; a production-grade AI accelerator deployed, customized, and operated by your team." />
+            <CopyBlock label="5. Enterprise-Grade Engineering" text="Built on open, auditable AI frameworks — not black-box proprietary models." />
+            <CopyBlock label="All 5 (paragraph format)" text="Paralegent.ai takes a fundamentally different approach from SaaS contract AI tools: (1) Deployed in the customer's cloud — data never leaves their environment. (2) Custom rulebook architecture — deeply structured rules with rationale, examples, and confidence scoring. (3) Multi-agent orchestration — 11 specialized agents per contract section with an orchestrator that resolves conflicts. (4) Accelerator model — a production-grade system deployed, customized, and operated by your team. (5) Enterprise-grade engineering — built on open, auditable AI frameworks." multiline />
           </div>
 
           {/* RIGHT COLUMN */}
@@ -228,7 +262,7 @@ Unlike SaaS contract review tools, Paralegent deploys directly in the customer's
 
             <CopyBlock label="Name" text="Mudassir Marwat" />
             <CopyBlock label="Title" text="Founder & CEO, Paralegent AI" />
-            <CopyBlock label="Bio" text="Builder-first founder with 100+ production AI systems and 50+ GenAI deployments. Built Paralegent AI to bring the same production-grade reliability that powers VectorHire, VORTA, and ProProspect to contract review." multiline />
+            <CopyBlock label="Bio" text="Builder-first founder with 100+ production AI systems and 50+ GenAI deployments across enterprise clients. Built Paralegent AI to bring production-grade AI to contract due diligence — helping legal teams review master agreements in 30 minutes instead of 30 hours, with data that never leaves their cloud." multiline />
 
             <LinkBlock label="LinkedIn (Personal)" url="https://www.linkedin.com/in/mudassir-marwat/" />
             <LinkBlock label="X / Twitter (Personal)" url="https://x.com/mudassir_cog" />
@@ -258,9 +292,9 @@ Unlike SaaS contract review tools, Paralegent deploys directly in the customer's
             {/* Hashtags */}
             <h2 className="text-lg font-bold text-[#042729] mb-4 mt-8">Hashtags</h2>
 
-            <CopyBlock label="LinkedIn Hashtags (use 3-5 per post)" text="#LegalTech #AIContractReview #ContractManagement #LegalOps #DataSovereignty #EnterpriseAI #MultiAgentAI #ContractReview #LegalAI #InHouseCounsel" multiline />
-            <CopyBlock label="Instagram / TikTok Hashtags" text="#LegalTech #AI #ContractReview #Enterprise #LegalAI #DataSovereignty #MultiAgent #LegalOps #Tech #Startup" multiline />
-            <CopyBlock label="YouTube Tags" text="AI contract review, contract review automation, legal AI, AI for legal teams, contract redlining AI, multi-agent AI, Paralegent AI, data sovereignty legal" multiline />
+            <CopyBlock label="LinkedIn Hashtags (use 3-5 per post)" text="#LegalTech #ContractDueDiligence #AIContractReview #ContractManagement #LegalOps #DataSovereignty #GeneralCounsel #InHouseCounsel #EnterpriseAI #LegalAI" multiline />
+            <CopyBlock label="Instagram / TikTok Hashtags" text="#LegalTech #ContractDueDiligence #AI #ContractReview #Enterprise #LegalAI #DataSovereignty #GeneralCounsel #LegalOps #MultiAgent" multiline />
+            <CopyBlock label="YouTube Tags" text="AI contract due diligence, AI contract review, contract redlining AI, legal AI, AI for general counsel, AI for legal teams, multi-agent AI, data sovereignty legal, contract due diligence automation, Paralegent AI, legal due diligence" multiline />
           </div>
         </div>
       </div>
