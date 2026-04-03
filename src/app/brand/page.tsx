@@ -215,17 +215,40 @@ Unlike SaaS contract review tools, Paralegent deploys directly in the customer's
             {/* Logos */}
             <h2 className="text-lg font-bold text-[#042729] mb-4">Logos (Click to Download)</h2>
 
-            <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="grid grid-cols-2 gap-4 mb-4">
               <a href="/logo.png" download className="bg-white rounded-xl border border-gray-200 p-6 flex flex-col items-center gap-3 hover:shadow-md transition-shadow">
                 <Image src="/logo.png" alt="Paralegent AI Logo" width={200} height={60} className="object-contain" />
-                <span className="text-xs text-gray-500">logo.png (dark bg ready)</span>
+                <span className="text-xs text-gray-500">logo.png — horizontal</span>
                 <span className="text-xs text-[#FF4800] font-medium">Click to Download</span>
               </a>
               <a href="/logo-white.png" download className="bg-[#042729] rounded-xl border border-gray-200 p-6 flex flex-col items-center gap-3 hover:shadow-md transition-shadow">
                 <Image src="/logo-white.png" alt="Paralegent AI Logo White" width={200} height={60} className="object-contain" />
-                <span className="text-xs text-gray-400">logo-white.png (light bg ready)</span>
+                <span className="text-xs text-gray-400">logo-white.png — horizontal (dark bg)</span>
                 <span className="text-xs text-[#FF4800] font-medium">Click to Download</span>
               </a>
+            </div>
+
+            <h3 className="text-sm font-bold text-[#042729] mb-3">Square Logos (for platform profiles)</h3>
+            <div className="grid grid-cols-3 gap-4 mb-6">
+              <a href="/logo-icon-red.jpg" download className="bg-white rounded-xl border-2 border-[#FF4800] p-4 flex flex-col items-center gap-3 hover:shadow-md transition-shadow">
+                <Image src="/logo-icon-red.jpg" alt="Paralegent AI Icon — Profile Picture" width={120} height={120} className="object-contain rounded-lg" />
+                <span className="text-xs text-gray-500 text-center">Profile Icon (use this for ALL social platform profile pictures)</span>
+                <span className="text-xs text-[#FF4800] font-medium">Download</span>
+              </a>
+              <a href="/logo-square-white.jpg" download className="bg-white rounded-xl border border-gray-200 p-4 flex flex-col items-center gap-3 hover:shadow-md transition-shadow">
+                <Image src="/logo-square-white.jpg" alt="Paralegent AI Square Logo White BG" width={120} height={120} className="object-contain rounded-lg" />
+                <span className="text-xs text-gray-500 text-center">Square + text (white bg)</span>
+                <span className="text-xs text-[#FF4800] font-medium">Download</span>
+              </a>
+              <a href="/logo-square-light.jpg" download className="bg-gray-50 rounded-xl border border-gray-200 p-4 flex flex-col items-center gap-3 hover:shadow-md transition-shadow">
+                <Image src="/logo-square-light.jpg" alt="Paralegent AI Square Logo Light BG" width={120} height={120} className="object-contain rounded-lg" />
+                <span className="text-xs text-gray-500 text-center">Square + text (light bg)</span>
+                <span className="text-xs text-[#FF4800] font-medium">Download</span>
+              </a>
+            </div>
+
+            <div className="bg-amber-50 rounded-lg border border-amber-200 p-3 mb-6">
+              <p className="text-xs text-amber-800"><span className="font-bold">Profile Picture Guide:</span> Use the red &quot;P&quot; icon (logo-icon-red.jpg) as the profile picture on ALL platforms: LinkedIn, YouTube, X, Facebook, Instagram, TikTok, Pinterest, G2, Capterra, Crunchbase, Product Hunt, Medium, Reddit, Quora. Use the square logo with text for channel banners and cover images.</p>
             </div>
 
             {/* Brand Colors */}
