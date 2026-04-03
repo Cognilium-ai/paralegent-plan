@@ -89,7 +89,7 @@ export default function BrandPage() {
 
             <CopyBlock
               label="Short Description (for G2, Capterra, quick intros)"
-              text="Paralegent AI reviews your contracts against your company's rules and tells you exactly which clauses are risky, which need approval, and which are ready to sign — all inside Microsoft Word. 11 specialized AI agents work together to review an 80-page agreement in 30 minutes instead of 30 hours. Your data stays in your cloud. Not a subscription — one-time investment."
+              text="Paralegent AI reviews your contracts against your company's rules and tells you exactly which clauses are risky, which need approval, and which are ready to sign — all inside Microsoft Word. 11 specialized AI agents work together to review an 80-page agreement in 30 minutes instead of 30 hours. Deployed directly in your cloud, customized to your business rules, and operated by your team. Your data never leaves your environment."
               multiline
             />
 
@@ -105,9 +105,9 @@ RED — unacceptable, reject and replace
 
 The result? 40-50 precise redlines delivered inside Microsoft Word, each with a clear explanation of why it was flagged and suggested replacement language in your preferred terms. Your attorneys review the findings, not 80 pages.
 
-What makes us different: Paralegent deploys directly in your cloud (Azure, AWS, or GCP). Your contracts never touch our servers. Your data never leaves your environment. And it's a one-time investment, not another SaaS subscription.
+What makes us different: Paralegent deploys directly in your cloud — Azure, AWS, or GCP. Your contracts never touch our servers. Your data never leaves your environment. We customize the system to your business rules, integrate with your CLM tools, and your team operates it.
 
-30 hours of manual review becomes 30 minutes. Your team focuses on negotiation, not repetitive clause-matching.`}
+30 hours of manual review becomes 30 minutes. Your attorneys focus on negotiation, not repetitive clause-matching.`}
               multiline
             />
 
@@ -117,7 +117,7 @@ What makes us different: Paralegent deploys directly in your cloud (Azure, AWS, 
 
 Unlike SaaS contract review tools, Paralegent deploys in the customer's own cloud environment. Contract data never leaves the customer's infrastructure. The solution supports Azure, AWS, and GCP deployments and works with the customer's choice of language model.
 
-Paralegent reduces contract review time from 20-30 hours to approximately 30 minutes per master agreement, with 40-50 precise redlines per contract. The company operates on a one-time licensing model rather than recurring SaaS subscriptions.`}
+Paralegent reduces contract review time from 20-30 hours to approximately 30 minutes per master agreement, delivering 40-50 precise redlines per contract. The system is customized to each organization's legal positions and integrated with their existing CLM tools.`}
               multiline
             />
 
@@ -133,7 +133,7 @@ Paralegent reduces contract review time from 20-30 hours to approximately 30 min
 
             <CopyBlock
               label="Elevator Pitch (30 seconds)"
-              text="Your legal team spends 30 hours reviewing a single master agreement. Paralegent AI does it in 30 minutes. 11 specialized AI agents analyze every clause against your company's rules and flag what's risky, what needs approval, and what's ready to sign — all inside Microsoft Word. The difference? It runs in your cloud, not ours. Your data never leaves your environment. And it's a one-time investment, not another subscription."
+              text="Your legal team spends 30 hours reviewing a single master agreement. Paralegent AI does it in 30 minutes. 11 specialized AI agents analyze every clause against your company's rules and flag what's risky, what needs approval, and what's ready to sign — all inside Microsoft Word. It deploys directly in your cloud, customized to your business rules, operated by your team. Your data never leaves your environment."
               multiline
             />
 
