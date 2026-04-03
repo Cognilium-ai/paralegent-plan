@@ -106,7 +106,7 @@ export const weeklyPlan: WeekData[] = [
       // ── MUDASSIR ──
       {
         id: "w2-m1", title: "Record founder story video + start LinkedIn posting", assignee: "Mudassir", week: 2, day: "Mon", hours: 4, priority: "P0", status: "not_started", phase: 1, category: "Content",
-        description: "Record 2-min 'Why I Built Paralegent' — authentic, not scripted. Key: 50+ GenAI systems deployed, legal teams drowning, 11 specialized agents.\nStart posting on LinkedIn: 3-5 posts this week. Mix of text + share blog content.",
+        description: "Record 2-min 'Why I Built Paralegent' — authentic, not scripted. Key: 50+ GenAI systems deployed, legal teams drowning, 18 specialized agents.\nStart posting on LinkedIn: 3-5 posts this week. Mix of text + share blog content.",
         salesConnection: "Founder authenticity converts. Prospects see this when checking your profile.", deliverable: "Raw founder video → Asad edits + 3-5 LinkedIn posts published", funnelStage: "awareness",
       },
       {
@@ -154,7 +154,7 @@ export const weeklyPlan: WeekData[] = [
       // ── ASAD ──
       {
         id: "w2-d1", title: "Write Blog #4: Multi-Agent AI vs Single LLM", assignee: "Asad", week: 2, day: "Mon-Tue", hours: 10, priority: "P0", status: "not_started", phase: 1, category: "Blog",
-        description: "2,500 words. Keyword: 'multi-agent AI legal' (3-4K vol, Medium comp).\nCategory we can own. Analogy: 11 specialist doctors > 1 generalist.\nCover: What is multi-agent, how single LLM breaks, how orchestration works, comparison table (8 dimensions), real-world example (80-page MSA), architecture (LangGraph + ADK).\nJSON-LD: BlogPosting + FAQPage.",
+        description: "2,500 words. Keyword: 'multi-agent AI legal' (3-4K vol, Medium comp).\nCategory we can own. Analogy: 18 specialist doctors > 1 generalist.\nCover: What is multi-agent, how single LLM breaks, how orchestration works, comparison table (8 dimensions), real-world example (80-page MSA), architecture explained for business audience.\nJSON-LD: BlogPosting + FAQPage.",
         salesConnection: "Differentiates from EVERY competitor. Send to technical buyers (CIOs, CTOs).", deliverable: "Published blog", funnelStage: "demo", pillar: "Solution",
       },
       {
@@ -294,7 +294,7 @@ export const weeklyPlan: WeekData[] = [
       },
       {
         id: "w5-s1", title: "Write Blog #9: Can AI Review Contracts Accurately?", assignee: "Saqlain", week: 5, day: "Mon-Tue", hours: 8, priority: "P0", status: "not_started", phase: 3, category: "Blog",
-        description: "1,500 words. Answer post for GEO/AEO. Keyword: 'Can AI review contracts accurately?' (High vol).\nAddresses #1 buyer barrier (80% cite accuracy). Definition-first, direct answer in first 3 lines, then expand.\nInclude: confidence scoring, 11 specialized agents, comparison with generic AI accuracy.",
+        description: "1,500 words. Answer post for GEO/AEO. Keyword: 'Can AI review contracts accurately?' (High vol).\nAddresses #1 buyer barrier (80% cite accuracy). Definition-first, direct answer in first 3 lines, then expand.\nInclude: confidence scoring, 18 specialized agents, comparison with generic AI accuracy.",
         salesConnection: "AI engines pull answers from this. Perplexity, ChatGPT, Gemini will cite this.", deliverable: "Published blog", funnelStage: "awareness", pillar: "Education",
       },
       {
@@ -379,7 +379,7 @@ export const weeklyPlan: WeekData[] = [
       },
       {
         id: "w7-s2", title: "Repurpose Blogs #11 + #12 + Hacker News launch prep", assignee: "Saqlain", week: 7, day: "Wed-Fri", hours: 12, priority: "P0", status: "not_started", phase: 4, category: "Repurposing",
-        description: "Repurpose both blogs to ALL platforms (18 pieces).\nPrep Hacker News launch: Write 'Show HN' post — focus on TECHNICAL (LangGraph, multi-agent, 1536-dim semantic search), tell 'We built this because...' story. Draft in doc for Mudassir review.",
+        description: "Repurpose both blogs to ALL platforms (18 pieces).\nPrep Hacker News launch: Write 'Show HN' post — focus on TECHNICAL (multi-agent architecture, how 18 agents work together), tell 'We built this because...' story. Draft in doc for Mudassir review.",
         salesConnection: "HN launch can drive 5-15K visitors in 24 hours. Credibility + backlinks.", deliverable: "18 repurposed + HN post draft", funnelStage: "awareness",
       },
       {

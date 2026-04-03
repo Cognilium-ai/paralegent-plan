@@ -389,7 +389,7 @@ export const platformRegistrations = [
     longDesc: "",
     categories: "",
     why: "Richard Tromans (editor@artificiallawyer.com) covers every legal AI development. A feature here = instant credibility with GCs.",
-    steps: "1. Email Richard Tromans at editor@artificiallawyer.com\n2. Subject: 'First cloud-deployed multi-agent contract AI — 11 specialized agents'\n3. Offer hands-on demo\n4. Emphasize: data sovereignty, Word-native, not SaaS\n5. Follow up in 1 week if no response",
+    steps: "1. Email Richard Tromans at editor@artificiallawyer.com\n2. Subject: 'First cloud-deployed multi-agent contract AI — 18 specialized agents'\n3. Offer hands-on demo\n4. Emphasize: data sovereignty, Word-native, not SaaS\n5. Follow up in 1 week if no response",
   },
   {
     id: "pr-9",
@@ -404,7 +404,7 @@ export const platformRegistrations = [
     longDesc: "",
     categories: "",
     why: "Bob Ambrogi is the #1 legal tech blogger. A LawSites review drives massive legal tech traffic and credibility.",
-    steps: "1. Email Bob Ambrogi\n2. Offer exclusive hands-on product review\n3. Provide demo environment access\n4. Emphasize unique angles: 11 agents, cloud-deployed, rulebook depth\n5. Follow up in 1 week",
+    steps: "1. Email Bob Ambrogi\n2. Offer exclusive hands-on product review\n3. Provide demo environment access\n4. Emphasize unique angles: 18 agents, cloud-deployed, rulebook depth\n5. Follow up in 1 week",
   },
   {
     id: "pr-10",

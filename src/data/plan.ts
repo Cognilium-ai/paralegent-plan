@@ -460,7 +460,7 @@ export const weeklyPlan: WeekData[] = [
         id: "w1-s2",
         title: "Write Implementation Timeline one-pager",
         description:
-          "Visual timeline showing the 8-10 week implementation:\n\nWeek 1-2: Discovery & Rulebook Setup — Map existing contract positions, define GREEN/ORANGE/RED criteria per clause type\nWeek 3-4: Agent Configuration — Configure 11 specialized agents for customer's contract types (MSA, MPA, MServA)\nWeek 5-6: Integration & Testing — Deploy in customer's cloud, connect to LLM accounts, test against sample contracts\nWeek 7-8: Word Add-In Deployment — Install Word add-in for legal team, configure user permissions\nWeek 9-10: Go Live & Training — Parallel run with manual review, train attorneys, fine-tune confidence thresholds\n\nInclude: Team involved (3-4 Paralegent engineers + customer legal ops), customer effort required (10-15 hrs total from legal team for rulebook input).",
+          "Visual timeline showing the 8-10 week implementation:\n\nWeek 1-2: Discovery & Rulebook Setup — Map existing contract positions, define GREEN/ORANGE/RED criteria per clause type\nWeek 3-4: Agent Configuration — Configure 18 specialized agents for customer's contract types (MSA, MPA, MServA)\nWeek 5-6: Integration & Testing — Deploy in customer's cloud, connect to LLM accounts, test against sample contracts\nWeek 7-8: Word Add-In Deployment — Install Word add-in for legal team, configure user permissions\nWeek 9-10: Go Live & Training — Parallel run with manual review, train attorneys, fine-tune confidence thresholds\n\nInclude: Team involved (3-4 Paralegent engineers + customer legal ops), customer effort required (10-15 hrs total from legal team for rulebook input).",
         assignee: "Saqlain",
         week: 1,
         day: "Wed",
@@ -477,7 +477,7 @@ export const weeklyPlan: WeekData[] = [
         id: "w1-s3",
         title: "Rewrite Mudassir's LinkedIn profile + Write 2 LinkedIn articles",
         description:
-          "LINKEDIN PROFILE REWRITE:\n- Headline: 'Building AI that reviews contracts in your cloud, not ours | CEO @ Paralegent AI | 50+ GenAI Systems Deployed'\n- About: Founder story (why Paralegent exists), problem statement, what makes it different, CTA to connect\n- Featured: Demo video (when ready), articles\n\nARTICLE 1: 'Why Your Contract Data Shouldn't Live on Someone Else's Cloud'\n- 1,200 words. Data sovereignty angle. Every SaaS competitor processes your contracts on their servers.\n- Cite GDPR, attorney-client privilege concerns, recent data breaches in legal tech\n- LinkedIn articles are Google-indexed and cited by AI engines at 50-66% of all LinkedIn AI citations\n\nARTICLE 2: '11 AI Agents vs 1 Generic AI: Why Specialization Wins in Contract Review'\n- 1,200 words. Multi-agent architecture explanation for a business audience (not technical jargon)\n- Analogy: Would you want one generalist doctor or 11 specialists for a complex diagnosis?\n- These articles live on Mudassir's profile — prospects WILL check his profile after receiving outreach",
+          "LINKEDIN PROFILE REWRITE:\n- Headline: 'Building AI that reviews contracts in your cloud, not ours | CEO @ Paralegent AI | 50+ GenAI Systems Deployed'\n- About: Founder story (why Paralegent exists), problem statement, what makes it different, CTA to connect\n- Featured: Demo video (when ready), articles\n\nARTICLE 1: 'Why Your Contract Data Shouldn't Live on Someone Else's Cloud'\n- 1,200 words. Data sovereignty angle. Every SaaS competitor processes your contracts on their servers.\n- Cite GDPR, attorney-client privilege concerns, recent data breaches in legal tech\n- LinkedIn articles are Google-indexed and cited by AI engines at 50-66% of all LinkedIn AI citations\n\nARTICLE 2: '18 AI Agents vs 1 Generic AI: Why Specialization Wins in Contract Review'\n- 1,200 words. Multi-agent architecture explanation for a business audience (not technical jargon)\n- Analogy: Would you want one generalist doctor or 18 specialists for a complex diagnosis?\n- These articles live on Mudassir's profile — prospects WILL check his profile after receiving outreach",
         assignee: "Saqlain",
         week: 1,
         day: "Thu-Fri",
@@ -558,7 +558,7 @@ export const weeklyPlan: WeekData[] = [
       {
         id: "w2-m1",
         title: "Record 'Why I Built Paralegent' founder story",
-        description: "2-minute authentic video. Not scripted. Key points: 50+ GenAI deployments, saw legal teams drowning, built 11 specialized agents, deployed in customer's cloud.",
+        description: "2-minute authentic video. Not scripted. Key points: 50+ GenAI deployments, saw legal teams drowning, built 18 specialized agents, deployed in customer's cloud.",
         assignee: "Mudassir",
         week: 2,
         day: "Mon",
@@ -1100,7 +1100,7 @@ export const weeklyPlan: WeekData[] = [
       {
         id: "w6-s1",
         title: "Write Blog #5: Multi-Agent AI (18 Specialists)",
-        description: "2,500 words. Deep technical content explaining the architecture for a business audience. Second-strongest unique positioning. Analogy: 11 specialist doctors > 1 generalist.",
+        description: "2,500 words. Deep technical content explaining the architecture for a business audience. Second-strongest unique positioning. Analogy: 18 specialist doctors > 1 generalist.",
         assignee: "Saqlain",
         week: 6,
         day: "Mon-Wed",

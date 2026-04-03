@@ -78,7 +78,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "s-d2-1",
         title: "Write Implementation Timeline One-Pager Copy",
-        description: "Write the copy for the timeline one-pager. Asad designs today.\n\nContent — visual timeline showing 8-10 week implementation:\n• Week 1-2: Discovery & Rulebook Setup — map existing contract positions, define GREEN/ORANGE/RED criteria\n• Week 3-4: Agent Configuration — configure 11 specialized agents for customer's contract types\n• Week 5-6: Integration & Testing — deploy in customer's cloud, connect to LLM accounts, test\n• Week 7-8: Word Add-In Deployment — install for legal team, configure permissions\n• Week 9-10: Go Live & Training — parallel run, train attorneys, fine-tune confidence\n\nInclude: 3-4 Paralegent engineers involved, customer effort: 10-15 hours total from legal team.",
+        description: "Write the copy for the timeline one-pager. Asad designs today.\n\nContent — visual timeline showing 8-10 week implementation:\n• Week 1-2: Discovery & Rulebook Setup — map existing contract positions, define GREEN/ORANGE/RED criteria\n• Week 3-4: Agent Configuration — configure 18 specialized agents for customer's contract types\n• Week 5-6: Integration & Testing — deploy in customer's cloud, connect to LLM accounts, test\n• Week 7-8: Word Add-In Deployment — install for legal team, configure permissions\n• Week 9-10: Go Live & Training — parallel run, train attorneys, fine-tune confidence\n\nInclude: 3-4 Paralegent engineers involved, customer effort: 10-15 hours total from legal team.",
         hours: 2,
         category: "Sales Asset",
         deliverable: "Timeline one-pager copy → Asad designs today",
@@ -122,7 +122,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "a-d2-2",
         title: "Create LinkedIn Carousel from Blog #1 (7 slides)",
-        description: "Use your carousel template (created Friday).\n\nSlides — from Content Factory dashboard:\nSlide 1 (Hook): 'AI Contract Review in 2026: What Enterprise Legal Teams Need to Know'\nSlide 2 (Problem): '30 hours per MSA. $100K+/month. Inconsistent risk calls across reviewers.'\nSlide 3 (Shift): 'The 2026 shift: from 1 generic AI to 11 specialized agents'\nSlide 4 (Types): '3 types: SaaS (their cloud) vs Customer-Cloud (your cloud) vs Generic AI'\nSlide 5 (Data): '$1.75-3.1B market. 52% adoption. But 80% cite accuracy barriers.'\nSlide 6 (Features): '5 features to demand: ✓ Rulebook depth ✓ Data sovereignty...'\nSlide 7 (CTA): 'Want AI that deploys in YOUR cloud? → paralegent.ai/demo'\n\nExport as PDF for LinkedIn upload.",
+        description: "Use your carousel template (created Friday).\n\nSlides — from Content Factory dashboard:\nSlide 1 (Hook): 'AI Contract Review in 2026: What Enterprise Legal Teams Need to Know'\nSlide 2 (Problem): '30 hours per MSA. $100K+/month. Inconsistent risk calls across reviewers.'\nSlide 3 (Shift): 'The 2026 shift: from 1 generic AI to 18 specialized agents'\nSlide 4 (Types): '3 types: SaaS (their cloud) vs Customer-Cloud (your cloud) vs Generic AI'\nSlide 5 (Data): '$1.75-3.1B market. 52% adoption. But 80% cite accuracy barriers.'\nSlide 6 (Features): '5 features to demand: ✓ Rulebook depth ✓ Data sovereignty...'\nSlide 7 (CTA): 'Want AI that deploys in YOUR cloud? → paralegent.ai/demo'\n\nExport as PDF for LinkedIn upload.",
         hours: 2,
         category: "LinkedIn Carousel",
         deliverable: "7-slide carousel PDF uploaded to LinkedIn",
@@ -184,7 +184,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "a-d3-1",
         title: "Create LinkedIn Carousel from Blog #2 (7 slides)",
-        description: "Slides from Content Factory dashboard:\nSlide 1: 'How AI Contract Redlining Actually Works (5 Steps)'\nSlide 2: 'Step 1: Upload Your Rulebook — 80-150 terms with YOUR positions'\nSlide 3: 'Step 2: 11 AI Agents Analyze Every Clause'\nSlide 4: 'Step 3: GREEN / ORANGE / RED Classification'\nSlide 5: 'Step 4: 40-50 Precise Redlines in Word'\nSlide 6: 'Step 5: Attorney Reviews Findings, Not 80 Pages'\nSlide 7: 'Want to see it? → paralegent.ai/demo'\n\nExport as PDF.",
+        description: "Slides from Content Factory dashboard:\nSlide 1: 'How AI Contract Redlining Actually Works (5 Steps)'\nSlide 2: 'Step 1: Upload Your Rulebook — 80-150 terms with YOUR positions'\nSlide 3: 'Step 2: 18 AI Agents Analyze Every Clause'\nSlide 4: 'Step 3: GREEN / ORANGE / RED Classification'\nSlide 5: 'Step 4: 40-50 Precise Redlines in Word'\nSlide 6: 'Step 5: Attorney Reviews Findings, Not 80 Pages'\nSlide 7: 'Want to see it? → paralegent.ai/demo'\n\nExport as PDF.",
         hours: 2,
         category: "LinkedIn Carousel",
         deliverable: "7-slide carousel PDF for Blog #2",
@@ -224,7 +224,7 @@ export const dailyPlan: DayPlan[] = [
     saqlain: [
       {
         id: "s-d4-1",
-        title: "Write LinkedIn Article #2: '11 AI Agents vs 1 Generic AI: Why Specialization Wins'",
+        title: "Write LinkedIn Article #2: '18 AI Agents vs 1 Generic AI: Why Specialization Wins'",
         description: "1,200 words. Published under Mudassir's profile.\n\nContent:\n• Would you want 1 generalist doctor or 18 specialists for a complex diagnosis?\n• How single-LLM fails: context window limits, no specialization, inconsistent outputs\n• Multi-agent architecture: each agent expert in one area\n• The orchestrator: compares findings, resolves conflicts, prioritizes\n• Why this matters for contract review specifically\n• CTA: connect or demo\n\nLinkedIn articles are indexed by Google and cited by AI engines.",
         hours: 4,
         category: "LinkedIn Article",
@@ -309,7 +309,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "s-d5-2",
         title: "Write '5 Questions Every GC Should Ask Before Buying AI Contract Review' Checklist",
-        description: "1-page PDF content (Asad designs the PDF today).\n\n5 Questions (designed so Paralegent's answers are strongest):\n1. 'Where does my contract data go during review?' → Data sovereignty\n2. 'Can I use my own LLM accounts?' → LLM-agnostic\n3. 'How many AI models analyze each contract?' → 11 specialized agents\n4. 'What happens to my data after the review?' → No vendor retention\n5. 'Is this a recurring subscription or one-time investment?' → One-time license\n\nFor each question: the question, why it matters (2 sentences), what the best answer looks like (2 sentences).\n\nThis is an outreach value-add — Ali attaches it to follow-up emails.",
+        description: "1-page PDF content (Asad designs the PDF today).\n\n5 Questions (designed so Paralegent's answers are strongest):\n1. 'Where does my contract data go during review?' → Data sovereignty\n2. 'Can I use my own AI model accounts (Azure OpenAI, AWS Bedrock, Google Vertex AI)?' → Your choice of AI model\n3. 'How many AI agents analyze each contract?' → 18 specialized domain analysts\n4. 'What happens to my data after the review?' → No vendor retention\n5. 'Is this a recurring subscription or one-time investment?' → One-time license\n\nFor each question: the question, why it matters (2 sentences), what the best answer looks like (2 sentences).\n\nThis is an outreach value-add — Ali attaches it to follow-up emails.",
         hours: 2,
         category: "Sales Asset",
         deliverable: "Checklist copy → Asad designs PDF today",
@@ -327,7 +327,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "a-d5-1",
         title: "Start Blog #4: Multi-Agent AI vs Single LLM — Research + Draft",
-        description: "2,500 words due Monday. Start today, finish Monday.\n\nKeyword: 'multi-agent AI legal' (3-4K vol, Medium comp)\nCategory we can OWN.\n\nToday: Research + draft first 1,500 words.\n• Research multi-agent AI architectures (LangGraph, orchestration)\n• Draft definition-first opening\n• Write H2: What is multi-agent AI, How single LLM breaks\n• Start comparison table (Single LLM vs Multi-Agent across 8 dimensions)\n\nAnalogy throughout: 11 specialist doctors > 1 generalist.",
+        description: "2,500 words due Monday. Start today, finish Monday.\n\nKeyword: 'multi-agent AI legal' (3-4K vol, Medium comp)\nCategory we can OWN.\n\nToday: Research + draft first 1,500 words.\n• Research multi-agent AI architectures (how multiple specialized agents work together)\n• Draft definition-first opening\n• Write H2: What is multi-agent AI, How single LLM breaks\n• Start comparison table (Single LLM vs Multi-Agent across 8 dimensions)\n\nAnalogy throughout: 18 specialist doctors > 1 generalist.",
         hours: 5,
         category: "Blog",
         deliverable: "Blog #4 draft (60% complete)",
@@ -344,7 +344,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "a-d5-3",
         title: "Design 'Paralegent At A Glance' Product Summary Sheet",
-        description: "1-page product summary — the post-demo leave-behind.\n\nContent:\n• Logo + tagline at top\n• What it is: 1-paragraph description\n• How it works: 3-step visual (Upload Rulebook → AI Reviews → Redlines in Word)\n• Key numbers: 18 agents, 2-8 min review, 40-50 redlines, 80-150 rulebook terms\n• Differentiators: Customer-cloud, LLM-agnostic, GREEN/ORANGE/RED, one-time license\n• CTA: Request a Demo\n\nReplace the 'let me send you more info' dead end with something concrete.",
+        description: "1-page product summary — the post-demo leave-behind.\n\nContent:\n• Logo + tagline at top\n• What it is: 1-paragraph description\n• How it works: 3-step visual (Upload Rulebook → AI Reviews → Redlines in Word)\n• Key numbers: 18 agents, 2-8 min review, 40-50 redlines, 80-150 rulebook terms\n• Differentiators: Customer-cloud, works with any AI model, GREEN/ORANGE/RED\n• CTA: Request a Demo\n\nReplace the 'let me send you more info' dead end with something concrete.",
         hours: 2,
         category: "Sales Asset",
         deliverable: "'At A Glance' product summary PDF",
@@ -389,7 +389,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "a-d6-1",
         title: "Finish Blog #4: Multi-Agent AI vs Single LLM",
-        description: "You drafted 60% on Friday. Finish:\n• Complete comparison table (8 dimensions)\n• Real-world example: how 18 agents review an 80-page MSA\n• The architecture: LangGraph + Google ADK explanation for business audience\n• FAQ (3 questions)\n• Final review + publish",
+        description: "You drafted 60% on Friday. Finish:\n• Complete comparison table (8 dimensions)\n• Real-world example: how 18 agents review an 80-page MSA\n• The architecture explained for business audience — how 18 agents work together\n• FAQ (3 questions)\n• Final review + publish",
         hours: 4,
         category: "Blog",
         deliverable: "Blog #4 published on website",
@@ -489,7 +489,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "s-d8-2",
         title: "Write LinkedIn Newsletter #2: 'The Contract Intelligence Brief'",
-        description: "Biweekly edition #2. Topic: '11 AI Agents vs 1 Generic AI: What Every GC Should Know'\n1,000-1,200 words. Publish under Mudassir's profile.\nDraw from Blog #4 content but written in newsletter voice.",
+        description: "Biweekly edition #2. Topic: '18 AI Agents vs 1 Generic AI: What Every GC Should Know'\n1,000-1,200 words. Publish under Mudassir's profile.\nDraw from Blog #4 content but written in newsletter voice.",
         hours: 2,
         category: "LinkedIn Newsletter",
         deliverable: "Newsletter #2 published",
@@ -507,7 +507,7 @@ export const dailyPlan: DayPlan[] = [
       {
         id: "a-d8-2",
         title: "Create YouTube Short #4 from Blog #4 content (Veo 3) + repurpose",
-        description: "Title: 'This Is What 11 AI Agents Reviewing a Contract Looks Like'\n60 sec, Veo 3. Then → IG Reel + TikTok + FB Video.",
+        description: "Title: 'This Is What 18 AI Agents Reviewing a Contract Looks Like'\n60 sec, Veo 3. Then → IG Reel + TikTok + FB Video.",
         hours: 2,
         category: "YouTube Short (Veo 3)",
         deliverable: "Short #4 + IG + TikTok + FB",

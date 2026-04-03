@@ -47,7 +47,7 @@ export const competitorGaps: CompetitorGap[] = [
   { gap: "No one talks about multi-agent orchestration", why: "We have 18 specialized domain analysts. Competitors use 1 generic LLM." },
   { gap: "No one shows rulebook depth", why: "80-150 terms with rationale, examples, confidence scoring — our IP." },
   { gap: "All are SaaS with vendor data control", why: "We offer data sovereignty. Customer data never leaves their environment." },
-  { gap: "No one is LLM-agnostic", why: "We work with Azure OpenAI, Bedrock, Vertex AI — customer chooses." },
+  { gap: "No one lets customers choose their own AI model", why: "We work with Azure OpenAI, Bedrock, Vertex AI — customer chooses." },
   { gap: "Generic risk classification", why: "We have GREEN/ORANGE/RED with rationale + confidence scoring." },
   { gap: "YouTube is wide open", why: "Harvey, Spellbook, LegalOn have minimal YouTube presence — first-mover opportunity." },
   { gap: "No one owns 'on-premise contract AI' keyword", why: "1-2K volume, LOW competition — blue ocean keyword we should own." },

@@ -212,7 +212,7 @@ const partnerships: Partnership[] = [
     steps: [
       "Apply at nvidia.com/inception",
       "Describe: multi-agent AI platform for legal contract review",
-      "Emphasize: 11 specialized agents, LLM orchestration, enterprise deployment",
+      "Emphasize: 18 specialized agents, LLM orchestration, enterprise deployment",
       "No funding requirement — open to AI startups at any stage",
       "Approval: 1-2 weeks",
       "Benefits unlock immediately upon approval",
