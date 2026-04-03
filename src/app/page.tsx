@@ -561,8 +561,6 @@ export default function Home() {
       <SalesAssetsSection />
       <PlatformRegistrationsSection />
       <BlogPlanSection />
-      <WeeklyBreakdown />
-      <WhatsNewSection />
 
       {/* Footer */}
       <footer className="bg-[#042729] text-[#F8F5EE]/50 text-center py-6 text-sm">

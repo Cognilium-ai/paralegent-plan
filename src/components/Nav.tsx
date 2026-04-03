@@ -1,10 +1,12 @@
 import Link from "next/link";
 
-export default function Nav({ active }: { active: "plan" | "research" | "content" }) {
+export default function Nav({ active }: { active: "plan" | "research" | "content" | "daily" | "brand" }) {
   const tabs = [
     { href: "/", key: "plan" as const, label: "Execution Plan" },
-    { href: "/research", key: "research" as const, label: "Research & Intelligence" },
+    { href: "/daily", key: "daily" as const, label: "Daily Tasks" },
     { href: "/content", key: "content" as const, label: "Content Factory" },
+    { href: "/brand", key: "brand" as const, label: "Brand Kit" },
+    { href: "/research", key: "research" as const, label: "Research" },
   ];
 
   return (
