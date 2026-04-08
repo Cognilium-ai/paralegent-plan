@@ -457,6 +457,14 @@ export default function ResearchPage() {
     <main>
       <Header />
       <Nav active="research" />
+
+      {/* Link to Buyer Intel */}
+      <div className="bg-amber-50 border-b border-amber-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
+          <p className="text-sm text-amber-800"><span className="font-bold">New: Buyer Intelligence</span> — Real objections (60% trust, 57% data, 77% burned), customer language, switching dynamics, buying triggers, competitor weaknesses from G2 reviews. See <a href="/buyers" className="text-[#FF4800] underline font-medium">Buyer Intel page</a></p>
+        </div>
+      </div>
+
       <KeywordTargetsSection />
       <CompetitorGapsSection />
       <ConversionBenchmarksSection />

@@ -269,6 +269,56 @@ const salesAssets: SalesAssetItem[] = [
     status: "needed",
     priority: "P0",
   },
+  // NEW: Missing assets identified from Sales Enablement research
+  {
+    id: "sa-17",
+    name: "Objection Handling Doc (Top 5 Objections)",
+    type: "Text (internal doc)",
+    purpose: "Top 5 objections with responses. 60% don't trust output, 57% data concerns, 77% burned by failed tech, 40% can't measure ROI, setup complaints. Mudassir + Ali use in demos and outreach.",
+    whatToCollect: [
+      "Objection #1: 'I don't trust AI output' (60%) → Response: confidence scoring + rationale for every finding",
+      "Objection #2: 'My data can't leave our environment' (57%) → Response: customer-cloud deployment",
+      "Objection #3: 'We tried something before and it failed' (77%) → Response: 8-10 week structured implementation",
+      "Objection #4: 'Where's the ROI?' (40%) → Response: 30hrs→30min, $100K/month→$60-80K one-time",
+      "Objection #5: 'It's not plug-and-play' → Response: we build the rulebook WITH you, 10-15 hours from your team",
+      "Format: Table — Objection | Why they say it | Response approach | Proof point | Follow-up question",
+    ],
+    usedWhen: "During and after every demo. Ali references in outreach follow-ups. Mudassir uses in live conversations.",
+    status: "needed",
+    priority: "P1",
+  },
+  {
+    id: "sa-18",
+    name: "Demo Script (Opening → Discovery → Walkthrough → Close)",
+    type: "Text (internal doc)",
+    purpose: "Structured demo flow so Mudassir hits the right points every time. Opening (2 min) → Discovery recap (3 min) → Walkthrough (15-20 min) → Interaction (5 min) → Close (5 min).",
+    whatToCollect: [
+      "Opening: 'Tell me about your current contract review process' — let them describe pain first",
+      "Discovery recap: reflect their pain back ('So your team spends X hours on each MSA...')",
+      "Walkthrough: show Word add-in → upload rulebook → review contract → GREEN/ORANGE/RED → confidence scores → suggested revisions",
+      "Interaction: let them ask questions, address objections in real-time",
+      "Close: 'Based on what you've seen, would a 4-week pilot make sense?'",
+      "Key rule: admit product limitations honestly — lawyers expect overselling, honesty stands out",
+    ],
+    usedWhen: "Every demo call. Structure ensures consistency and hits all value points.",
+    status: "needed",
+    priority: "P1",
+  },
+  {
+    id: "sa-19",
+    name: "Persona Cards (4 buyer roles)",
+    type: "PDF (4 cards)",
+    purpose: "What each buyer role cares about + their top objection + how to win them. GC, VP Legal Ops, CIO/CISO, CFO.",
+    whatToCollect: [
+      "GC/CLO: Cares about risk reduction + team efficiency. Says 'do more with less.' Objection: trust. Win with: confidence scoring.",
+      "VP Legal Ops: Cares about ROI + measurable results. Says 'show me the numbers.' Objection: failed tech before. Win with: structured implementation.",
+      "CIO/CISO: Cares about security + compliance. Says 'where does data go?' Objection: data sovereignty. Win with: customer-cloud deployment.",
+      "CFO: Cares about cost vs value. Says 'why should I approve this?' Objection: price. Win with: ROI one-pager ($100K/month → $60-80K one-time).",
+    ],
+    usedWhen: "Before demos — know which persona you're talking to. Customize the conversation accordingly.",
+    status: "needed",
+    priority: "P1",
+  },
 ];
 
 const priorityStyles = {
@@ -292,6 +342,8 @@ const typeIcons: Record<string, string> = {
   "Image (600x100px)": "🖼️",
   "Images (PNG, multiple sizes)": "🖼️",
   "Slide deck": "📊",
+  "Text (internal doc)": "📋",
+  "PDF (4 cards)": "👤",
 };
 
 export default function AssetsPage() {
@@ -310,6 +362,13 @@ export default function AssetsPage() {
         </div>
       </header>
       <Nav active="assets" />
+
+      {/* Link to Buyer Intel */}
+      <div className="bg-amber-50 border-b border-amber-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
+          <p className="text-sm text-amber-800"><span className="font-bold">When to use each asset?</span> See <a href="/buyers" className="text-[#FF4800] underline font-medium">Buyer Intel → Sales Assets by Deal Moment</a> — maps each asset to the exact trigger and who sends it.</p>
+        </div>
+      </div>
 
       {/* Summary */}
       <div className="bg-white border-b border-gray-200">
