@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import { platformPlaybooks, repurposingWorkflow, week1Content, hookFormulas, engagementRoutine, contentBlocks, objectionContentMap } from "@/data/content-factory";
 import Nav from "@/components/Nav";
 
@@ -385,21 +387,220 @@ function ObjectionContentSection() {
   );
 }
 
+function FlowSection() {
+  const steps = [
+    {
+      step: 1,
+      title: "Pick the Buyer Objection (WHY this content exists)",
+      time: "2 min",
+      color: "bg-red-600",
+      description: "Every piece of content addresses ONE buyer objection. Don't create content without knowing which objection it solves.",
+      action: "Go to Objection → Content Map above. Pick the objection for this week's blog.",
+      example: "This week: Objection #1 — 'I don't trust AI output' (60% of buyers say this)",
+      tools: "Objection → Content Map section",
+    },
+    {
+      step: 2,
+      title: "Choose Your Hook (HOW you stop the scroll)",
+      time: "5 min",
+      color: "bg-amber-600",
+      description: "Pick one of the 4 hook formulas. The hook is the first 2 lines — it determines if anyone reads the rest.",
+      action: "Match the hook formula to the objection. Curiosity and Contrarian work best for trust objections. Value works for ROI. Story works for failed tech.",
+      example: "Objection #1 (trust) → Curiosity hook: '60% of legal teams don't trust AI output. They're right to be skeptical — here's why.'",
+      tools: "Hook Formulas section",
+    },
+    {
+      step: 3,
+      title: "Write the Blog Using Content Blocks (WHAT to write)",
+      time: "6-8 hours",
+      color: "bg-blue-600",
+      description: "Structure the blog using content blocks that AI engines can extract and cite. Every blog MUST have: Definition Block + Statistic Block + Comparison Table + FAQ Block.",
+      action: "Follow the blog brief from the Content Factory. Use the content block templates. Cite sources with every stat (+40% AI visibility). Include comparison table (33% of AI citations). End with FAQ (32% of AI citations).",
+      example: "Blog: 'Can Your Legal Team Trust AI Contract Review?' → Definition block (what is AI accuracy) → Stat block (60% trust concern, 75% hallucination fear — cite ABA, LawNext) → Comparison table (generic AI vs specialized agents) → FAQ (3 questions about accuracy)",
+      tools: "Content Blocks for AI Citation section",
+    },
+    {
+      step: 4,
+      title: "30-Min Engagement Routine (BEFORE you post anything)",
+      time: "30 min",
+      color: "bg-emerald-600",
+      description: "EVERY day before posting. Comment on 10 GC/legal ops posts. The algorithm rewards creators who engage first. This is NOT optional.",
+      action: "Follow the engagement routine: 5 min respond to comments → 15 min comment on 10 target posts → 5 min engage influencers → 5 min check DMs. Use substantive comments, not 'Great post!'",
+      example: "Comment on a GC's post about contract backlogs: 'This aligns with CLOC's finding that 83% expect demand to increase while headcount flattens. The consistency gap across reviewers is often the hidden cost.'",
+      tools: "Daily Engagement Routine section",
+    },
+    {
+      step: 5,
+      title: "Post on LinkedIn (WHERE + formatting)",
+      time: "30 min",
+      color: "bg-indigo-600",
+      description: "Post the LinkedIn version of your blog content. Hook in first 2 lines. Link in FIRST COMMENT, not body. 8-9 AM UK time.",
+      action: "Use the hook from Step 2. Write 3-5 short paragraphs. End with question or CTA. Put blog link in first comment. Add 3-5 hashtags.",
+      example: "Hook: '60% of legal teams don't trust AI output. They're right to be skeptical.' → Body (3 paragraphs from blog) → CTA: 'What's your team's biggest concern about AI accuracy? Link in comments.'",
+      tools: "Platform Playbooks → LinkedIn (Posts) section",
+    },
+    {
+      step: 6,
+      title: "Create LinkedIn Carousel (7 slides)",
+      time: "2 hours",
+      color: "bg-indigo-600",
+      description: "585% more engagement than text posts. Extract 5 key points from blog. One idea per slide.",
+      action: "Slide 1: Hook (bold question/stat). Slides 2-6: One key point each. Slide 7: CTA to demo page. Brand colors. Upload as PDF.",
+      example: "Slide 1: 'Can You Trust AI to Review Your Contracts?' → Slide 2: '60% of GCs say no' → Slide 3: 'The hallucination problem' → Slide 4: 'How confidence scoring changes everything' → Slide 5: 'Specialized vs generic AI accuracy' → Slide 6: 'What to look for in AI contract review' → Slide 7: 'See it in action → paralegent.ai/demo'",
+      tools: "Platform Playbooks → LinkedIn (Carousels) section",
+    },
+    {
+      step: 7,
+      title: "Create YouTube Video + Shorts (Veo 3 + ElevenLabs)",
+      time: "4-5 hours",
+      color: "bg-red-500",
+      description: "1 long-form (5-8 min) from blog content + cut 2-3 Shorts (60 sec). Competitors aren't doing YouTube — first-mover advantage.",
+      action: "Script from blog. Create with Veo 3 + ElevenLabs voiceover. Hook in first 5 seconds. Timestamps. Custom thumbnail. Pinned comment with demo link. Cut Shorts from best moments.",
+      example: "Video: 'Can You Trust AI Contract Review? The Accuracy Question Answered' (6 min) → Short #1: 'Why 60% of lawyers don't trust AI' (60 sec) → Short #2: 'Confidence scoring explained in 45 seconds'",
+      tools: "Platform Playbooks → YouTube sections",
+    },
+    {
+      step: 8,
+      title: "Repurpose to ALL Platforms (same content, different formats)",
+      time: "2 hours",
+      color: "bg-purple-600",
+      description: "Take the blog + video and distribute everywhere. This is NOT creating new content — it's reformatting what you already made.",
+      action: "YouTube Shorts → same video to IG Reel + TikTok + FB Video (15 min each). Twitter thread from blog (5-7 tweets). Facebook text post with link. Instagram carousel (adapt from LinkedIn). Quora answer using blog knowledge.",
+      example: "Short → IG Reel (change caption) → TikTok (casual caption) → FB Video (same). Twitter thread: 5 tweets from blog key points. Quora: answer 'Can AI accurately review contracts?' with blog content.",
+      tools: "Repurposing Workflow section + Platform Playbooks for each platform",
+    },
+    {
+      step: 9,
+      title: "Medium Republish (2 weeks later)",
+      time: "30 min",
+      color: "bg-green-600",
+      description: "Republish blog on Medium with canonical URL. DA 96 backlink. AI engines cite Medium content.",
+      action: "Wait 2 weeks after original publish. Import to Medium. Set canonical URL to paralegent.ai. Add 'Originally published on paralegent.ai' at top. Submit to 'Towards AI' publication.",
+      example: "Blog published April 8 → Medium republish April 22. Canonical: paralegent.ai/resources/blog/can-you-trust-ai-contract-review",
+      tools: "Platform Playbooks → Medium section",
+    },
+    {
+      step: 10,
+      title: "Reddit + Quora Engagement (ongoing, low effort)",
+      time: "1 hour/week",
+      color: "bg-gray-600",
+      description: "Build karma on Reddit (NO promotion). Answer questions on Quora (feeds AI engines). These are long-term plays, not immediate results.",
+      action: "Reddit: browse r/legaltech, upvote, comment helpfully. Quora: find high-view questions, write 500-800 word genuine answers. Mention Paralegent only in 1/5 answers.",
+      example: "Quora question: 'Can AI review legal contracts accurately?' → Write 600-word answer using blog research. Cite ABA, CLOC data. Mention 'newer solutions like Paralegent use specialized agents with confidence scoring' as ONE option among several.",
+      tools: "Platform Playbooks → Reddit + Quora sections",
+    },
+  ];
+
+  return (
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+      <div className="mb-8">
+        <h2 className="text-xl font-bold mb-2">The Content Creation Flow — Step by Step</h2>
+        <p className="text-sm text-gray-500">Follow this flow top to bottom for every piece of content. Each step references a section in the Layers tab.</p>
+      </div>
+
+      <div className="space-y-4">
+        {steps.map((s) => (
+          <div key={s.step} className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+            <div className={`${s.color} text-white px-6 py-3 flex items-center justify-between`}>
+              <div className="flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm font-bold">{s.step}</span>
+                <h3 className="font-semibold text-sm">{s.title}</h3>
+              </div>
+              <Badge className="bg-white/20 text-white">{s.time}</Badge>
+            </div>
+            <div className="p-5">
+              <p className="text-sm text-gray-700 mb-3">{s.description}</p>
+
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="bg-blue-50 rounded-lg p-3">
+                  <p className="text-xs font-bold text-blue-800 uppercase mb-1">What to do</p>
+                  <p className="text-xs text-gray-700">{s.action}</p>
+                </div>
+                <div className="bg-amber-50 rounded-lg p-3">
+                  <p className="text-xs font-bold text-amber-800 uppercase mb-1">Example</p>
+                  <p className="text-xs text-gray-700 italic">{s.example}</p>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-3">
+                  <p className="text-xs font-bold text-gray-500 uppercase mb-1">Reference</p>
+                  <p className="text-xs text-[#FF4800] font-medium">{s.tools}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Weekly Summary */}
+      <div className="mt-8 bg-[#042729] rounded-xl p-6 text-[#F8F5EE]">
+        <h3 className="font-bold text-lg mb-4">Weekly Rhythm (per person)</h3>
+        <div className="grid md:grid-cols-5 gap-4 text-center">
+          {[
+            { day: "MON", tasks: "Write blog (Steps 1-3)", hours: "9h" },
+            { day: "TUE", tasks: "Finish blog + YouTube video (Steps 3, 7)", hours: "9h" },
+            { day: "WED", tasks: "Shorts + carousel + repurpose (Steps 6-8)", hours: "9h" },
+            { day: "THU", tasks: "LinkedIn + Twitter + Quora + IG + FB (Steps 4-5, 8)", hours: "9h" },
+            { day: "FRI", tasks: "Medium + Reddit + prep next blog (Steps 9-10, 1)", hours: "9h" },
+          ].map((d) => (
+            <div key={d.day} className="bg-white/10 rounded-lg p-3">
+              <p className="text-[#FF4800] font-bold text-sm mb-1">{d.day}</p>
+              <p className="text-xs text-[#F8F5EE]/70 mb-1">{d.tasks}</p>
+              <p className="text-xs text-[#F8F5EE]/50">{d.hours}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-[#F8F5EE]/50 mt-4 text-center">+ 30 min engagement routine EVERY day before posting (Step 4)</p>
+      </div>
+    </section>
+  );
+}
+
 export default function ContentPage() {
+  const [tab, setTab] = useState<"flow" | "layers">("flow");
+
   return (
     <main>
       <Header />
       <Nav active="content" />
-      <HookFormulasSection />
-      <EngagementSection />
-      <ContentBlocksSection />
-      <ObjectionContentSection />
-      <PlaybooksSection />
-      <RepurposingSection />
-      <Week1BlogsSection />
-      <VideoBriefsSection />
+
+      {/* Tab Switcher */}
+      <div className="bg-white border-b border-gray-200 sticky top-0 z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex gap-0">
+          <button
+            onClick={() => setTab("flow")}
+            className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors cursor-pointer ${
+              tab === "flow" ? "border-[#FF4800] text-[#FF4800]" : "border-transparent text-gray-500 hover:text-gray-700"
+            }`}
+          >
+            The Flow (Start Here)
+          </button>
+          <button
+            onClick={() => setTab("layers")}
+            className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors cursor-pointer ${
+              tab === "layers" ? "border-[#FF4800] text-[#FF4800]" : "border-transparent text-gray-500 hover:text-gray-700"
+            }`}
+          >
+            Layers (Reference)
+          </button>
+        </div>
+      </div>
+
+      {tab === "flow" && <FlowSection />}
+
+      {tab === "layers" && (
+        <>
+          <HookFormulasSection />
+          <EngagementSection />
+          <ContentBlocksSection />
+          <ObjectionContentSection />
+          <PlaybooksSection />
+          <RepurposingSection />
+          <Week1BlogsSection />
+          <VideoBriefsSection />
+        </>
+      )}
+
       <footer className="bg-[#042729] text-[#F8F5EE]/50 text-center py-6 text-sm">
-        Paralegent AI Content Factory | Updated with buyer research + hook formulas + GEO blocks
+        Paralegent AI Content Factory | The Flow + Layers Reference
       </footer>
     </main>
   );
