@@ -261,6 +261,307 @@ Caption: [Casual version of the insight — speak to the person, not the company
   },
 ];
 
+// ── HOOK FORMULAS (4 proven types with Paralegent examples) ──
+
+export const hookFormulas = [
+  {
+    type: "Curiosity",
+    formula: "Open a loop the reader MUST close. Challenge an assumption or reveal something unexpected.",
+    examples: [
+      "I was wrong about AI contract review. Here's what changed my mind.",
+      "The biggest risk in your contracts isn't what you think it is.",
+      "We analyzed 500 master agreements. One pattern shocked us.",
+      "60% of legal teams don't trust AI output. They're right to be skeptical — here's why.",
+    ],
+    bestFor: "Building authority. Gets saves and shares. Works when you have a surprising insight.",
+    objectionMatch: "#1 Trust (60%)",
+  },
+  {
+    type: "Story",
+    formula: "Start with a specific moment. Pull the reader into a scene. Then bridge to the insight.",
+    examples: [
+      "Last week a GC told me: 'We spend 200 working days a year just reviewing contracts.' I asked one question that changed the conversation.",
+      "A missed liability cap in an indemnification clause. $50K that should have been a $5K mediation. This is why contract review consistency matters.",
+      "3 lawyers. Same contract. 3 different risk calls. This is the problem nobody talks about.",
+      "An 80-page MSA sat in legal review for 15 days. The deal nearly died. Here's what happened next.",
+    ],
+    bestFor: "Emotional engagement. Gets comments and DMs. Works for problem-awareness content.",
+    objectionMatch: "#3 Failed tech (77%) + #4 ROI (40%)",
+  },
+  {
+    type: "Value",
+    formula: "Promise a specific outcome. Be concrete about what they'll learn or gain.",
+    examples: [
+      "How to cut contract review from 30 hours to 30 minutes without sacrificing accuracy.",
+      "5 questions every GC should ask before buying AI contract review software.",
+      "The 3-step framework for consistent contract review across your entire legal team.",
+      "How to prove your legal department's ROI to the C-suite (with numbers they care about).",
+    ],
+    bestFor: "Practical, actionable content. Gets saves. Works for how-to and educational content.",
+    objectionMatch: "#4 ROI (40%) + #5 Setup (common)",
+  },
+  {
+    type: "Contrarian",
+    formula: "Challenge conventional wisdom. Take a stance most people disagree with. Back it up.",
+    examples: [
+      "Your legal team doesn't have a productivity problem. They have a consistency problem.",
+      "Unpopular opinion: Most AI contract review tools are just glorified Ctrl+F.",
+      "Stop measuring contract review by speed. Start measuring it by accuracy.",
+      "The best contract AI isn't the fastest. It's the one that explains WHY it flagged something.",
+      "Generic AI playbooks are making your contract review worse, not better.",
+    ],
+    bestFor: "Sparks debate. Gets comments and shares. Works for thought leadership. Use sparingly — 1 per week max.",
+    objectionMatch: "#1 Trust (60%)",
+  },
+];
+
+// ── DAILY ENGAGEMENT ROUTINE (30 min BEFORE posting) ──
+
+export const engagementRoutine = {
+  title: "30-Minute Daily Engagement Routine",
+  description: "Do this BEFORE posting. The algorithm rewards creators who engage with others first. 30 minutes daily = 50-100 profile visits/day → 10-20 new followers/week.",
+  saqlainRoutine: {
+    owner: "Saqlain (manages Mudassir's profile)",
+    steps: [
+      { time: "5 min", action: "Respond to all comments on Mudassir's recent posts (within 1 hour of commenting = algorithm boost)" },
+      { time: "15 min", action: "Comment substantively on 10 posts from: GCs, VP Legal Ops, CLOs, legal tech journalists. Not 'Great post!' — add a genuine insight, data point, or question." },
+      { time: "5 min", action: "Engage with 3-5 posts from this week's target influencers (see list below)" },
+      { time: "5 min", action: "Check DMs on Mudassir's profile — respond to any messages" },
+    ],
+  },
+  asadRoutine: {
+    owner: "Asad (manages Ali's profile)",
+    steps: [
+      { time: "5 min", action: "Respond to all comments on Ali's recent posts" },
+      { time: "15 min", action: "Comment on 10 posts from: legal ops managers, contract managers, CLM vendors, legal tech community" },
+      { time: "5 min", action: "Engage with 3-5 posts from target influencers" },
+      { time: "5 min", action: "Check DMs on Ali's profile — respond to messages" },
+    ],
+  },
+  influencersToEngage: [
+    { name: "Mary O'Carroll", role: "Former Google Legal Ops, CLOC founder", platform: "LinkedIn" },
+    { name: "Casey Flaherty", role: "Legal ops consultant", platform: "LinkedIn" },
+    { name: "Mark Cohen", role: "Legal industry analyst", platform: "LinkedIn" },
+    { name: "David Curle", role: "Legal tech analyst", platform: "LinkedIn" },
+    { name: "Bob Ambrogi", role: "#1 legal tech blogger", platform: "LinkedIn + Twitter" },
+    { name: "Isabel Parker", role: "Legal innovation (UK/EU)", platform: "LinkedIn" },
+    { name: "Colin Levy", role: "Legal tech advocate", platform: "LinkedIn + Twitter" },
+  ],
+  whatToComment: [
+    "Add a relevant data point: 'This aligns with CLOC's finding that 83% expect demand to increase while budgets flatten.'",
+    "Share a related perspective: 'We see the same pattern — the consistency gap across reviewers is often bigger than the speed gap.'",
+    "Ask a thoughtful question: 'How are you seeing legal teams measure ROI on this? Only 7% use specific KPIs according to recent data.'",
+    "Connect to a broader trend: 'This ties into the 86% vs 17% perception gap — GCs see their value, but C-suite often doesn't.'",
+  ],
+  neverComment: [
+    "'Great post!' (no substance)",
+    "'We solve this at Paralegent!' (promotional)",
+    "'Check out our tool' (spam)",
+    "Generic emojis only (lazy)",
+    "Copy-paste same comment on multiple posts (will get flagged)",
+  ],
+};
+
+// ── CONTENT BLOCKS FOR AI CITATION (GEO/AEO) ──
+
+export const contentBlocks = {
+  title: "Content Block Templates for AI Citation",
+  description: "Princeton research: these specific content structures boost AI visibility by 15-40%. Use in EVERY blog post.",
+  blocks: [
+    {
+      type: "Definition Block",
+      boost: "+40% AI visibility (cite sources)",
+      template: `## What Is [Term]?
+
+[Term] is [one-sentence definition that AI can extract as a direct answer]. [Second sentence expanding with specificity]. [Third sentence with a data point or comparison].
+
+For example, [concrete example that grounds the definition].`,
+      example: `## What Is Contract Due Diligence?
+
+Contract due diligence is the systematic review of legal agreements to identify clauses that deviate from an organization's accepted risk positions — covering warranty, liability, indemnity, IP, compliance, and termination provisions. Unlike manual review, which takes 20-30 hours per master agreement (LegalOn 2025 Survey), AI-assisted due diligence can complete the same analysis in 30 minutes while applying consistent standards across every reviewer.
+
+For example, an 80-page Master Sales Agreement analyzed against a company's rulebook of 80-150 terms, with each clause classified as favorable (GREEN), conditional (ORANGE), or unacceptable (RED).`,
+    },
+    {
+      type: "Statistic Block",
+      boost: "+37% AI visibility (add statistics with sources)",
+      template: `### [Heading as a question people would ask an AI]
+
+[Direct answer in first sentence]. According to [Source], [specific statistic]. [Why this matters in 1-2 sentences].
+
+| Metric | Value | Source |
+|--------|-------|--------|
+| [Metric 1] | [Value] | [Source] |
+| [Metric 2] | [Value] | [Source] |
+| [Metric 3] | [Value] | [Source] |`,
+      example: `### How Long Does Manual Contract Review Take?
+
+Manual contract review takes an average of 3.1 hours per single contract for enterprise legal teams. According to the CLOC 2025 State of the Industry Report, 83% of legal departments expect demand to increase while 65% face flat or declining headcount — creating an unsustainable workload gap.
+
+| Metric | Value | Source |
+|--------|-------|--------|
+| Average review time per contract | 3.1 hours | LegalOn 2025 Survey |
+| Annual revenue lost to poor contracts | 9.2% | World Commerce & Contracting |
+| Legal teams with flat/declining headcount | 65% | CLOC 2025 |
+| GCs citing cost pressure as daily driver | 69% | LawVu |`,
+    },
+    {
+      type: "Comparison Table",
+      boost: "33% of ALL AI citations come from comparison content",
+      template: `## [Option A] vs [Option B]: [Key Difference]
+
+[1-2 sentence summary of the key difference for someone skimming].
+
+| Dimension | [Option A] | [Option B] |
+|-----------|-----------|-----------|
+| [Most important dimension] | [A's approach] | [B's approach] |
+| [Second dimension] | ... | ... |
+| [Third dimension] | ... | ... |
+
+**Bottom line:** [1 sentence recommendation based on the comparison].`,
+      example: `## SaaS Contract AI vs Customer-Cloud Deployment: Where Does Your Data Go?
+
+The fundamental difference is data residency: SaaS tools process your contracts on the vendor's servers, while customer-cloud solutions deploy in your own infrastructure — your data never leaves your environment.
+
+| Dimension | SaaS Contract AI | Customer-Cloud (Paralegent) |
+|-----------|-----------------|---------------------------|
+| Data residency | Vendor's cloud | Your cloud (Azure/AWS/GCP) |
+| Attorney-client privilege | Potential risk | Preserved |
+| Vendor data retention | Vendor controls | You control |
+| LLM provider | Vendor's choice | Your choice |
+| Compliance (GDPR) | Vendor's responsibility | Your jurisdiction |
+
+**Bottom line:** If your organization reviews contracts containing privileged or sensitive information, customer-cloud deployment eliminates the data sovereignty risk that stalls 57% of legal AI purchases (LawNext 2025).`,
+    },
+    {
+      type: "FAQ Block",
+      boost: "32% of AI citations come from FAQ sections",
+      template: `## Frequently Asked Questions
+
+### [Question phrased exactly as someone would ask an AI engine]?
+
+[Direct answer in first 2 sentences — 40-60 words]. [Supporting detail with a specific data point].
+
+### [Second question]?
+
+[Direct answer]. [Supporting detail].`,
+      example: `## Frequently Asked Questions
+
+### Can AI accurately review legal contracts?
+
+Yes — specialized AI systems achieve high accuracy when using domain-specific agents focused on individual contract sections rather than a single generic model. The key differentiator is confidence scoring: every finding should include the rationale, the exact rulebook rule matched, and a confidence level — allowing attorneys to review flagged items rather than 80 pages.
+
+### Is AI contract review safe for confidential documents?
+
+Customer-cloud deployment eliminates data sovereignty concerns entirely. The AI deploys in your cloud infrastructure (Azure, AWS, or GCP), uses your LLM accounts, and your contract data never touches the vendor's servers. This preserves attorney-client privilege and meets GDPR data residency requirements.`,
+    },
+  ],
+};
+
+// ── BUYER OBJECTION → CONTENT MAPPING ──
+
+export const objectionContentMap = [
+  {
+    objection: "#1: 'I don't trust the AI output' (60%)",
+    blogTopics: [
+      "Can Your Legal Team Trust AI Contract Review? The Accuracy Question",
+      "Why Confidence Scoring Changes Everything in Legal AI",
+      "How 18 Domain Analysts Beat 1 Generic AI for Accuracy",
+    ],
+    linkedinHooks: [
+      "Curiosity: '60% of legal teams don't trust AI output. They're right to be skeptical.'",
+      "Contrarian: 'The best contract AI isn't the fastest. It's the one that explains WHY it flagged something.'",
+      "Value: 'How to evaluate AI contract review accuracy (the 3 questions nobody asks)'",
+    ],
+    youtubeIdeas: [
+      "Demo: Watch confidence scoring in action — every finding explained",
+      "Explainer: Why generic AI hallucinates on contracts (and how specialized agents don't)",
+    ],
+    quoraQuestions: [
+      "Can AI accurately review legal contracts?",
+      "How reliable is AI for contract review?",
+      "What is the accuracy rate of AI contract review tools?",
+    ],
+  },
+  {
+    objection: "#2: 'My data cannot leave our environment' (57%)",
+    blogTopics: [
+      "Data Sovereignty in Legal AI: Why Your Contracts Should Never Leave Your Cloud",
+      "On-Premise Contract AI: Deploy in Your Own Cloud (BLUE OCEAN)",
+      "Is AI Contract Review Safe? GDPR, Privilege, and Data Sovereignty",
+    ],
+    linkedinHooks: [
+      "Story: 'A GC told me: If you can\\'t meet our security standards, we can\\'t proceed. 57% of legal teams say the same thing.'",
+      "Contrarian: 'Every AI contract review tool on the market is SaaS. That\\'s a problem.'",
+      "Curiosity: 'Where do your contracts go when you click \\'Review\\'?'",
+    ],
+    youtubeIdeas: [
+      "Explainer: SaaS vs Customer-Cloud — where your contract data actually goes",
+      "Short: 'Your data never leaves your cloud. Here's why that matters.'",
+    ],
+    quoraQuestions: [
+      "Is AI contract review safe for confidential documents?",
+      "How do AI contract tools handle data privacy?",
+      "Can AI contract review comply with GDPR?",
+    ],
+  },
+  {
+    objection: "#3: 'We tried something before and it failed' (77%)",
+    blogTopics: [
+      "Why 95% of AI Contract Review Pilots Fail (And How to Avoid It)",
+      "The 8-10 Week Implementation That Actually Works",
+    ],
+    linkedinHooks: [
+      "Story: '77% of legal teams have experienced a failed tech implementation. Here\\'s what the 23% did differently.'",
+      "Value: 'The 3-phase implementation framework that prevents legal AI pilot failure'",
+    ],
+    youtubeIdeas: [
+      "Explainer: Why most legal AI pilots fail — and the structured approach that works",
+    ],
+    quoraQuestions: [
+      "Why do legal AI projects fail?",
+      "How to successfully implement AI in a legal department?",
+    ],
+  },
+  {
+    objection: "#4: 'Where's the ROI? I can't measure it' (40%)",
+    blogTopics: [
+      "AI Contract Review ROI: The Real Numbers for Enterprise Legal Teams",
+      "Paralegent vs Manual Review: Time, Cost, and Accuracy Compared",
+    ],
+    linkedinHooks: [
+      "Value: '30 hours → 30 minutes. $100K/month → $60-80K one-time. Here\\'s the math.'",
+      "Curiosity: 'Only 7% of legal departments use KPIs to track AI value. Here\\'s what they measure.'",
+    ],
+    youtubeIdeas: [
+      "Explainer: The real ROI of AI contract review (with actual numbers)",
+      "Short: '$100K/month in attorney time. Or $60-80K once. You choose.'",
+    ],
+    quoraQuestions: [
+      "What is the ROI of AI contract review?",
+      "How much does AI contract review save?",
+    ],
+  },
+  {
+    objection: "#5: 'It's not plug-and-play' (common G2 complaint)",
+    blogTopics: [
+      "How We Build Your Rulebook in 8-10 Weeks",
+      "The Complete Guide to AI Contract Review in 2026",
+    ],
+    linkedinHooks: [
+      "Value: 'Your legal team invests 10-15 hours. Our engineers invest 8-10 weeks. You get a system customized to YOUR contract positions.'",
+      "Contrarian: 'Plug-and-play AI contract review is a myth. Here\\'s what actually works.'",
+    ],
+    youtubeIdeas: [
+      "Walkthrough: From rulebook setup to first contract review — the 8-10 week journey",
+    ],
+    quoraQuestions: [
+      "How long does it take to set up AI contract review?",
+      "How do you customize AI for your company's contracts?",
+    ],
+  },
+];
+
 // ── REPURPOSING WORKFLOW ──
 
 export const repurposingWorkflow = {

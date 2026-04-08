@@ -1,4 +1,4 @@
-import { platformPlaybooks, repurposingWorkflow, week1Content } from "@/data/content-factory";
+import { platformPlaybooks, repurposingWorkflow, week1Content, hookFormulas, engagementRoutine, contentBlocks, objectionContentMap } from "@/data/content-factory";
 import Nav from "@/components/Nav";
 
 function Badge({ className, children }: { className: string; children: React.ReactNode }) {
@@ -240,17 +240,166 @@ function Week1BlogsSection() {
   );
 }
 
+function HookFormulasSection() {
+  return (
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
+      <h2 className="text-xl font-bold mb-2">Hook Formulas (4 Proven Types)</h2>
+      <p className="text-sm text-gray-500 mb-6">Every LinkedIn post, Twitter thread, and YouTube video starts with a hook. Use these formulas — they&apos;re backed by engagement data.</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {hookFormulas.map((hf) => (
+          <div key={hf.type} className="bg-white rounded-xl border border-gray-200 p-5">
+            <div className="flex items-center gap-2 mb-2">
+              <h3 className="font-bold text-sm text-[#042729]">{hf.type}</h3>
+              <Badge className="bg-red-50 text-red-700">{hf.objectionMatch}</Badge>
+            </div>
+            <p className="text-xs text-gray-600 mb-3">{hf.formula}</p>
+            <p className="text-xs font-bold text-gray-500 uppercase mb-2">Examples:</p>
+            <ul className="space-y-1 mb-3">
+              {hf.examples.map((ex, i) => (
+                <li key={i} className="text-xs text-gray-700 italic">&ldquo;{ex}&rdquo;</li>
+              ))}
+            </ul>
+            <p className="text-xs text-emerald-700"><span className="font-medium">Best for:</span> {hf.bestFor}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function EngagementSection() {
+  return (
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
+      <h2 className="text-xl font-bold mb-2">Daily Engagement Routine (30 min BEFORE posting)</h2>
+      <p className="text-sm text-gray-500 mb-6">{engagementRoutine.description}</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        {[engagementRoutine.saqlainRoutine, engagementRoutine.asadRoutine].map((routine) => (
+          <div key={routine.owner} className="bg-white rounded-xl border border-gray-200 p-5">
+            <h3 className="font-bold text-sm text-[#042729] mb-3">{routine.owner}</h3>
+            <div className="space-y-2">
+              {routine.steps.map((step, i) => (
+                <div key={i} className="flex gap-3">
+                  <Badge className="bg-gray-100 text-gray-600 flex-shrink-0">{step.time}</Badge>
+                  <p className="text-xs text-gray-700">{step.action}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-white rounded-xl border border-gray-200 p-5">
+          <h4 className="text-xs font-bold text-gray-500 uppercase mb-2">Influencers to Engage</h4>
+          <ul className="space-y-1">{engagementRoutine.influencersToEngage.map((inf, i) => (
+            <li key={i} className="text-xs text-gray-700"><span className="font-medium">{inf.name}</span> — {inf.role}</li>
+          ))}</ul>
+        </div>
+        <div className="bg-emerald-50 rounded-xl border border-emerald-200 p-5">
+          <h4 className="text-xs font-bold text-emerald-800 uppercase mb-2">What to Comment (DO)</h4>
+          <ul className="space-y-1">{engagementRoutine.whatToComment.map((c, i) => (
+            <li key={i} className="text-xs text-gray-700">{c}</li>
+          ))}</ul>
+        </div>
+        <div className="bg-red-50 rounded-xl border border-red-200 p-5">
+          <h4 className="text-xs font-bold text-red-800 uppercase mb-2">Never Comment (DON&apos;T)</h4>
+          <ul className="space-y-1">{engagementRoutine.neverComment.map((c, i) => (
+            <li key={i} className="text-xs text-red-700">{c}</li>
+          ))}</ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ContentBlocksSection() {
+  return (
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
+      <h2 className="text-xl font-bold mb-2">Content Blocks for AI Citation (GEO/AEO)</h2>
+      <p className="text-sm text-gray-500 mb-6">{contentBlocks.description}</p>
+      <div className="space-y-4">
+        {contentBlocks.blocks.map((block) => (
+          <details key={block.type} className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+            <summary className="px-6 py-4 cursor-pointer hover:bg-gray-50 font-semibold text-sm flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                {block.type}
+                <Badge className="bg-emerald-100 text-emerald-800">{block.boost}</Badge>
+              </div>
+              <span className="text-xs text-gray-400">Click to expand</span>
+            </summary>
+            <div className="px-6 pb-6 border-t border-gray-100">
+              <div className="mt-4">
+                <h4 className="text-xs font-bold text-gray-500 uppercase mb-2">Template</h4>
+                <pre className="text-xs text-gray-700 bg-gray-50 rounded-lg p-4 whitespace-pre-wrap font-sans">{block.template}</pre>
+              </div>
+              <div className="mt-4">
+                <h4 className="text-xs font-bold text-gray-500 uppercase mb-2">Example (Paralegent)</h4>
+                <pre className="text-xs text-gray-700 bg-blue-50 rounded-lg p-4 whitespace-pre-wrap font-sans">{block.example}</pre>
+              </div>
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function ObjectionContentSection() {
+  return (
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
+      <h2 className="text-xl font-bold mb-2">Objection → Content Map</h2>
+      <p className="text-sm text-gray-500 mb-6">Every piece of content addresses a specific buyer objection. Use this to pick which content to create next.</p>
+      <div className="space-y-4">
+        {objectionContentMap.map((obj) => (
+          <div key={obj.objection} className="bg-white rounded-xl border-2 border-l-4 border-l-red-500 border-gray-200 p-5">
+            <h3 className="font-bold text-sm text-[#042729] mb-3">{obj.objection}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div>
+                <p className="text-xs font-bold text-gray-500 uppercase mb-2">Blog Topics</p>
+                <ul className="space-y-1">{obj.blogTopics.map((t, i) => (
+                  <li key={i} className="text-xs text-gray-700">• {t}</li>
+                ))}</ul>
+              </div>
+              <div>
+                <p className="text-xs font-bold text-gray-500 uppercase mb-2">LinkedIn Hooks</p>
+                <ul className="space-y-1">{obj.linkedinHooks.map((h, i) => (
+                  <li key={i} className="text-xs text-gray-700 italic">{h}</li>
+                ))}</ul>
+              </div>
+              <div>
+                <p className="text-xs font-bold text-gray-500 uppercase mb-2">YouTube Ideas</p>
+                <ul className="space-y-1">{obj.youtubeIdeas.map((y, i) => (
+                  <li key={i} className="text-xs text-gray-700">• {y}</li>
+                ))}</ul>
+              </div>
+              <div>
+                <p className="text-xs font-bold text-gray-500 uppercase mb-2">Quora Questions</p>
+                <ul className="space-y-1">{obj.quoraQuestions.map((q, i) => (
+                  <li key={i} className="text-xs text-gray-700">&ldquo;{q}&rdquo;</li>
+                ))}</ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function ContentPage() {
   return (
     <main>
       <Header />
       <Nav active="content" />
+      <HookFormulasSection />
+      <EngagementSection />
+      <ContentBlocksSection />
+      <ObjectionContentSection />
       <PlaybooksSection />
       <RepurposingSection />
       <Week1BlogsSection />
       <VideoBriefsSection />
       <footer className="bg-[#042729] text-[#F8F5EE]/50 text-center py-6 text-sm">
-        Paralegent AI Content Factory | Week 1 Ready for Monday April 7
+        Paralegent AI Content Factory | Updated with buyer research + hook formulas + GEO blocks
       </footer>
     </main>
   );
