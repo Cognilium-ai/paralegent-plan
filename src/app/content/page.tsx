@@ -395,99 +395,89 @@ function FlowSection() {
       time: "2 min",
       color: "bg-red-600",
       description: "Every piece of content addresses ONE buyer objection. Don't create content without knowing which objection it solves.",
-      action: "Go to Objection → Content Map above. Pick the objection for this week's blog.",
-      example: "This week: Objection #1 — 'I don't trust AI output' (60% of buyers say this)",
-      tools: "Objection → Content Map section",
+      action: "Go to Buyer Intel page → Blog Calendar. Check which blog is assigned to you this week. Note the objection it addresses.",
+      example: "Week 1 Saqlain: Blog #1 'Can Your Legal Team Trust AI Contract Review?' → addresses Objection #1 (trust, 60%)",
+      tools: "Buyer Intel page → Blog Calendar Ordered by Objections",
     },
     {
       step: 2,
       title: "Choose Your Hook (HOW you stop the scroll)",
       time: "5 min",
       color: "bg-amber-600",
-      description: "Pick one of the 4 hook formulas. The hook is the first 2 lines — it determines if anyone reads the rest.",
-      action: "Match the hook formula to the objection. Curiosity and Contrarian work best for trust objections. Value works for ROI. Story works for failed tech.",
+      description: "Pick one of the 4 hook formulas. The hook is the first 2 lines — it determines if anyone reads the rest. Match the formula to the objection.",
+      action: "Curiosity + Contrarian → trust/accuracy objections. Value → ROI/setup objections. Story → failed tech/costly mistakes. Check the Objection → Content Map for pre-written hooks for each objection.",
       example: "Objection #1 (trust) → Curiosity hook: '60% of legal teams don't trust AI output. They're right to be skeptical — here's why.'",
-      tools: "Hook Formulas section",
+      tools: "Layers tab → Hook Formulas + Objection → Content Map (has pre-written hooks per objection)",
     },
     {
       step: 3,
-      title: "Write the Blog Using Content Blocks (WHAT to write)",
+      title: "Write the Blog (follow the brief + use content blocks)",
       time: "6-8 hours",
       color: "bg-blue-600",
-      description: "Structure the blog using content blocks that AI engines can extract and cite. Every blog MUST have: Definition Block + Statistic Block + Comparison Table + FAQ Block.",
-      action: "Follow the blog brief from the Content Factory. Use the content block templates. Cite sources with every stat (+40% AI visibility). Include comparison table (33% of AI citations). End with FAQ (32% of AI citations).",
-      example: "Blog: 'Can Your Legal Team Trust AI Contract Review?' → Definition block (what is AI accuracy) → Stat block (60% trust concern, 75% hallucination fear — cite ABA, LawNext) → Comparison table (generic AI vs specialized agents) → FAQ (3 questions about accuracy)",
-      tools: "Content Blocks for AI Citation section",
+      description: "Two things work together: (1) The BLOG BRIEF gives you the outline — title, keyword, H2/H3 structure, stats to include, FAQ questions. (2) CONTENT BLOCKS give you the format — how to structure each section so AI engines can cite it.",
+      action: "Open the blog brief (Layers tab → Week 1 Blog Briefs). Follow the H2/H3 outline exactly. For EACH section, use a content block: start with Definition Block, add Statistic Blocks (cite sources!), include Comparison Table, end with FAQ Block. Every blog MUST have all 4 block types.",
+      example: "Blog brief says H2: 'What Is AI Accuracy in Contract Review?' → Use Definition Block template. Next H2: 'The Real Numbers' → Use Statistic Block with cited sources (ABA, CLOC, LawNext). Then H2: 'Generic AI vs Specialized Agents' → Use Comparison Table block. End: FAQ with 3 questions.",
+      tools: "Layers tab → Content Blocks for AI Citation (templates) + Week 1 Blog Briefs (outlines). NOTE: Blog briefs need updating to match new blog order from Buyer Intel page.",
     },
     {
       step: 4,
-      title: "30-Min Engagement Routine (BEFORE you post anything)",
-      time: "30 min",
-      color: "bg-emerald-600",
-      description: "EVERY day before posting. Comment on 10 GC/legal ops posts. The algorithm rewards creators who engage first. This is NOT optional.",
-      action: "Follow the engagement routine: 5 min respond to comments → 15 min comment on 10 target posts → 5 min engage influencers → 5 min check DMs. Use substantive comments, not 'Great post!'",
-      example: "Comment on a GC's post about contract backlogs: 'This aligns with CLOC's finding that 83% expect demand to increase while headcount flattens. The consistency gap across reviewers is often the hidden cost.'",
-      tools: "Daily Engagement Routine section",
+      title: "Create YouTube Video from Blog (Veo 3 + ElevenLabs)",
+      time: "4-5 hours",
+      color: "bg-red-500",
+      description: "Turn your blog into a 5-8 min YouTube video. The script comes directly from the blog — you're NOT writing new content. Then cut 2-3 Shorts from the best moments.",
+      action: "Blog-to-video process: (1) Pull 5-6 key sections from blog → these become video chapters. (2) Write voiceover script from blog text — simplify, make conversational. (3) Create visuals with Veo 3 matching each section. (4) Add ElevenLabs voiceover. (5) Add timestamps, thumbnail, tags. (6) Cut 2-3 best moments as 60-sec Shorts.",
+      example: "Blog 'Can You Trust AI Contract Review?' → Video chapters: 0:00 Hook (the 60% stat) → 0:30 The hallucination problem → 2:00 Generic vs specialized AI → 3:30 How confidence scoring works → 5:00 What to look for → 6:00 CTA. Short #1: 'Why 60% don't trust AI' (0:00-1:00). Short #2: 'Confidence scoring in 45 seconds' (3:30-4:30).",
+      tools: "Layers tab → Platform Playbooks → YouTube (Long-form) + YouTube (Shorts)",
     },
     {
       step: 5,
-      title: "Post on LinkedIn (WHERE + formatting)",
-      time: "30 min",
-      color: "bg-indigo-600",
-      description: "Post the LinkedIn version of your blog content. Hook in first 2 lines. Link in FIRST COMMENT, not body. 8-9 AM UK time.",
-      action: "Use the hook from Step 2. Write 3-5 short paragraphs. End with question or CTA. Put blog link in first comment. Add 3-5 hashtags.",
-      example: "Hook: '60% of legal teams don't trust AI output. They're right to be skeptical.' → Body (3 paragraphs from blog) → CTA: 'What's your team's biggest concern about AI accuracy? Link in comments.'",
-      tools: "Platform Playbooks → LinkedIn (Posts) section",
-    },
-    {
-      step: 6,
       title: "Create LinkedIn Carousel (7 slides)",
       time: "2 hours",
       color: "bg-indigo-600",
-      description: "585% more engagement than text posts. Extract 5 key points from blog. One idea per slide.",
-      action: "Slide 1: Hook (bold question/stat). Slides 2-6: One key point each. Slide 7: CTA to demo page. Brand colors. Upload as PDF.",
-      example: "Slide 1: 'Can You Trust AI to Review Your Contracts?' → Slide 2: '60% of GCs say no' → Slide 3: 'The hallucination problem' → Slide 4: 'How confidence scoring changes everything' → Slide 5: 'Specialized vs generic AI accuracy' → Slide 6: 'What to look for in AI contract review' → Slide 7: 'See it in action → paralegent.ai/demo'",
-      tools: "Platform Playbooks → LinkedIn (Carousels) section",
+      description: "585% more engagement than text. Extract 5 key points from blog. One idea per slide. This is the HIGHEST engagement format on LinkedIn.",
+      action: "Slide 1: Hook from Step 2 (bold question/stat). Slides 2-6: One key point each from blog. Slide 7: CTA to paralegent.ai/demo. Brand colors (Teal #042729, Orange #FF4800). Upload as PDF.",
+      example: "Slide 1: 'Can You Trust AI to Review Your Contracts?' → Slide 2: '60% of GCs say no — here's why' → Slide 3: 'The hallucination problem (600+ documented cases)' → Slide 4: 'How confidence scoring changes everything' → Slide 5: 'Specialized vs generic: the accuracy difference' → Slide 6: '3 questions to ask any AI vendor' → Slide 7: 'See confidence scoring in action → paralegent.ai/demo'",
+      tools: "Layers tab → Platform Playbooks → LinkedIn (Carousels)",
+    },
+    {
+      step: 6,
+      title: "Post LinkedIn + Twitter (use the hook)",
+      time: "1 hour",
+      color: "bg-indigo-600",
+      description: "Post LinkedIn text post (with hook from Step 2) + Twitter thread (5-7 tweets from blog key points). Remember: link in FIRST COMMENT on LinkedIn, not in post body.",
+      action: "LinkedIn: Hook (2 lines) → Body (3-5 short paragraphs from blog) → CTA question → Hashtags. Link in first comment. Post at 8-9 AM UK time (1-2 PM PKT). Twitter: Thread of 5-7 tweets, each tweet stands alone, link only in last tweet.",
+      example: "LinkedIn: '60% of legal teams don't trust AI output. They're right to be skeptical...' [3 paragraphs] 'What's your team's biggest concern about AI accuracy?' First comment: link to blog. Twitter: 1/ The 60% stat 🧵 → 2/ Hallucination problem → 3/ Specialized vs generic → 4/ Confidence scoring → 5/ Link to blog.",
+      tools: "Layers tab → Platform Playbooks → LinkedIn (Posts) + Twitter/X (Threads)",
     },
     {
       step: 7,
-      title: "Create YouTube Video + Shorts (Veo 3 + ElevenLabs)",
-      time: "4-5 hours",
-      color: "bg-red-500",
-      description: "1 long-form (5-8 min) from blog content + cut 2-3 Shorts (60 sec). Competitors aren't doing YouTube — first-mover advantage.",
-      action: "Script from blog. Create with Veo 3 + ElevenLabs voiceover. Hook in first 5 seconds. Timestamps. Custom thumbnail. Pinned comment with demo link. Cut Shorts from best moments.",
-      example: "Video: 'Can You Trust AI Contract Review? The Accuracy Question Answered' (6 min) → Short #1: 'Why 60% of lawyers don't trust AI' (60 sec) → Short #2: 'Confidence scoring explained in 45 seconds'",
-      tools: "Platform Playbooks → YouTube sections",
+      title: "Repurpose Shorts → IG Reel + TikTok + FB Video + FB Post + IG Carousel",
+      time: "2 hours",
+      color: "bg-purple-600",
+      description: "Take what you already made and put it everywhere. YouTube Shorts → same video on IG/TikTok/FB. LinkedIn carousel → adapted to IG. Blog → short FB text post. NOT creating new content.",
+      action: "Each Short → post to IG Reel (IG caption + hashtags) + TikTok (casual caption) + FB Video (FB caption). LinkedIn carousel → adapt to 1080x1080 for IG carousel. Blog → short FB text post with direct link. Quora → find related question, answer using blog knowledge (500-800 words).",
+      example: "Short 'Why 60% don't trust AI' → IG Reel + TikTok + FB Video (3 posts in 30 min). LinkedIn carousel → IG carousel (resize). Blog summary → FB text post with link. Quora: answer 'Can AI review contracts accurately?' using blog data.",
+      tools: "Layers tab → Repurposing Workflow + Platform Playbooks (each platform)",
     },
     {
       step: 8,
-      title: "Repurpose to ALL Platforms (same content, different formats)",
-      time: "2 hours",
-      color: "bg-purple-600",
-      description: "Take the blog + video and distribute everywhere. This is NOT creating new content — it's reformatting what you already made.",
-      action: "YouTube Shorts → same video to IG Reel + TikTok + FB Video (15 min each). Twitter thread from blog (5-7 tweets). Facebook text post with link. Instagram carousel (adapt from LinkedIn). Quora answer using blog knowledge.",
-      example: "Short → IG Reel (change caption) → TikTok (casual caption) → FB Video (same). Twitter thread: 5 tweets from blog key points. Quora: answer 'Can AI accurately review contracts?' with blog content.",
-      tools: "Repurposing Workflow section + Platform Playbooks for each platform",
+      title: "Medium Republish (2 weeks after original blog)",
+      time: "30 min",
+      color: "bg-green-600",
+      description: "Republish the blog on Medium. DA 96 backlink. AI engines cite Medium. MUST wait 2 weeks and MUST set canonical URL.",
+      action: "Import blog to Medium. Set canonical URL to paralegent.ai original. Add 'Originally published on paralegent.ai' at top. Add 2-3 inline CTAs. Submit to 'Towards AI' or 'The Startup' publications.",
+      example: "Blog published April 8 → Medium republish April 22. Canonical: paralegent.ai/resources/blog/can-you-trust-ai-contract-review",
+      tools: "Layers tab → Platform Playbooks → Medium",
     },
     {
       step: 9,
-      title: "Medium Republish (2 weeks later)",
-      time: "30 min",
-      color: "bg-green-600",
-      description: "Republish blog on Medium with canonical URL. DA 96 backlink. AI engines cite Medium content.",
-      action: "Wait 2 weeks after original publish. Import to Medium. Set canonical URL to paralegent.ai. Add 'Originally published on paralegent.ai' at top. Submit to 'Towards AI' publication.",
-      example: "Blog published April 8 → Medium republish April 22. Canonical: paralegent.ai/resources/blog/can-you-trust-ai-contract-review",
-      tools: "Platform Playbooks → Medium section",
-    },
-    {
-      step: 10,
-      title: "Reddit + Quora Engagement (ongoing, low effort)",
+      title: "Reddit + Quora (ongoing, daily/weekly)",
       time: "1 hour/week",
       color: "bg-gray-600",
-      description: "Build karma on Reddit (NO promotion). Answer questions on Quora (feeds AI engines). These are long-term plays, not immediate results.",
-      action: "Reddit: browse r/legaltech, upvote, comment helpfully. Quora: find high-view questions, write 500-800 word genuine answers. Mention Paralegent only in 1/5 answers.",
-      example: "Quora question: 'Can AI review legal contracts accurately?' → Write 600-word answer using blog research. Cite ABA, CLOC data. Mention 'newer solutions like Paralegent use specialized agents with confidence scoring' as ONE option among several.",
-      tools: "Platform Playbooks → Reddit + Quora sections",
+      description: "Reddit: build karma (NO promotion for first 4-6 weeks). Quora: answer high-view questions (feeds AI engines directly). Both are long-term plays.",
+      action: "Reddit: browse r/legaltech daily (15 min), upvote, comment helpfully. Quora: 2-3 answers/week on questions with 1,000+ views. Only mention Paralegent in 1 out of 5 answers. Cite real data.",
+      example: "Quora: 'Can AI review legal contracts accurately?' → 600-word answer citing ABA (75% hallucination concern), CLOC (83% demand increase), real accuracy data. Mention 'newer solutions like Paralegent use specialized domain analysts with confidence scoring' as ONE option.",
+      tools: "Layers tab → Platform Playbooks → Reddit + Quora",
     },
   ];
 
@@ -495,9 +485,38 @@ function FlowSection() {
     <section className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
       <div className="mb-8">
         <h2 className="text-xl font-bold mb-2">The Content Creation Flow — Step by Step</h2>
-        <p className="text-sm text-gray-500">Follow this flow top to bottom for every piece of content. Each step references a section in the Layers tab.</p>
+        <p className="text-sm text-gray-500">Follow this flow for every piece of content. Each step references a section in the Layers tab.</p>
       </div>
 
+      {/* DAILY: Engagement Routine — shown FIRST as a banner */}
+      <div className="bg-emerald-600 text-white rounded-xl p-5 mb-6">
+        <div className="flex items-center gap-3 mb-2">
+          <span className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm font-bold">!</span>
+          <h3 className="font-semibold text-sm">DAILY — 30-Min Engagement Routine (8:00-8:30 AM EVERY morning)</h3>
+        </div>
+        <p className="text-sm text-white/80 mb-3">Do this BEFORE any other work. The algorithm rewards creators who engage first. Not optional.</p>
+        <div className="grid md:grid-cols-4 gap-3">
+          <div className="bg-white/10 rounded-lg p-2 text-center">
+            <p className="text-xs font-bold">5 min</p>
+            <p className="text-xs text-white/70">Respond to comments on yesterday&apos;s posts</p>
+          </div>
+          <div className="bg-white/10 rounded-lg p-2 text-center">
+            <p className="text-xs font-bold">15 min</p>
+            <p className="text-xs text-white/70">Comment on 10 GC/legal ops posts (substantive, not &apos;Great post!&apos;)</p>
+          </div>
+          <div className="bg-white/10 rounded-lg p-2 text-center">
+            <p className="text-xs font-bold">5 min</p>
+            <p className="text-xs text-white/70">Engage with 3-5 influencer posts (Mary O&apos;Carroll, Casey Flaherty, etc.)</p>
+          </div>
+          <div className="bg-white/10 rounded-lg p-2 text-center">
+            <p className="text-xs font-bold">5 min</p>
+            <p className="text-xs text-white/70">Check + respond to DMs</p>
+          </div>
+        </div>
+        <p className="text-xs text-white/50 mt-2">Layers tab → Daily Engagement Routine for full details + influencer list + comment examples</p>
+      </div>
+
+      {/* Steps */}
       <div className="space-y-4">
         {steps.map((s) => (
           <div key={s.step} className="bg-white rounded-xl border border-gray-200 overflow-hidden">
@@ -510,7 +529,6 @@ function FlowSection() {
             </div>
             <div className="p-5">
               <p className="text-sm text-gray-700 mb-3">{s.description}</p>
-
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="bg-blue-50 rounded-lg p-3">
                   <p className="text-xs font-bold text-blue-800 uppercase mb-1">What to do</p>
@@ -530,25 +548,25 @@ function FlowSection() {
         ))}
       </div>
 
-      {/* Weekly Summary */}
+      {/* Weekly Rhythm */}
       <div className="mt-8 bg-[#042729] rounded-xl p-6 text-[#F8F5EE]">
-        <h3 className="font-bold text-lg mb-4">Weekly Rhythm (per person)</h3>
+        <h3 className="font-bold text-lg mb-2">Weekly Rhythm (per person)</h3>
+        <p className="text-xs text-[#FF4800] font-medium mb-4">8:00-8:30 AM — Engagement routine EVERY day (respond to comments, comment on 10 posts, engage influencers, check DMs)</p>
         <div className="grid md:grid-cols-5 gap-4 text-center">
           {[
-            { day: "MON", tasks: "Write blog (Steps 1-3)", hours: "9h" },
-            { day: "TUE", tasks: "Finish blog + YouTube video (Steps 3, 7)", hours: "9h" },
-            { day: "WED", tasks: "Shorts + carousel + repurpose (Steps 6-8)", hours: "9h" },
-            { day: "THU", tasks: "LinkedIn + Twitter + Quora + IG + FB (Steps 4-5, 8)", hours: "9h" },
-            { day: "FRI", tasks: "Medium + Reddit + prep next blog (Steps 9-10, 1)", hours: "9h" },
+            { day: "MON", tasks: "Pick objection + hook → Write blog (Steps 1-3)", hours: "8:30-5:30" },
+            { day: "TUE", tasks: "Finish blog + publish → Create YouTube video (Steps 3-4)", hours: "8:30-5:30" },
+            { day: "WED", tasks: "Cut Shorts → Create carousel → Repurpose Shorts to IG/TikTok/FB (Steps 4-5-7)", hours: "8:30-5:30" },
+            { day: "THU", tasks: "Post LinkedIn + Twitter → FB post → IG carousel → Quora answer (Steps 6-7)", hours: "8:30-5:30" },
+            { day: "FRI", tasks: "Medium republish (older blog) → Reddit → Research next week's blog (Steps 8-9, Step 1)", hours: "8:30-5:30" },
           ].map((d) => (
             <div key={d.day} className="bg-white/10 rounded-lg p-3">
               <p className="text-[#FF4800] font-bold text-sm mb-1">{d.day}</p>
               <p className="text-xs text-[#F8F5EE]/70 mb-1">{d.tasks}</p>
-              <p className="text-xs text-[#F8F5EE]/50">{d.hours}</p>
+              <p className="text-xs text-[#F8F5EE]/40">{d.hours}</p>
             </div>
           ))}
         </div>
-        <p className="text-xs text-[#F8F5EE]/50 mt-4 text-center">+ 30 min engagement routine EVERY day before posting (Step 4)</p>
       </div>
     </section>
   );
