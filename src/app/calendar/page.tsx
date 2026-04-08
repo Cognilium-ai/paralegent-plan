@@ -1,6 +1,7 @@
 import { weeklyPlans, dayLabels, hoursSummary, weeks3to8 } from "@/data/content-calendar";
 import type { TaskItem } from "@/data/content-calendar";
 import { contentRules, qualityGates, internalLinkingMap } from "@/data/content-rules";
+import { contentToSalesSync, weeklyHandoff, platformKPIs, revenueContentTest, hackerNewsLaunch, aliTriggeredTasks, mudassirTriggeredTasks, platformStrategies, influencerList, aiCitationQueries, aiCitationInstructions } from "@/data/strategic-plan";
 import Nav from "@/components/Nav";
 
 function Badge({ className, children }: { className: string; children: React.ReactNode }) {
@@ -276,10 +277,190 @@ export default function CalendarPage() {
             </table>
           </div>
         </div>
+
+        {/* ═══════ STRATEGIC SECTIONS ═══════ */}
+        <div className="border-t-4 border-[#FF4800] mt-12 pt-8">
+          <h2 className="text-2xl font-bold text-[#042729] mb-2">Strategic Layer</h2>
+          <p className="text-sm text-gray-500 mb-8">How content connects to sales, growth targets, platform strategies, and revenue.</p>
+        </div>
+
+        {/* Content-to-Sales Sync */}
+        <div className="mb-8">
+          <h3 className="text-lg font-bold text-[#042729] mb-4">Content-to-Sales Sync — How Ali Uses Content in Outreach</h3>
+          <div className="bg-emerald-50 rounded-xl border border-emerald-200 p-5 mb-4">
+            <p className="text-xs font-bold text-emerald-800 uppercase mb-2">Weekly Handoff</p>
+            <div className="grid md:grid-cols-2 gap-3">
+              {Object.entries(weeklyHandoff).map(([day, action]) => (
+                <div key={day} className="bg-white rounded-lg p-3 border border-emerald-200">
+                  <p className="text-xs font-bold text-emerald-700 uppercase">{day}</p>
+                  <p className="text-xs text-gray-700">{action}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead><tr className="bg-[#042729] text-[#F8F5EE]">
+                <th className="px-3 py-2 text-left font-semibold">Week</th>
+                <th className="px-3 py-2 text-left font-semibold">Blog</th>
+                <th className="px-3 py-2 text-left font-semibold">Ali&apos;s Outreach Action</th>
+                <th className="px-3 py-2 text-left font-semibold">Trigger</th>
+              </tr></thead>
+              <tbody>{contentToSalesSync.map((s) => (
+                <tr key={s.week} className="border-t border-gray-100 hover:bg-gray-50">
+                  <td className="px-3 py-2 font-bold text-[#042729]">{s.week}</td>
+                  <td className="px-3 py-2 text-xs">{s.blog}</td>
+                  <td className="px-3 py-2 text-xs text-gray-700">{s.aliAction}</td>
+                  <td className="px-3 py-2 text-xs text-gray-500">{s.trigger}</td>
+                </tr>
+              ))}</tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Platform KPIs */}
+        <div className="mb-8">
+          <h3 className="text-lg font-bold text-[#042729] mb-4">Platform Growth KPIs — Week-by-Week Targets</h3>
+          <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead><tr className="bg-[#042729] text-[#F8F5EE]">
+                {platformKPIs.headers.map((h) => <th key={h} className="px-3 py-2 text-left font-semibold">{h}</th>)}
+              </tr></thead>
+              <tbody>{platformKPIs.rows.map((row, i) => (
+                <tr key={i} className="border-t border-gray-100 hover:bg-gray-50">
+                  {row.map((cell, j) => <td key={j} className={`px-3 py-2 text-xs ${j === 0 ? "font-medium text-gray-800" : "text-center text-gray-600"}`}>{cell}</td>)}
+                </tr>
+              ))}</tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Revenue-Driven Content Test */}
+        <div className="mb-8">
+          <h3 className="text-lg font-bold text-[#042729] mb-4">Revenue-Driven Content Test — Can We Trace to Pipeline?</h3>
+          <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead><tr className="bg-[#042729] text-[#F8F5EE]">
+                <th className="px-3 py-2 text-left font-semibold">Content</th>
+                <th className="px-3 py-2 text-left font-semibold">Path to Pipeline</th>
+                <th className="px-3 py-2 text-left font-semibold">Revenue Connection</th>
+              </tr></thead>
+              <tbody>{revenueContentTest.map((r, i) => (
+                <tr key={i} className={`border-t border-gray-100 ${r.content.includes("Facebook") ? "bg-red-50/30" : "hover:bg-gray-50"}`}>
+                  <td className="px-3 py-2 font-medium text-xs">{r.content}</td>
+                  <td className="px-3 py-2 text-xs text-gray-600">{r.path}</td>
+                  <td className="px-3 py-2 text-xs text-[#FF4800]">{r.connection}</td>
+                </tr>
+              ))}</tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Platform Strategies */}
+        <div className="mb-8">
+          <h3 className="text-lg font-bold text-[#042729] mb-4">Platform Strategies — Growth Target + Cadence + Research</h3>
+          <div className="space-y-3">
+            {platformStrategies.map((p) => (
+              <div key={p.platform} className="bg-white rounded-xl border border-gray-200 p-4">
+                <div className="flex flex-wrap items-center gap-2 mb-2">
+                  <h4 className="font-semibold text-sm text-[#042729]">{p.platform}</h4>
+                  <Badge className="bg-emerald-100 text-emerald-800">{p.target}</Badge>
+                  <Badge className="bg-blue-100 text-blue-800">{p.owner}</Badge>
+                </div>
+                <p className="text-xs text-gray-600 mb-1"><span className="font-medium">Cadence:</span> {p.cadence}</p>
+                <p className="text-xs text-gray-500"><span className="font-medium">Research:</span> {p.research}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Influencer List */}
+        <div className="mb-8">
+          <h3 className="text-lg font-bold text-[#042729] mb-4">Influencer Engagement List — 7 People to Engage Daily</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+            {influencerList.map((inf) => (
+              <div key={inf.name} className="bg-white rounded-xl border border-gray-200 p-4">
+                <div className="flex items-center gap-2 mb-1">
+                  <h4 className="font-semibold text-sm">{inf.name}</h4>
+                  <Badge className="bg-gray-100 text-gray-600">{inf.platform}</Badge>
+                </div>
+                <p className="text-xs text-gray-500 mb-1">{inf.role}</p>
+                <p className="text-xs text-[#FF4800]">{inf.strategy}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Ali + Mudassir Triggered Tasks */}
+        <div className="mb-8 grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 className="text-lg font-bold text-[#FF4800] mb-4">Ali&apos;s Triggered Tasks ({aliTriggeredTasks.length})</h3>
+            <div className="space-y-2">
+              {aliTriggeredTasks.map((t, i) => (
+                <div key={i} className="bg-white rounded-lg border border-gray-200 p-3">
+                  <div className="flex items-center gap-2 mb-1">
+                    <Badge className="bg-[#FF4800] text-white">{t.when}</Badge>
+                  </div>
+                  <p className="text-xs font-medium text-gray-800">{t.task}</p>
+                  <p className="text-xs text-gray-500">Trigger: {t.trigger}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold text-[#042729] mb-4">Mudassir&apos;s Triggered Tasks ({mudassirTriggeredTasks.length})</h3>
+            <div className="space-y-2">
+              {mudassirTriggeredTasks.map((t, i) => (
+                <div key={i} className="bg-white rounded-lg border border-gray-200 p-3">
+                  <div className="flex items-center gap-2 mb-1">
+                    <Badge className="bg-[#042729] text-white">{t.when}</Badge>
+                  </div>
+                  <p className="text-xs font-medium text-gray-800">{t.task}</p>
+                  <p className="text-xs text-gray-500">Trigger: {t.trigger}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Hacker News Launch */}
+        <div className="mb-8">
+          <h3 className="text-lg font-bold text-[#042729] mb-4">Hacker News Launch Plan — Week 7-8</h3>
+          <div className="bg-orange-50 rounded-xl border-2 border-orange-200 p-5">
+            <div className="flex items-center gap-2 mb-3">
+              <Badge className="bg-orange-600 text-white">{hackerNewsLaunch.when}</Badge>
+              <Badge className="bg-orange-100 text-orange-800">Expected: {hackerNewsLaunch.expected}</Badge>
+            </div>
+            <h4 className="font-bold text-sm text-[#042729] mb-2">&ldquo;{hackerNewsLaunch.title}&rdquo;</h4>
+            <p className="text-xs text-gray-600 mb-3">{hackerNewsLaunch.focus}</p>
+            <ul className="space-y-1 mb-3">
+              {hackerNewsLaunch.details.map((d, i) => (
+                <li key={i} className="text-xs text-gray-700 flex gap-2"><span className="text-orange-500">•</span>{d}</li>
+              ))}
+            </ul>
+            <p className="text-xs text-gray-500 italic">{hackerNewsLaunch.prep}</p>
+          </div>
+        </div>
+
+        {/* AI Citation Measurement */}
+        <div className="mb-8">
+          <h3 className="text-lg font-bold text-[#042729] mb-4">AI Citation Measurement — Test Biweekly</h3>
+          <div className="bg-purple-50 rounded-xl border border-purple-200 p-5">
+            <p className="text-xs text-purple-800 mb-3">{aiCitationInstructions}</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+              {aiCitationQueries.map((q, i) => (
+                <div key={i} className="bg-white rounded-lg p-2 border border-purple-200">
+                  <p className="text-xs text-gray-700">&ldquo;{q}&rdquo;</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-purple-600 mt-3">Test in: ChatGPT, Perplexity, Gemini, Copilot. Track: Are we cited? Which page? Screenshot.</p>
+          </div>
+        </div>
       </div>
 
       <footer className="bg-[#042729] text-[#F8F5EE]/50 text-center py-6 text-sm">
-        Paralegent AI | Complete 8-Week Content Calendar | 16 blogs, 16 videos, 32 Shorts, 272 pieces
+        Paralegent AI | Complete 8-Week System | Tactical + Strategic | 16 blogs, 272 pieces, all research-backed
       </footer>
     </main>
   );
