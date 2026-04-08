@@ -320,14 +320,66 @@ export const dayLabels = {
 };
 
 export const hoursSummary = {
-  saqlainDay1: "6 hrs 20 min",
-  asadDay1: "8 hrs 10 min",
-  saqlainDay2: "6 hrs 30 min",
+  saqlainDay1: "6 hrs 50 min",
+  asadDay1: "7 hrs 30 min",
+  saqlainDay2: "7 hrs 15 min",
   asadDay2: "6 hrs 30 min",
   saqlainDay3: "7 hrs",
-  asadDay3: "8 hrs 30 min",
-  saqlainDay4: "7 hrs 45 min",
-  asadDay4: "8 hrs",
-  saqlainDay5: "8 hrs 30 min",
-  asadDay5: "8 hrs 30 min",
+  asadDay3: "9 hrs",
+  saqlainDay4: "7 hrs",
+  asadDay4: "7 hrs",
+  saqlainDay5: "Light (buffer)",
+  asadDay5: "Light (buffer)",
 };
+
+// Weeks 3-8 blog summaries (same daily pattern as Weeks 1-2)
+export const weeks3to8 = [
+  {
+    week: 3, startDate: "April 21",
+    saqlain: { num: 5, title: "On-Premise Contract AI: Deploy in Your Own Cloud", objection: "#2 deep — BLUE OCEAN", keyword: "on-premise contract AI (LOW comp)", hook: "Contrarian", words: 2500 },
+    asad: { num: 6, title: "How AI Contract Redlining Works: From 30 Hours to 30 Minutes", objection: "Solution explanation", keyword: "AI contract redlining (9K+)", hook: "Value", words: 2500 },
+    videoA: "How Customer-Cloud AI Deployment Actually Works",
+    videoB: "Watch 18 Domain Analysts Review a Contract in Real Time",
+    shorts: ["Your Data Path: Your Cloud → Your LLM → Your Results", "Every Other Tool: Vendor Cloud. Us: Your Cloud.", "30 Hours → 30 Minutes: Watch AI Redline a Contract", "GREEN, ORANGE, or RED? How AI Classifies Contract Risk"],
+  },
+  {
+    week: 4, startDate: "April 28",
+    saqlain: { num: 7, title: "The Complete Guide to AI Contract Review in 2026", objection: "Education + authority", keyword: "AI contract review software (15K+)", hook: "Value", words: 3500 },
+    asad: { num: 8, title: "Paralegent vs Manual Contract Review: Time, Cost, and Accuracy", objection: "#4 ROI comparison", keyword: "AI vs manual contract review", hook: "Value", words: 2500 },
+    videoA: "Everything You Need to Know About AI Contract Review in 2026",
+    videoB: "AI vs Manual Contract Review: The Numbers Side by Side",
+    shorts: ["52% Use GenAI. Only 39% See Results.", "9.2% of Revenue Lost to Bad Contracts", "200 Working Days Consumed by Contract Review", "3.1 Hours Per Contract × 500 = The Problem"],
+  },
+  {
+    week: 5, startDate: "May 5",
+    saqlain: { num: 9, title: "The 10 Best AI Contract Review Tools in 2026 (Compared)", objection: "Capture comparison traffic", keyword: "best AI contract review tools 2026 (3K+)", hook: "Value", words: 3000 },
+    asad: { num: 10, title: "Paralegent vs LegalOn: Cloud-Deployed vs SaaS", objection: "Competitor comparison", keyword: "Paralegent vs LegalOn", hook: "Curiosity", words: 2500 },
+    videoA: "We Ranked 10 AI Contract Review Tools — Here's What We Found",
+    videoB: "Paralegent vs LegalOn: The Honest Comparison",
+    shorts: ["We Ranked 10 Tools. #1 Surprised Us.", "Best Tool for Data Sovereignty? Only 1 Option.", "LegalOn's Biggest Limitation (57% Can't Accept)", "'Not Plug-and-Play' — The #1 G2 Complaint"],
+  },
+  {
+    week: 6, startDate: "May 12",
+    saqlain: { num: 11, title: "Can ChatGPT Review Contracts? Why Generic AI Falls Short", objection: "#1 Trust — generic AI", keyword: "Can ChatGPT review contracts (High)", hook: "Contrarian", words: 1500 },
+    asad: { num: 12, title: "Multi-Agent AI vs Single LLM: Why Specialized Beats Generic", objection: "Technical differentiation", keyword: "multi-agent AI legal (3-4K)", hook: "Story", words: 2500 },
+    videoA: "Can ChatGPT Review Your Contracts? (We Tested It)",
+    videoB: "Why 18 Specialists Beat 1 Generic AI for Contract Review",
+    shorts: ["ChatGPT: Summarize Yes. Redline? No.", "600+ AI Hallucination Cases on Record", "1 Generalist vs 18 Specialists — The Doctor Analogy", "How an Orchestrator Resolves Conflicts Between 18 Agents"],
+  },
+  {
+    week: 7, startDate: "May 19",
+    saqlain: { num: 13, title: "Paralegent vs Spellbook: Deep Customization vs Pre-Built Playbooks", objection: "Competitor comparison #2", keyword: "Paralegent vs Spellbook", hook: "Curiosity", words: 2500 },
+    asad: { num: 14, title: "Is AI Contract Review Safe? GDPR, Privilege, and Data Sovereignty", objection: "#2 Data — compliance", keyword: "AI contract review GDPR", hook: "Value", words: 2000 },
+    videoA: "Paralegent vs Spellbook: Deep Customization vs Pre-Built",
+    videoB: "Is AI Contract Review Safe? The GDPR Compliance Guide",
+    shorts: ["Spellbook Users: 'Irrelevant Changes, Tedious'", "Our Honest Comparison — Strengths AND Weaknesses", "GDPR Says Your Data Stays Home", "Privilege Waiver Risk in SaaS AI"],
+  },
+  {
+    week: 8, startDate: "May 26",
+    saqlain: { num: 15, title: "Enterprise Buyer's Guide to AI Contract Review Software (2026)", objection: "Decision-stage authority", keyword: "AI contract review enterprise (2-3K)", hook: "Value", words: 3500 },
+    asad: { num: 16, title: "What Is a Contract Rulebook? The AI-Optimized Alternative to Playbooks", objection: "Category creation — own the term", keyword: "contract rulebook (Low, Very Low comp)", hook: "Curiosity", words: 2000 },
+    videoA: "The Enterprise Buyer's Guide to AI Contract Review (2026)",
+    videoB: "What Is a Contract Rulebook? (And Why It's Better Than a Playbook)",
+    shorts: ["The Only Evaluation Checklist You Need", "How to Choose: 5 Questions for Every Vendor", "Playbook vs Rulebook: What's the Difference?", "Your Rules. Your Agents. Your Cloud."],
+  },
+];
