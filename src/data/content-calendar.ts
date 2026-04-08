@@ -1,57 +1,63 @@
 // ============================================================
 // 8-WEEK CONTENT CALENDAR — System Design (Structure Before Content)
-// Every piece mapped: objection, hook, purpose, angle, platform
-// Saqlain → Mudassir's LinkedIn + Company Page + Twitter + Quora + Medium + Reddit + Strapi
-// Asad → Ali's LinkedIn + YouTube + Instagram + TikTok + Facebook
+//
+// KEY PRINCIPLE: Both blogs publish SAME day. Both people work in PARALLEL.
+// Each person handles BOTH blogs on THEIR platforms:
+//   Saqlain → Mudassir's LinkedIn, Company Page, Twitter, Quora, Medium, Reddit, Strapi
+//   Asad → Ali's LinkedIn, YouTube, Instagram, TikTok, Facebook, Carousel design
+//
+// Day 1: SURGE (both blogs publish + all text posts)
+// Day 2: VIDEO (both long videos)
+// Day 3: SHORTS (all 4 Shorts + reposts)
+// Day 4-5: BUFFER (Articles, Newsletter, Medium, prep)
 // ============================================================
 
-export interface BlogWeek {
+export interface WeekPlan {
   week: number;
-  blog: {
-    number: number;
-    title: string;
-    objection: string;
-    objectionPercent: string;
-    keyword: string;
-    hookFormula: string;
-    hookExample: string;
-    contentBlocks: string[];
-    customerLanguage: string[];
-    buyerStage: string;
-    assignedWriter: "Saqlain" | "Asad";
-    words: number;
-  };
-  pieces: {
-    platform: string;
-    type: string;
-    owner: "Saqlain" | "Asad";
-    day: number;
-    purpose: string;
-    angle: string;
-    postedOn: string;
-  }[];
-  videoLong: {
-    title: string;
-    purpose: string;
-    angle: string;
-    duration: string;
-    owner: "Saqlain" | "Asad";
-    day: number;
-  };
-  shorts: {
-    title: string;
-    angle: string;
-    owner: "Saqlain" | "Asad";
-    day: number;
-  }[];
+  startDate: string;
+  blogA: BlogInfo;   // Saqlain writes this blog
+  blogB: BlogInfo;   // Asad writes this blog
+  saqlainDay1: TaskItem[];  // What Saqlain does Day 1
+  asadDay1: TaskItem[];     // What Asad does Day 1
+  saqlainDay2: TaskItem[];
+  asadDay2: TaskItem[];
+  saqlainDay3: TaskItem[];
+  asadDay3: TaskItem[];
+  saqlainDay4: TaskItem[];
+  asadDay4: TaskItem[];
+  saqlainDay5: TaskItem[];
+  asadDay5: TaskItem[];
 }
 
-export const contentCalendar: BlogWeek[] = [
-  // ═══════════════════ WEEK 1 ═══════════════════
-  // Saqlain: Blog #1 (Trust) — Asad: Blog #2 (Data Sovereignty)
+export interface BlogInfo {
+  number: number;
+  title: string;
+  objection: string;
+  objectionPercent: string;
+  keyword: string;
+  hookFormula: string;
+  hookExample: string;
+  contentBlocks: string[];
+  customerLanguage: string[];
+  buyerStage: string;
+  words: number;
+}
+
+export interface TaskItem {
+  task: string;
+  forBlog: number;  // which blog number this serves
+  time: string;
+  platform: string;
+  purpose: string;
+  angle: string;
+}
+
+export const weeklyPlans: WeekPlan[] = [
+  // ═══════════════════ WEEK 1: April 9-13 ═══════════════════
   {
     week: 1,
-    blog: {
+    startDate: "April 9 (Wed)",
+    blogA: {
       number: 1,
       title: "Can Your Legal Team Trust AI Contract Review? The Accuracy Question Answered",
       objection: "#1 — I don't trust the AI output",
@@ -59,41 +65,12 @@ export const contentCalendar: BlogWeek[] = [
       keyword: "AI contract review accuracy",
       hookFormula: "Curiosity",
       hookExample: "60% of legal teams don't trust AI output. They're right to be skeptical — here's what changes their mind.",
-      contentBlocks: ["Definition: What is AI accuracy in contract review", "Stats: 60% trust concern (LawNext), 75% hallucination fear (ABA), 600+ documented cases", "Comparison Table: Generic AI vs Specialized Domain Analysts", "FAQ: 3 questions about accuracy"],
+      contentBlocks: ["Definition: What is AI accuracy in contract review", "Stats: 60% trust (LawNext), 75% hallucination (ABA), 600+ cases", "Comparison Table: Generic AI vs Specialized Domain Analysts", "FAQ: 3 questions about accuracy"],
       customerLanguage: ["professional judgment", "hallucination concerns", "undetected inconsistencies", "can't afford errors"],
       buyerStage: "Awareness → Consideration",
-      assignedWriter: "Saqlain",
       words: 2500,
     },
-    pieces: [
-      { platform: "Mudassir's LinkedIn", type: "Text Post", owner: "Saqlain", day: 1, purpose: "Founder credibility on trust. GCs see CEO addressing THEIR #1 concern personally.", angle: "Curiosity hook. Lead with 60% stat. Personal voice: 'Here's what I've learned building AI for legal teams.'" , postedOn: "Mudassir's personal profile" },
-      { platform: "LinkedIn Company Page", type: "Text Post", owner: "Saqlain", day: 1, purpose: "Official product credibility. Professional tone.", angle: "Product-focused: 'How confidence scoring solves the trust problem.'", postedOn: "Paralegent AI company page" },
-      { platform: "Twitter/X", type: "Thread (5 tweets)", owner: "Saqlain", day: 1, purpose: "Capture legal tech conversation. Data-heavy thread shows depth.", angle: "One stat per tweet. Thread of facts, not opinions.", postedOn: "@paralegentai" },
-      { platform: "Quora", type: "Answer (600 words)", owner: "Saqlain", day: 1, purpose: "Feeds AI engines directly. ChatGPT/Gemini cite Quora answers.", angle: "Genuine answer to 'Can AI accurately review legal contracts?' Cite ABA, CLOC data.", postedOn: "Quora" },
-      { platform: "Ali's LinkedIn", type: "Text Post", owner: "Asad", day: 1, purpose: "Second LinkedIn profile = 2x reach. Different angle from Mudassir's.", angle: "Value hook: 'How to evaluate AI accuracy (3 questions nobody asks).' Technical angle.", postedOn: "Ali's personal profile" },
-      { platform: "LinkedIn Carousel", type: "7 slides", owner: "Asad", day: 1, purpose: "585% more engagement than text. Visual breakdown of trust problem.", angle: "Slide 1: bold stat. Slides 2-6: generic AI problems → specialized solution. Slide 7: CTA.", postedOn: "Ali's personal profile" },
-      { platform: "Facebook", type: "Text Post", owner: "Asad", day: 1, purpose: "Maintain presence. Link directly to blog.", angle: "Shorter. Direct link (FB doesn't penalize). Blog summary.", postedOn: "Paralegent AI FB page" },
-      { platform: "Instagram", type: "Carousel + Caption", owner: "Asad", day: 1, purpose: "Visual platform. Adapted carousel drives to link in bio.", angle: "Data-visual. Key stats as graphics.", postedOn: "@paralegentai" },
-      { platform: "TikTok", type: "Caption (for Short)", owner: "Asad", day: 3, purpose: "Discovery. 18% higher B2B completion rate.", angle: "Casual: 'Did you know 75% of lawyers worry about AI hallucination?'", postedOn: "@paralegentai" },
-    ],
-    videoLong: {
-      title: "Can You Trust AI to Review Your Contracts? (The Accuracy Question)",
-      purpose: "29% of buyers search YouTube before contacting sales. Show confidence scoring working — builds trust visually.",
-      angle: "NOT a talking head. Show the product: upload contract → findings appear → confidence scores → rationale. 'Watch how every finding is explained.'",
-      duration: "5-8 min",
-      owner: "Asad",
-      day: 2,
-    },
-    shorts: [
-      { title: "60% of Lawyers Don't Trust AI. Here's Why They Should.", angle: "Hook with the stat. Show confidence scoring in 30 seconds. End: 'Every finding explained.'", owner: "Asad", day: 3 },
-      { title: "What Confidence Scoring Actually Looks Like in Contract Review", angle: "Demo clip: RED clause → rationale → confidence 94% → suggested revision. Visual proof.", owner: "Asad", day: 3 },
-    ],
-  },
-
-  // Asad's blog for Week 1
-  {
-    week: 1,
-    blog: {
+    blogB: {
       number: 2,
       title: "Data Sovereignty in Legal AI: Why Your Contracts Should Never Leave Your Cloud",
       objection: "#2 — My data cannot leave our environment",
@@ -101,41 +78,129 @@ export const contentCalendar: BlogWeek[] = [
       keyword: "data sovereignty legal AI",
       hookFormula: "Contrarian",
       hookExample: "Every AI contract review tool on the market is SaaS. Your contracts sit on someone else's servers. There's a better way.",
-      contentBlocks: ["Definition: What is data sovereignty in legal AI", "Stats: 57% cite data privacy (LawNext), 75% top ethical concern (Deloitte)", "Comparison Table: SaaS vs Customer-Cloud across security/privilege/compliance/control", "FAQ: 3 questions about data safety"],
+      contentBlocks: ["Definition: What is data sovereignty in legal AI", "Stats: 57% cite data privacy (LawNext), 75% ethical concern (Deloitte)", "Comparison Table: SaaS vs Customer-Cloud", "FAQ: 3 questions about data safety"],
       customerLanguage: ["can't send our data to another vendor", "security and information governance standards", "privileged client data", "attorney-client privilege"],
       buyerStage: "Consideration",
-      assignedWriter: "Asad",
       words: 2500,
     },
-    pieces: [
-      { platform: "Ali's LinkedIn", type: "Text Post", owner: "Asad", day: 1, purpose: "Ali's profile speaks to the technical buyer (CIO/CISO audience).", angle: "Contrarian hook. 'Every contract AI is SaaS. Here's the problem with that.'", postedOn: "Ali's personal profile" },
-      { platform: "LinkedIn Carousel", type: "7 slides", owner: "Asad", day: 1, purpose: "Visual: where your data goes with SaaS vs customer-cloud. Architecture diagram.", angle: "Slide 1: 'Where do your contracts go when you click Review?' Slides: SaaS data flow vs your-cloud flow.", postedOn: "Ali's personal profile" },
-      { platform: "Facebook", type: "Text Post", owner: "Asad", day: 1, purpose: "Maintain presence. Direct link.", angle: "Short version. Link to blog.", postedOn: "Paralegent AI FB page" },
-      { platform: "Instagram", type: "Carousel + Caption", owner: "Asad", day: 1, purpose: "Visual. Architecture diagram as carousel.", angle: "SaaS vs Your Cloud — visual comparison.", postedOn: "@paralegentai" },
-      { platform: "Mudassir's LinkedIn", type: "Text Post", owner: "Saqlain", day: 1, purpose: "Founder voice on data sovereignty. GCs trust CEO on security.", angle: "Story hook: 'A GC told me: If you can't meet our security standards, we can't proceed. 57% say the same.'", postedOn: "Mudassir's personal profile" },
-      { platform: "LinkedIn Company Page", type: "Text Post", owner: "Saqlain", day: 1, purpose: "Official stance on data sovereignty.", angle: "Product-focused: 'Deployed in your cloud. Data never leaves.'", postedOn: "Paralegent AI company page" },
-      { platform: "Twitter/X", type: "Thread (5 tweets)", owner: "Saqlain", day: 1, purpose: "Legal tech conversation. Data sovereignty thread.", angle: "Thread: 'Every AI contract tool is SaaS. Here's why that's a problem for legal teams. 🧵'", postedOn: "@paralegentai" },
-      { platform: "Quora", type: "Answer (600 words)", owner: "Saqlain", day: 1, purpose: "AI engine feed. Answer data safety question.", angle: "'Is AI contract review safe for confidential documents?' Genuine answer.", postedOn: "Quora" },
-      { platform: "TikTok", type: "Caption (for Short)", owner: "Asad", day: 3, purpose: "Discovery.", angle: "'Your SaaS AI tool has access to every contract you've ever reviewed. Should it?'", postedOn: "@paralegentai" },
+
+    // ── DAY 1: SURGE ── Saqlain handles both blogs on HIS platforms
+    saqlainDay1: [
+      { task: "Engagement routine", forBlog: 0, time: "2 hrs", platform: "LinkedIn", purpose: "Respond to comments, comment on 10 GC/legal ops posts, engage influencers, check DMs", angle: "Substantive comments using buyer language" },
+      { task: "Reddit engagement", forBlog: 0, time: "30 min", platform: "Reddit", purpose: "Browse r/legaltech, upvote, comment helpfully", angle: "Build karma, no promotion" },
+      { task: "Publish Blog #1 to Strapi", forBlog: 1, time: "30 min", platform: "Website", purpose: "Blog #1 goes LIVE — triggers all other posts", angle: "Format, images, schema, JSON-LD" },
+      { task: "Post Blog #1 on Mudassir's LinkedIn", forBlog: 1, time: "20 min", platform: "Mudassir's LinkedIn", purpose: "Founder credibility on trust. GCs see CEO addressing THEIR #1 concern.", angle: "Curiosity hook: '60% of legal teams don't trust AI output...'" },
+      { task: "Post Blog #1 on Company Page", forBlog: 1, time: "20 min", platform: "Company Page", purpose: "Official product credibility", angle: "Product-focused: 'How confidence scoring solves the trust problem'" },
+      { task: "Post Blog #1 Twitter thread", forBlog: 1, time: "30 min", platform: "Twitter/X", purpose: "Legal tech conversation. Data-heavy thread.", angle: "One stat per tweet. Thread of facts." },
+      { task: "Post Blog #1 Quora answer", forBlog: 1, time: "30 min", platform: "Quora", purpose: "Feeds AI engines. ChatGPT/Gemini cite Quora.", angle: "'Can AI accurately review contracts?' Genuine 600-word answer." },
+      { task: "Post Blog #2 on Mudassir's LinkedIn", forBlog: 2, time: "20 min", platform: "Mudassir's LinkedIn", purpose: "Founder voice on data sovereignty. GCs trust CEO on security.", angle: "Story hook: 'A GC told me: If you can't meet our security standards, we can't proceed.'" },
+      { task: "Post Blog #2 on Company Page", forBlog: 2, time: "20 min", platform: "Company Page", purpose: "Official data sovereignty stance", angle: "'Deployed in your cloud. Data never leaves.'" },
+      { task: "Post Blog #2 Twitter thread", forBlog: 2, time: "30 min", platform: "Twitter/X", purpose: "Data sovereignty thread", angle: "'Every AI contract tool is SaaS. Here's why that's a problem. 🧵'" },
+      { task: "Post Blog #2 Quora answer", forBlog: 2, time: "30 min", platform: "Quora", purpose: "AI engine feed", angle: "'Is AI contract review safe for confidential documents?' Genuine answer." },
     ],
-    videoLong: {
-      title: "Where Do Your Contracts Go? SaaS vs Customer-Cloud AI (Data Sovereignty Explained)",
-      purpose: "CIOs search YouTube for security evaluations. Visual architecture comparison builds trust.",
-      angle: "Side-by-side: SaaS data flow (your contract → vendor servers → vendor LLM → results) vs Customer-cloud (your contract → your cloud → your LLM → results, never leaves).",
-      duration: "5-7 min",
-      owner: "Asad",
-      day: 2,
-    },
-    shorts: [
-      { title: "Your Contract Data Never Leaves Your Cloud. Here's How.", angle: "30-sec architecture animation. Your cloud, your LLM, your data.", owner: "Asad", day: 3 },
-      { title: "SaaS vs Your Cloud: Where Does Your Contract Data Actually Go?", angle: "Split screen comparison. SaaS = vendor servers. Customer-cloud = your environment.", owner: "Asad", day: 3 },
+    // Saqlain Day 1 Total: 2h + 30m + 30m + 20m + 20m + 30m + 30m + 20m + 20m + 30m + 30m = 6 hrs 20 min ✓
+
+    // ── DAY 1: SURGE ── Asad handles both blogs on HIS platforms
+    asadDay1: [
+      { task: "Engagement routine", forBlog: 0, time: "2 hrs", platform: "LinkedIn", purpose: "Respond to comments, comment on 10 posts, engage influencers, check DMs", angle: "Substantive comments on legal ops / CIO posts" },
+      { task: "Reddit engagement", forBlog: 0, time: "30 min", platform: "Reddit", purpose: "Browse, upvote, comment", angle: "Build karma" },
+      { task: "Post Blog #2 on Ali's LinkedIn", forBlog: 2, time: "20 min", platform: "Ali's LinkedIn", purpose: "Ali's profile speaks to technical buyer (CIO/CISO).", angle: "Contrarian: 'Every contract AI is SaaS. Here's the problem.'" },
+      { task: "Design Blog #2 LinkedIn carousel (7 slides)", forBlog: 2, time: "1 hr", platform: "Ali's LinkedIn", purpose: "585% more engagement. Visual architecture comparison.", angle: "Slide 1: 'Where do your contracts go?' Slides: SaaS flow vs your-cloud flow." },
+      { task: "Adapt Blog #2 carousel → IG", forBlog: 2, time: "30 min", platform: "Instagram", purpose: "Visual platform. Architecture diagram as carousel.", angle: "SaaS vs Your Cloud visual." },
+      { task: "Post Blog #2 Facebook", forBlog: 2, time: "20 min", platform: "Facebook", purpose: "Presence. Direct link.", angle: "Short version + link." },
+      { task: "Post Blog #2 Instagram caption", forBlog: 2, time: "20 min", platform: "Instagram", purpose: "Drive to link in bio.", angle: "Data-visual angle." },
+      { task: "Post Blog #2 TikTok", forBlog: 2, time: "20 min", platform: "TikTok", purpose: "Discovery.", angle: "'Your SaaS AI has access to every contract you've reviewed. Should it?'" },
+      { task: "Post Blog #1 on Ali's LinkedIn", forBlog: 1, time: "20 min", platform: "Ali's LinkedIn", purpose: "Second profile = 2x reach. Different angle from Mudassir's.", angle: "Value: 'How to evaluate AI accuracy (3 questions nobody asks).'" },
+      { task: "Design Blog #1 LinkedIn carousel (7 slides)", forBlog: 1, time: "1 hr", platform: "Ali's LinkedIn", purpose: "Visual trust breakdown.", angle: "Slide 1: bold stat. Slides: generic AI problems → specialized solution." },
+      { task: "Adapt Blog #1 carousel → IG", forBlog: 1, time: "30 min", platform: "Instagram", purpose: "Visual.", angle: "Key stats as graphics." },
+      { task: "Post Blog #1 Facebook", forBlog: 1, time: "20 min", platform: "Facebook", purpose: "Presence.", angle: "Short + link." },
+      { task: "Post Blog #1 Instagram caption", forBlog: 1, time: "20 min", platform: "Instagram", purpose: "Drive to bio.", angle: "Trust angle." },
+      { task: "Post Blog #1 TikTok", forBlog: 1, time: "20 min", platform: "TikTok", purpose: "Discovery.", angle: "'Did you know 75% of lawyers worry about AI hallucination?'" },
     ],
+    // Asad Day 1 Total: 2h + 30m + 20m + 1h + 30m + 20m + 20m + 20m + 20m + 1h + 30m + 20m + 20m + 20m = 8 hrs 10 min ✓
+
+    // ── DAY 2: VIDEO ── Each makes 1 long video for their blog
+    saqlainDay2: [
+      { task: "Engagement routine", forBlog: 0, time: "2 hrs", platform: "LinkedIn", purpose: "Daily engagement", angle: "" },
+      { task: "Reddit engagement", forBlog: 0, time: "30 min", platform: "Reddit", purpose: "Daily", angle: "" },
+      { task: "Make Blog #1 YouTube Long Video (Veo 3 + ElevenLabs)", forBlog: 1, time: "3 hrs", platform: "YouTube", purpose: "29% of buyers search YouTube. Show confidence scoring working — builds trust visually.", angle: "Show product: upload → findings → confidence scores → rationale. 'Watch how every finding is explained.'" },
+      { task: "Make Blog #1 YouTube thumbnail", forBlog: 1, time: "30 min", platform: "YouTube", purpose: "Thumbnail drives clicks (89% of top videos use custom)", angle: "High contrast, text: 'Can You Trust AI Contract Review?'" },
+      { task: "Upload Blog #1 video to YouTube", forBlog: 1, time: "30 min", platform: "YouTube", purpose: "SEO: keyword in title, description, tags, pinned comment", angle: "Title: 'Can You Trust AI Contract Review? The Accuracy Question'" },
+    ],
+    // Saqlain Day 2 Total: 2h + 30m + 3h + 30m + 30m = 6 hrs 30 min (2.5 hrs buffer)
+
+    asadDay2: [
+      { task: "Engagement routine", forBlog: 0, time: "2 hrs", platform: "LinkedIn", purpose: "Daily engagement", angle: "" },
+      { task: "Reddit engagement", forBlog: 0, time: "30 min", platform: "Reddit", purpose: "Daily", angle: "" },
+      { task: "Make Blog #2 YouTube Long Video (Veo 3 + ElevenLabs)", forBlog: 2, time: "3 hrs", platform: "YouTube", purpose: "CIOs search YouTube for security evaluations. Visual architecture comparison.", angle: "Side-by-side: SaaS data flow vs Customer-cloud. 'Your data never leaves.'" },
+      { task: "Make Blog #2 YouTube thumbnail", forBlog: 2, time: "30 min", platform: "YouTube", purpose: "Thumbnail", angle: "Split screen: SaaS cloud vs Your cloud" },
+      { task: "Upload Blog #2 video to YouTube", forBlog: 2, time: "30 min", platform: "YouTube", purpose: "SEO", angle: "Title: 'Where Do Your Contracts Go? SaaS vs Customer-Cloud AI'" },
+    ],
+    // Asad Day 2 Total: 2h + 30m + 3h + 30m + 30m = 6 hrs 30 min (2.5 hrs buffer)
+
+    // ── DAY 3: SHORTS ── Each makes 2 Shorts + reposts for BOTH blogs
+    saqlainDay3: [
+      { task: "Engagement routine", forBlog: 0, time: "2 hrs", platform: "LinkedIn", purpose: "Daily engagement", angle: "" },
+      { task: "Reddit engagement", forBlog: 0, time: "30 min", platform: "Reddit", purpose: "Daily", angle: "" },
+      { task: "Make Blog #1 Short #1 (Veo 3)", forBlog: 1, time: "2 hrs", platform: "YouTube", purpose: "Discovery — 80% views from non-subscribers", angle: "'60% of Lawyers Don't Trust AI. Here's Why They Should.'" },
+      { task: "Make Blog #1 Short #2 (Veo 3)", forBlog: 1, time: "2 hrs", platform: "YouTube", purpose: "Different angle from Short #1", angle: "'What Confidence Scoring Actually Looks Like in Contract Review'" },
+      { task: "Upload both Shorts to YouTube", forBlog: 1, time: "30 min", platform: "YouTube", purpose: "Upload + titles + descriptions", angle: "" },
+    ],
+    // Saqlain Day 3 Total: 2h + 30m + 2h + 2h + 30m = 7 hrs (2 hrs buffer)
+
+    asadDay3: [
+      { task: "Engagement routine", forBlog: 0, time: "2 hrs", platform: "LinkedIn", purpose: "Daily engagement", angle: "" },
+      { task: "Reddit engagement", forBlog: 0, time: "30 min", platform: "Reddit", purpose: "Daily", angle: "" },
+      { task: "Make Blog #2 Short #1 (Veo 3)", forBlog: 2, time: "2 hrs", platform: "YouTube", purpose: "Discovery", angle: "'Your Contract Data Never Leaves Your Cloud. Here's How.'" },
+      { task: "Make Blog #2 Short #2 (Veo 3)", forBlog: 2, time: "2 hrs", platform: "YouTube", purpose: "Different angle", angle: "'SaaS vs Your Cloud: Where Does Your Contract Data Actually Go?'" },
+      { task: "Upload both Shorts + Repost all 4 Shorts (Blog #1 + #2) → IG Reel + TikTok + FB Video", forBlog: 0, time: "2 hrs", platform: "IG/TikTok/FB", purpose: "Repost all 4 Shorts across platforms (15 min each × 4 Shorts × 3 platforms = ~12 reposts)", angle: "Platform-specific captions for each" },
+    ],
+    // Asad Day 3 Total: 2h + 30m + 2h + 2h + 2h = 8 hrs 30 min ✓
+
+    // ── DAY 4: BUFFER ──
+    saqlainDay4: [
+      { task: "Engagement routine", forBlog: 0, time: "2 hrs", platform: "LinkedIn", purpose: "Daily", angle: "" },
+      { task: "Reddit engagement", forBlog: 0, time: "30 min", platform: "Reddit", purpose: "Daily", angle: "" },
+      { task: "Write + Publish LinkedIn Article on Mudassir's profile (adapt from Blog #1)", forBlog: 1, time: "3 hrs", platform: "Mudassir's LinkedIn", purpose: "LinkedIn Articles are Google-indexed + cited by AI engines (50-66% of LinkedIn AI citations)", angle: "Adapted from blog, not copy-paste. Newsletter voice." },
+      { task: "LinkedIn Newsletter 'The Contract Intelligence Brief' (biweekly — if applicable)", forBlog: 1, time: "2 hrs", platform: "Mudassir's LinkedIn", purpose: "40-60% open rate. Triple notification bypasses algorithm.", angle: "Topic: 'Why 60% of Legal Teams Don't Trust AI — And What Changes Their Mind'" },
+      { task: "Medium republish of older blog (if any from previous weeks)", forBlog: 0, time: "15 min", platform: "Medium", purpose: "DA 96 backlink", angle: "Canonical URL to website" },
+    ],
+    // Saqlain Day 4 Total: 2h + 30m + 3h + 2h + 15m = 7 hrs 45 min ✓
+
+    asadDay4: [
+      { task: "Engagement routine", forBlog: 0, time: "2 hrs", platform: "LinkedIn", purpose: "Daily", angle: "" },
+      { task: "Reddit engagement", forBlog: 0, time: "30 min", platform: "Reddit", purpose: "Daily", angle: "" },
+      { task: "Repost remaining Shorts to platforms (if not finished Day 3)", forBlog: 0, time: "1 hr", platform: "IG/TikTok/FB", purpose: "Catch up on any remaining reposts", angle: "" },
+      { task: "Extra YouTube Short from Blog #2 (bonus content)", forBlog: 2, time: "2 hrs", platform: "YouTube", purpose: "Extra discovery content", angle: "Different angle from Day 3 Shorts" },
+      { task: "Review next week's content package from us (when available)", forBlog: 0, time: "2 hrs", platform: "—", purpose: "Prepare for next week's execution", angle: "Read briefs, understand objectives, plan execution" },
+    ],
+    // Asad Day 4 Total: 2h + 30m + 1h + 2h + 2h = 7 hrs 30 min ✓
+
+    // ── DAY 5: BUFFER ──
+    saqlainDay5: [
+      { task: "Engagement routine", forBlog: 0, time: "2 hrs", platform: "LinkedIn", purpose: "Daily", angle: "" },
+      { task: "Reddit engagement", forBlog: 0, time: "30 min", platform: "Reddit", purpose: "Daily", angle: "" },
+      { task: "Review next week's content package from us", forBlog: 0, time: "2 hrs", platform: "—", purpose: "Prepare for next week", angle: "Read Blog #3 brief, understand pilot failure objection" },
+      { task: "Extra engagement — comment on high-performing posts from this week", forBlog: 0, time: "2 hrs", platform: "LinkedIn", purpose: "Boost posts that are gaining traction", angle: "Respond to every comment, engage with sharers" },
+      { task: "Catch up on any missed posts or overflow", forBlog: 0, time: "2 hrs", platform: "Various", purpose: "Buffer", angle: "" },
+    ],
+    // Saqlain Day 5 Total: 2h + 30m + 2h + 2h + 2h = 8 hrs 30 min ✓
+
+    asadDay5: [
+      { task: "Engagement routine", forBlog: 0, time: "2 hrs", platform: "LinkedIn", purpose: "Daily", angle: "" },
+      { task: "Reddit engagement", forBlog: 0, time: "30 min", platform: "Reddit", purpose: "Daily", angle: "" },
+      { task: "Review next week's content package from us", forBlog: 0, time: "2 hrs", platform: "—", purpose: "Prepare for next week", angle: "Read Blog #4 brief, understand ROI objection" },
+      { task: "Extra YouTube Short or Reel (bonus content)", forBlog: 0, time: "2 hrs", platform: "YouTube/IG", purpose: "Extra content", angle: "Trending angle or behind-the-scenes" },
+      { task: "Catch up on any missed posts or overflow", forBlog: 0, time: "2 hrs", platform: "Various", purpose: "Buffer", angle: "" },
+    ],
+    // Asad Day 5 Total: 2h + 30m + 2h + 2h + 2h = 8 hrs 30 min ✓
   },
 
-  // ═══════════════════ WEEK 2 ═══════════════════
+  // ═══════════════════ WEEK 2: April 14-18 ═══════════════════
   {
     week: 2,
-    blog: {
+    startDate: "April 14 (Mon)",
+    blogA: {
       number: 3,
       title: "Why 95% of AI Contract Review Pilots Fail (And How to Avoid It)",
       objection: "#3 — We tried something before and it failed",
@@ -143,40 +208,12 @@ export const contentCalendar: BlogWeek[] = [
       keyword: "AI contract review pilot failure",
       hookFormula: "Story",
       hookExample: "77% of legal teams have experienced a failed tech implementation. 43% had more than one. Here's what the successful 23% did differently.",
-      contentBlocks: ["Definition: What makes an AI pilot fail vs succeed", "Stats: 77% failed (Artificial Lawyer), 95% no measurable impact (MIT/Axiom), 38% too long, 36% too complicated", "Comparison Table: Failed pilot characteristics vs Successful pilot characteristics", "FAQ: 3 questions about implementation"],
-      customerLanguage: ["implementation took too long", "too complicated", "didn't match actual needs", "the machine won't do the job autonomously"],
+      contentBlocks: ["Definition: What makes an AI pilot fail vs succeed", "Stats: 77% failed (Artificial Lawyer), 95% no impact (MIT/Axiom)", "Comparison Table: Failed vs Successful pilot characteristics", "FAQ: 3 questions about implementation"],
+      customerLanguage: ["implementation took too long", "too complicated", "didn't match actual needs"],
       buyerStage: "Consideration",
-      assignedWriter: "Saqlain",
       words: 2500,
     },
-    pieces: [
-      { platform: "Mudassir's LinkedIn", type: "Text Post", owner: "Saqlain", day: 1, purpose: "Founder addressing the elephant in the room. Shows self-awareness.", angle: "Story: '77% of legal teams have been burned by failed tech. We built our implementation to be different. Here's how.'", postedOn: "Mudassir's personal profile" },
-      { platform: "LinkedIn Company Page", type: "Text Post", owner: "Saqlain", day: 1, purpose: "Official: our implementation methodology.", angle: "8-10 weeks, phased, clear success criteria.", postedOn: "Paralegent AI company page" },
-      { platform: "Twitter/X", type: "Thread (5 tweets)", owner: "Saqlain", day: 1, purpose: "Thread of failure stats + what works.", angle: "Data thread: each tweet = one failure reason + the fix.", postedOn: "@paralegentai" },
-      { platform: "Quora", type: "Answer (600 words)", owner: "Saqlain", day: 1, purpose: "AI engine feed.", angle: "'Why do legal AI projects fail?' Honest answer with data.", postedOn: "Quora" },
-      { platform: "Ali's LinkedIn", type: "Text Post", owner: "Asad", day: 1, purpose: "Technical perspective on implementation.", angle: "Value: 'The 3-phase implementation that prevents failure.'", postedOn: "Ali's personal profile" },
-      { platform: "LinkedIn Carousel", type: "7 slides", owner: "Asad", day: 1, purpose: "Visual: failed vs successful pilot comparison.", angle: "Slide 1: '95% of AI pilots fail.' Slides: why they fail → what works → our approach.", postedOn: "Ali's personal profile" },
-      { platform: "Facebook", type: "Text Post", owner: "Asad", day: 1, purpose: "Presence.", angle: "Short + link.", postedOn: "Paralegent AI FB page" },
-      { platform: "Instagram", type: "Carousel + Caption", owner: "Asad", day: 1, purpose: "Visual failure stats.", angle: "Infographic style.", postedOn: "@paralegentai" },
-      { platform: "TikTok", type: "Caption (for Short)", owner: "Asad", day: 3, purpose: "Discovery.", angle: "'95% of AI pilots fail. Here's why.'", postedOn: "@paralegentai" },
-    ],
-    videoLong: {
-      title: "Why 95% of Legal AI Pilots Fail — And the Implementation That Works",
-      purpose: "Address the burned buyer. Show we understand their past pain.",
-      angle: "NOT promotional. Genuine analysis of failure reasons + the structured approach that works.",
-      duration: "6-8 min",
-      owner: "Asad",
-      day: 2,
-    },
-    shorts: [
-      { title: "77% of Legal Teams Had a Failed Tech Implementation", angle: "Stats cascade: 77% failed → 43% more than once → 23% left their jobs. Shock value.", owner: "Asad", day: 3 },
-      { title: "The 3 Reasons AI Pilots Fail (38% Too Long, 36% Too Complex, 33% Wrong Fit)", angle: "Quick data breakdown. Each reason in 15 seconds.", owner: "Asad", day: 3 },
-    ],
-  },
-
-  {
-    week: 2,
-    blog: {
+    blogB: {
       number: 4,
       title: "AI Contract Review ROI: The Real Numbers for Enterprise Legal Teams",
       objection: "#4 — Where's the ROI? I can't measure it",
@@ -184,52 +221,113 @@ export const contentCalendar: BlogWeek[] = [
       keyword: "AI contract review ROI",
       hookFormula: "Value",
       hookExample: "30 hours → 30 minutes. $100K/month → $60-80K once. Only 7% of legal departments track AI ROI. Here's the math they should be doing.",
-      contentBlocks: ["Definition: How to calculate contract review ROI", "Stats: 3.1 hrs/contract (LegalOn), 9.2% revenue loss (WCC), 59% no savings yet (ACC)", "Comparison Table: Manual vs SaaS AI vs Customer-Cloud TCO over 3 years", "FAQ: 3 questions about cost and ROI"],
-      customerLanguage: ["show me the numbers", "no noticeable savings yet", "can't justify the investment", "payback period"],
+      contentBlocks: ["Definition: How to calculate contract review ROI", "Stats: 3.1 hrs/contract (LegalOn), 9.2% revenue loss (WCC)", "Comparison Table: Manual vs SaaS AI vs Customer-Cloud TCO 3 years", "FAQ: 3 questions about cost"],
+      customerLanguage: ["show me the numbers", "no noticeable savings yet", "payback period"],
       buyerStage: "Consideration → Decision",
-      assignedWriter: "Asad",
       words: 2000,
     },
-    pieces: [
-      { platform: "Ali's LinkedIn", type: "Text Post", owner: "Asad", day: 1, purpose: "Ali speaks to VP Legal Ops (ROI-focused buyer).", angle: "Value hook: 'Only 7% of legal departments use KPIs to track AI value. Here's what they measure.'", postedOn: "Ali's personal profile" },
-      { platform: "LinkedIn Carousel", type: "7 slides", owner: "Asad", day: 1, purpose: "Visual ROI math. Scannable numbers.", angle: "Slide 1: '$100K/month question.' Slides: manual cost → AI cost → TCO table → payback. Slide 7: CTA.", postedOn: "Ali's personal profile" },
-      { platform: "Facebook", type: "Text Post", owner: "Asad", day: 1, purpose: "Presence.", angle: "Short + link.", postedOn: "Paralegent AI FB page" },
-      { platform: "Instagram", type: "Carousel + Caption", owner: "Asad", day: 1, purpose: "Visual cost comparison.", angle: "Before/after numbers.", postedOn: "@paralegentai" },
-      { platform: "Mudassir's LinkedIn", type: "Text Post", owner: "Saqlain", day: 1, purpose: "Founder on ROI credibility.", angle: "Curiosity: '59% of in-house attorneys report no savings from AI. Here's why — and what to measure instead.'", postedOn: "Mudassir's personal profile" },
-      { platform: "LinkedIn Company Page", type: "Text Post", owner: "Saqlain", day: 1, purpose: "Official ROI messaging.", angle: "Month 1 payback. Real math.", postedOn: "Paralegent AI company page" },
-      { platform: "Twitter/X", type: "Thread (5 tweets)", owner: "Saqlain", day: 1, purpose: "ROI data thread.", angle: "Each tweet = one number. $100K → $60-80K. 30 hrs → 30 min. 15 days → 2 days.", postedOn: "@paralegentai" },
-      { platform: "Quora", type: "Answer (600 words)", owner: "Saqlain", day: 1, purpose: "AI engine feed.", angle: "'What is the ROI of AI contract review?' With real math.", postedOn: "Quora" },
-      { platform: "TikTok", type: "Caption (for Short)", owner: "Asad", day: 3, purpose: "Discovery.", angle: "'$100K/month in attorney time. Or $60-80K once. You choose.'", postedOn: "@paralegentai" },
+
+    // Week 2 follows SAME day structure as Week 1
+    // Saqlain: Blog #3 on his platforms + Blog #4 cross-posts
+    // Asad: Blog #4 on his platforms + Blog #3 cross-posts
+    saqlainDay1: [
+      { task: "Engagement routine", forBlog: 0, time: "2 hrs", platform: "LinkedIn", purpose: "Daily", angle: "" },
+      { task: "Reddit engagement", forBlog: 0, time: "30 min", platform: "Reddit", purpose: "Daily", angle: "" },
+      { task: "Publish Blog #3 to Strapi", forBlog: 3, time: "30 min", platform: "Website", purpose: "Blog #3 goes LIVE", angle: "" },
+      { task: "Post Blog #3 on Mudassir's LinkedIn", forBlog: 3, time: "20 min", platform: "Mudassir's LinkedIn", purpose: "Founder addressing the elephant in the room — shows self-awareness", angle: "Story: '77% of legal teams have been burned by failed tech. We built differently.'" },
+      { task: "Post Blog #3 on Company Page", forBlog: 3, time: "20 min", platform: "Company Page", purpose: "Official: our implementation methodology", angle: "8-10 weeks, phased, clear success criteria" },
+      { task: "Post Blog #3 Twitter thread", forBlog: 3, time: "30 min", platform: "Twitter/X", purpose: "Failure stats thread", angle: "Each tweet = one failure reason + the fix" },
+      { task: "Post Blog #3 Quora answer", forBlog: 3, time: "30 min", platform: "Quora", purpose: "AI engine feed", angle: "'Why do legal AI projects fail?' Honest answer." },
+      { task: "Post Blog #4 on Mudassir's LinkedIn", forBlog: 4, time: "20 min", platform: "Mudassir's LinkedIn", purpose: "Founder on ROI credibility", angle: "Curiosity: '59% report no savings from AI. Here's why — and what to measure.'" },
+      { task: "Post Blog #4 on Company Page", forBlog: 4, time: "20 min", platform: "Company Page", purpose: "Official ROI messaging", angle: "Month 1 payback. Real math." },
+      { task: "Post Blog #4 Twitter thread", forBlog: 4, time: "30 min", platform: "Twitter/X", purpose: "ROI data thread", angle: "Each tweet = one number. $100K → $60-80K." },
+      { task: "Post Blog #4 Quora answer", forBlog: 4, time: "30 min", platform: "Quora", purpose: "AI engine feed", angle: "'What is the ROI of AI contract review?' Real math." },
     ],
-    videoLong: {
-      title: "The Real ROI of AI Contract Review (With Actual Numbers)",
-      purpose: "CFO-friendly. Visual math that gets forwarded from GC to CFO.",
-      angle: "Calculator style: input your numbers → see your savings. TCO comparison animated.",
-      duration: "5-6 min",
-      owner: "Asad",
-      day: 2,
-    },
-    shorts: [
-      { title: "$100K/Month in Attorney Time — or $60-80K Once", angle: "Split screen: money burning monthly vs one-time investment. Visual impact.", owner: "Asad", day: 3 },
-      { title: "Only 7% of Legal Teams Track AI ROI. Here's What to Measure.", angle: "Quick list: review time, SLA days, consistency score, cost per contract.", owner: "Asad", day: 3 },
+
+    asadDay1: [
+      { task: "Engagement routine", forBlog: 0, time: "2 hrs", platform: "LinkedIn", purpose: "Daily", angle: "" },
+      { task: "Reddit engagement", forBlog: 0, time: "30 min", platform: "Reddit", purpose: "Daily", angle: "" },
+      { task: "Post Blog #4 on Ali's LinkedIn", forBlog: 4, time: "20 min", platform: "Ali's LinkedIn", purpose: "Ali speaks to VP Legal Ops (ROI buyer)", angle: "Value: 'Only 7% track AI ROI. Here's what to measure.'" },
+      { task: "Design Blog #4 LinkedIn carousel", forBlog: 4, time: "1 hr", platform: "Ali's LinkedIn", purpose: "Visual ROI math. Scannable numbers.", angle: "Slide 1: '$100K/month question.' Slides: cost breakdown → payback." },
+      { task: "Adapt Blog #4 carousel → IG", forBlog: 4, time: "30 min", platform: "Instagram", purpose: "Visual cost comparison", angle: "Before/after numbers" },
+      { task: "Post Blog #4 Facebook", forBlog: 4, time: "20 min", platform: "Facebook", purpose: "Presence", angle: "Short + link" },
+      { task: "Post Blog #4 Instagram caption", forBlog: 4, time: "20 min", platform: "Instagram", purpose: "Bio link", angle: "ROI visual" },
+      { task: "Post Blog #4 TikTok", forBlog: 4, time: "20 min", platform: "TikTok", purpose: "Discovery", angle: "'$100K/month in attorney time. Or $60-80K once. You choose.'" },
+      { task: "Post Blog #3 on Ali's LinkedIn", forBlog: 3, time: "20 min", platform: "Ali's LinkedIn", purpose: "Technical implementation perspective", angle: "Value: 'The 3-phase implementation that prevents failure.'" },
+      { task: "Design Blog #3 LinkedIn carousel", forBlog: 3, time: "1 hr", platform: "Ali's LinkedIn", purpose: "Visual: failed vs successful pilot", angle: "Slide 1: '95% fail.' Slides: why → what works → our approach." },
+      { task: "Adapt Blog #3 carousel → IG", forBlog: 3, time: "30 min", platform: "Instagram", purpose: "Visual failure stats", angle: "Infographic style" },
+      { task: "Post Blog #3 Facebook", forBlog: 3, time: "20 min", platform: "Facebook", purpose: "Presence", angle: "Short + link" },
+      { task: "Post Blog #3 Instagram caption", forBlog: 3, time: "20 min", platform: "Instagram", purpose: "Bio link", angle: "Failure stats visual" },
+      { task: "Post Blog #3 TikTok", forBlog: 3, time: "20 min", platform: "TikTok", purpose: "Discovery", angle: "'95% of AI pilots fail. Here's why.'" },
+    ],
+
+    // Days 2-5 follow same pattern as Week 1
+    saqlainDay2: [
+      { task: "Engagement + Reddit", forBlog: 0, time: "2.5 hrs", platform: "LinkedIn/Reddit", purpose: "Daily", angle: "" },
+      { task: "Make Blog #3 YouTube Long Video (Veo 3 + ElevenLabs)", forBlog: 3, time: "3 hrs", platform: "YouTube", purpose: "Address burned buyer. Show structured implementation.", angle: "NOT promotional. Genuine failure analysis + what works." },
+      { task: "Thumbnail + Upload", forBlog: 3, time: "1 hr", platform: "YouTube", purpose: "SEO", angle: "Title: 'Why 95% of Legal AI Pilots Fail'" },
+    ],
+    asadDay2: [
+      { task: "Engagement + Reddit", forBlog: 0, time: "2.5 hrs", platform: "LinkedIn/Reddit", purpose: "Daily", angle: "" },
+      { task: "Make Blog #4 YouTube Long Video (Veo 3 + ElevenLabs)", forBlog: 4, time: "3 hrs", platform: "YouTube", purpose: "CFO-friendly. Visual ROI math.", angle: "Calculator style: input numbers → see savings. TCO comparison animated." },
+      { task: "Thumbnail + Upload", forBlog: 4, time: "1 hr", platform: "YouTube", purpose: "SEO", angle: "Title: 'The Real ROI of AI Contract Review'" },
+    ],
+    saqlainDay3: [
+      { task: "Engagement + Reddit", forBlog: 0, time: "2.5 hrs", platform: "LinkedIn/Reddit", purpose: "Daily", angle: "" },
+      { task: "Make Blog #3 Short #1 (Veo 3)", forBlog: 3, time: "2 hrs", platform: "YouTube", purpose: "Discovery", angle: "'77% Had a Failed Tech Implementation' — shock stat" },
+      { task: "Make Blog #3 Short #2 (Veo 3)", forBlog: 3, time: "2 hrs", platform: "YouTube", purpose: "Different angle", angle: "'3 Reasons AI Pilots Fail (38% Too Long, 36% Too Complex, 33% Wrong Fit)'" },
+      { task: "Upload Shorts", forBlog: 3, time: "30 min", platform: "YouTube", purpose: "Upload", angle: "" },
+    ],
+    asadDay3: [
+      { task: "Engagement + Reddit", forBlog: 0, time: "2.5 hrs", platform: "LinkedIn/Reddit", purpose: "Daily", angle: "" },
+      { task: "Make Blog #4 Short #1 (Veo 3)", forBlog: 4, time: "2 hrs", platform: "YouTube", purpose: "Discovery", angle: "'$100K/Month in Attorney Time — or $60-80K Once'" },
+      { task: "Make Blog #4 Short #2 (Veo 3)", forBlog: 4, time: "2 hrs", platform: "YouTube", purpose: "Different angle", angle: "'Only 7% of Legal Teams Track AI ROI. Here's What to Measure.'" },
+      { task: "Repost all 4 Shorts → IG/TikTok/FB", forBlog: 0, time: "2 hrs", platform: "IG/TikTok/FB", purpose: "Reposts", angle: "Platform captions" },
+    ],
+    saqlainDay4: [
+      { task: "Engagement + Reddit", forBlog: 0, time: "2.5 hrs", platform: "LinkedIn/Reddit", purpose: "Daily", angle: "" },
+      { task: "LinkedIn Article (adapt from Blog #3)", forBlog: 3, time: "3 hrs", platform: "Mudassir's LinkedIn", purpose: "Google-indexed + AI-cited", angle: "Why pilots fail — founder perspective" },
+      { task: "Medium republish Blog #1 (2 weeks after April 9)", forBlog: 1, time: "15 min", platform: "Medium", purpose: "DA 96 backlink", angle: "Canonical to website" },
+      { task: "Buffer / overflow", forBlog: 0, time: "2 hrs", platform: "Various", purpose: "Catch up", angle: "" },
+    ],
+    asadDay4: [
+      { task: "Engagement + Reddit", forBlog: 0, time: "2.5 hrs", platform: "LinkedIn/Reddit", purpose: "Daily", angle: "" },
+      { task: "Extra Short or Reel", forBlog: 0, time: "2 hrs", platform: "YouTube/IG", purpose: "Extra content", angle: "Trending or bonus angle" },
+      { task: "Review next week's content package", forBlog: 0, time: "2 hrs", platform: "—", purpose: "Prep", angle: "" },
+      { task: "Buffer / overflow", forBlog: 0, time: "1.5 hrs", platform: "Various", purpose: "Catch up", angle: "" },
+    ],
+    saqlainDay5: [
+      { task: "Engagement + Reddit", forBlog: 0, time: "2.5 hrs", platform: "LinkedIn/Reddit", purpose: "Daily", angle: "" },
+      { task: "Review next week's content package", forBlog: 0, time: "2 hrs", platform: "—", purpose: "Prep Blog #5", angle: "On-premise BLUE OCEAN" },
+      { task: "Extra engagement on high-performing posts", forBlog: 0, time: "2 hrs", platform: "LinkedIn", purpose: "Boost traction", angle: "" },
+      { task: "Buffer / overflow", forBlog: 0, time: "2 hrs", platform: "Various", purpose: "Catch up", angle: "" },
+    ],
+    asadDay5: [
+      { task: "Engagement + Reddit", forBlog: 0, time: "2.5 hrs", platform: "LinkedIn/Reddit", purpose: "Daily", angle: "" },
+      { task: "Review next week's content package", forBlog: 0, time: "2 hrs", platform: "—", purpose: "Prep Blog #6", angle: "How Redlining Works" },
+      { task: "Extra Short or bonus content", forBlog: 0, time: "2 hrs", platform: "YouTube/IG", purpose: "Extra", angle: "" },
+      { task: "Buffer / overflow", forBlog: 0, time: "2 hrs", platform: "Various", purpose: "Catch up", angle: "" },
     ],
   },
-
-  // ═══════════════════ WEEKS 3-8 (structure only — same format) ═══════════════════
-  // Week 3: Blog #5 (On-Premise BLUE OCEAN) + Blog #6 (How Redlining Works)
-  // Week 4: Blog #7 (Complete Guide) + Blog #8 (Paralegent vs Manual)
-  // Week 5: Blog #9 (10 Best Tools) + Blog #10 (Paralegent vs LegalOn)
-  // Week 6: Blog #11 (ChatGPT vs Dedicated) + Blog #12 (Multi-Agent vs Single LLM)
-  // Week 7: Blog #13 (Paralegent vs Spellbook) + Blog #14 (Is AI Safe? GDPR)
-  // Week 8: Blog #15 (Enterprise Buyer's Guide) + Blog #16 (What Is a Rulebook?)
-  // TODO: Build same detailed structure for weeks 3-8
 ];
 
-// Day labels for the schedule
 export const dayLabels = {
-  1: "SURGE DAY — Blog publishes + all text posts + carousel",
-  2: "VIDEO DAY — YouTube long video + thumbnail + upload",
-  3: "SHORTS DAY — 2 Shorts + repost to IG Reel/TikTok/FB Video",
-  4: "BUFFER — LinkedIn Article / Newsletter / Medium / Overflow",
-  5: "BUFFER — Prep next week / Extra content / Catch up",
+  1: "SURGE — Both blogs publish + all text posts + carousels (both people handle BOTH blogs on their platforms)",
+  2: "VIDEO — Each person makes 1 YouTube long video for their blog",
+  3: "SHORTS — Each person makes 2 Shorts + Asad reposts all to IG/TikTok/FB",
+  4: "BUFFER — LinkedIn Article, Newsletter, Medium republish, overflow",
+  5: "BUFFER — Prep next week, extra content, catch up",
+};
+
+export const hoursSummary = {
+  saqlainDay1: "6 hrs 20 min",
+  asadDay1: "8 hrs 10 min",
+  saqlainDay2: "6 hrs 30 min",
+  asadDay2: "6 hrs 30 min",
+  saqlainDay3: "7 hrs",
+  asadDay3: "8 hrs 30 min",
+  saqlainDay4: "7 hrs 45 min",
+  asadDay4: "8 hrs",
+  saqlainDay5: "8 hrs 30 min",
+  asadDay5: "8 hrs 30 min",
 };
