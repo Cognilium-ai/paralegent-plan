@@ -1,8 +1,9 @@
 import Link from "next/link";
 
-export default function Nav({ active }: { active: "plan" | "research" | "content" | "daily" | "brand" | "assets" | "partnerships" | "buyers" }) {
+export default function Nav({ active }: { active: "plan" | "research" | "content" | "daily" | "brand" | "assets" | "partnerships" | "buyers" | "calendar" }) {
   const tabs = [
     { href: "/", key: "plan" as const, label: "Plan" },
+    { href: "/calendar", key: "calendar" as const, label: "Calendar" },
     { href: "/daily", key: "daily" as const, label: "Daily Tasks" },
     { href: "/buyers", key: "buyers" as const, label: "Buyer Intel" },
     { href: "/content", key: "content" as const, label: "Content" },
